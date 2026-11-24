@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KX76XF8R');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pilotos que escalan · IA en la empresa · IA en la empresa</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Los pasos que da una empresa para adoptar la IA: diagnóstico, portafolio de casos, caso de negocio, modelo operativo, personas, pilotos que escalan, KPI y gobierno, recorridos con una empresa de servicios que sube la escalera de cinco niveles en doce meses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX76XF8R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="wrap" data-page="pilotos-que-escalan">
+<header class="topbar"><a class="brand" href="index.html">IA en la <b>empresa</b></a><span class="eyebrow">Curso visual e interactivo · Datos e inteligencia artificial</span><a class="al-sitio" href="https://aaramirez.github.io/">← Todos los cursos</a></header>
+<div class="layout">
+<nav class="toc" id="toc" aria-label="Ruta de aprendizaje"></nav>
+<main>
+<header class="page-head"><span class="num">CAPÍTULO 11 DE 14</span><h1>Pilotos que escalan: de la prueba a producción</h1><p class="lede">La empresa ficticia tiene su portafolio, su plataforma, su política y un plan para las personas. Falta lo que separa a una empresa con pilotos de una empresa con procesos cambiados: llevar cada caso de la prueba a producción. Este capítulo trata los criterios de salida, el plan de 30, 60 y 90 días, la secuencia simular, aprobar y automatizar, el despliegue por anillos y el plan de doce meses, mes por mes.</p></header>
+<section><div class="prose"><p>Al final del segundo mes, la empresa ficticia tiene las bases en su lugar: documentos con dueño y vigencia, una política de una página y media, la pasarela de IA con el inicio de sesión único y el registro de cada pedido, y una herramienta aprobada abierta a todos. El comité aprobó el piloto de los borradores de respuesta a reclamos (capítulo 6), pero solo la parte del piloto: unos 4.000 de los 12.000 de la inversión. El resto depende de lo que pase en ocho semanas.</p><p>Los tres pilotos del capítulo 1 llevaban meses «en prueba». Este es distinto, y no por el modelo: tiene fecha de fin, criterios acordados antes de empezar y un plan para lo que viene después.</p></div><div class="analogia"><b>Imagínalo así</b><p>Un restaurante que quiere un plato nuevo no lo pone en la carta el primer día. Lo sirve una semana como «sugerencia del chef» a las mesas que lo piden, anota cuántos lo terminan, qué comentan y cuánto tarda la cocina, y el lunes decide: entra a la carta, se cambia la receta o se olvida. Si nunca decide, el plato queda para siempre en la pizarra de sugerencias, ocupando a un cocinero y sin que nadie sepa si conviene.</p></div></section>
+<section><h2>Un piloto con fecha de fin y criterios de éxito acordados antes de empezar</h2><div class="prose"><p>Un <b>piloto</b> (<i>pilot</i>) es una prueba acotada con usuarios reales, datos reales y un plazo. Lo que lo convierte en una herramienta de decisión, y no en una demostración larga, son sus <b>criterios de salida</b> (<i>exit criteria</i>): los umbrales que, medidos al final, dicen si el caso pasa a producción. Se escriben antes de empezar, con su número, y los firma el patrocinador. Si se escriben al final, siempre se cumplen: se eligen mirando los resultados.</p><p>Los criterios de salida cubren cuatro preguntas, y cada una sale de un sistema:</p><ul><li><b>¿Lo usan?</b> La adopción: qué parte de los reclamos del grupo piloto se respondió con un borrador. Sale del sistema de tickets.</li><li><b>¿Está bien?</b> La calidad: qué parte de los borradores se envió con cambios menores, según una revisión de una muestra. Sale de la evaluación semanal con el conjunto de oro y de la revisión de muestras.</li><li><b>¿Ahorra?</b> La eficiencia: minutos por respuesta, comparados con la línea base de 11 minutos. Sale de los tiempos del sistema de tickets.</li><li><b>¿Es seguro?</b> Los incidentes: borradores con datos de otro cliente, respuestas sin fuente, quejas. Se mide con el registro de auditoría y el canal de reportes. Es una <b>métrica de resguardo</b> (<i>guardrail metric</i>): no dice si el caso es bueno, dice si hay que detenerlo.</li></ul><p>Todo eso se escribe en la <b>carta del piloto</b> (<i>pilot charter</i>), una página que es la continuación del caso de negocio:</p><div class="code-copia"><pre><code>PILOTO: Borradores de respuesta a reclamos escritos
+Dueña: jefa del equipo de reclamos · Patrocinadora: directora de operaciones
+Grupo: 10 agentes voluntarios del equipo de reclamos
+Comparación: los otros 20 agentes del mismo equipo
+Fechas: semanas 1 a 8 (meses 3 y 4) · Decisión: comité de fin del mes 4
+
+Criterios de salida (todos deben cumplirse):
+  Adopción  ≥ 60 % de los reclamos del grupo responden con borrador
+  Ahorro    ≥ 3 minutos por respuesta frente a la línea base de 11
+  Calidad   ≥ 80 % enviados con cambios menores (muestra de 50 por semana)
+Umbral de parada (detiene el piloto en cualquier semana):
+  1 borrador con datos de otra cuenta enviado a un cliente
+
+Si sigue: se libera el resto de la inversión y se despliega por anillos
+Si se cierra: se apaga la función, se escribe lo aprendido
+             y el equipo pasa al caso 3</code></pre><button type="button" class="copiar copiar-todo">Copiar</button></div><p>Fíjate en el <b>grupo de comparación</b> (<i>control group</i>): los 20 agentes del mismo equipo que no usan el borrador durante esas ocho semanas. Sirve para separar el efecto de la IA de todo lo demás que cambia al mismo tiempo. Si en esas semanas entra un nuevo tipo de reclamo más fácil, los tiempos bajan en los dos grupos; la diferencia entre ellos es lo que se le puede atribuir al borrador. Cómo leer esas diferencias está en el capítulo 12.</p></div><figure class="fig fig-comparacion" id="11-diagrama-1"><div class="lienzo"><svg viewBox="0 0 880 380" style="min-width:700px" role="img" aria-label="Comparación de dos pilotos en doce meses. Arriba, sin criterios de salida: empieza en el mes 1, se extiende un mes más tres veces, cambia de dueño en el mes 7 y sigue en prueba en el mes 12, con un costo acumulado que crece todo el año. Abajo, con carta del piloto: ocho semanas, decisión en el comité al final del mes 2 y tres salidas: seguir, ajustar o cerrar">
+  <defs>
+    <marker id="c11d1-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="fl-muted"/></marker>
+  </defs>
+  
+  <text x="150" y="22" class="t t-xs t-b t-m">MES</text>
+  <g class="t t-xs t-m" text-anchor="middle">
+    <text x="196" y="22">1</text><text x="252" y="22">2</text><text x="308" y="22">3</text><text x="364" y="22">4</text><text x="420" y="22">5</text><text x="476" y="22">6</text><text x="532" y="22">7</text><text x="588" y="22">8</text><text x="644" y="22">9</text><text x="700" y="22">10</text><text x="756" y="22">11</text><text x="812" y="22">12</text>
+  </g>
+  <line x1="168" y1="30" x2="168" y2="360" class="vida"/>
+  <line x1="840" y1="30" x2="840" y2="360" class="vida"/>
+
+  
+  <rect x="10" y="44" width="148" height="140" rx="10" class="caja"/>
+  <text x="22" y="70" class="t t-b">Sin criterios</text>
+  <text x="22" y="90" class="t t-s t-m">«lo probamos y</text>
+  <text x="22" y="105" class="t t-s t-m">vemos»</text>
+  <rect x="170" y="56" width="166" height="30" rx="6" class="c-apl"/>
+  <text x="180" y="76" class="t t-s">piloto «de dos meses»</text>
+  <rect x="338" y="56" width="54" height="30" rx="6" class="c-apl" style="opacity:.75"/>
+  <rect x="394" y="56" width="54" height="30" rx="6" class="c-apl" style="opacity:.6"/>
+  <rect x="450" y="56" width="54" height="30" rx="6" class="c-apl" style="opacity:.45"/>
+  <text x="344" y="104" class="t t-s t-m">«un mes más» × 3</text>
+  <polygon points="532,62 542,72 532,82 522,72" class="caja" style="stroke-width:2"/>
+  <text x="548" y="76" class="t t-s">cambia de dueño</text>
+  <rect x="506" y="112" width="332" height="26" rx="6" class="c-apl" style="opacity:.35;stroke-dasharray:5 4"/>
+  <text x="516" y="130" class="t t-s">sigue «en prueba» al mes 12, sin decisión</text>
+  
+  <polygon points="170,176 838,148 838,176" class="caja" style="opacity:.9"/>
+  <text x="600" y="172" class="t t-xs t-m">costo acumulado, todo el año</text>
+
+  
+  <rect x="10" y="204" width="148" height="150" rx="10" class="c-enl"/>
+  <text x="22" y="230" class="t t-b">Con carta</text>
+  <text x="22" y="250" class="t t-s">grupo, fechas,</text>
+  <text x="22" y="265" class="t t-s">criterios y umbral</text>
+  <text x="22" y="280" class="t t-s">de parada firmados</text>
+  <rect x="170" y="216" width="112" height="30" rx="6" class="c-enl"/>
+  <text x="180" y="236" class="t t-s">8 semanas</text>
+  <polygon points="282,221 292,231 282,241 272,231" class="c-red" style="stroke-width:2"/>
+  <text x="246" y="266" class="t t-s t-b">comité</text>
+  <path d="M292 231 C320 231 320 214 350 214" class="ln" style="stroke-width:1.6" marker-end="url(#c11d1-m)"/>
+  <path d="M292 231 H350" class="ln" style="stroke-width:1.6" marker-end="url(#c11d1-m)"/>
+  <path d="M292 231 C320 231 320 290 350 290" class="ln" style="stroke-width:1.6" marker-end="url(#c11d1-m)"/>
+  <rect x="354" y="200" width="484" height="26" rx="6" class="c-fis"/>
+  <text x="364" y="218" class="t t-s"><tspan class="t-b">seguir</tspan>: anillos, producción y la inversión que faltaba</text>
+  <rect x="354" y="236" width="160" height="26" rx="6" class="c-tra"/>
+  <text x="364" y="254" class="t t-s"><tspan class="t-b">ajustar</tspan>: una vez más</text>
+  <text x="524" y="254" class="t t-s t-m">→ nueva fecha y otra decisión</text>
+  <rect x="354" y="276" width="112" height="26" rx="6" class="caja"/>
+  <text x="364" y="294" class="t t-s"><tspan class="t-b">cerrar</tspan></text>
+  <text x="476" y="294" class="t t-s t-m">→ lo aprendido al registro; el equipo pasa a otro caso</text>
+  <polygon points="170,350 282,334 282,350" class="caja" style="opacity:.9"/>
+  <text x="292" y="348" class="t t-xs t-m">costo del piloto: acotado y conocido de antemano</text>
+</svg></div><figcaption><b>Un piloto con y sin criterio de salida.</b> Dos líneas de tiempo de doce meses. Arriba, un piloto sin criterios: empieza, se extiende «un mes más» tres veces, cambia de dueño y sigue en prueba al final del año, con un costo que se acumula mes a mes. Abajo, el piloto con carta: ocho semanas, una decisión en el comité y tres salidas posibles (seguir, ajustar o cerrar), cada una con lo que pasa después. La barra gris al pie de cada línea es el costo acumulado.</figcaption></figure><div class="practica"><div class="practica-title"><span class="tag">En el navegador</span><h3>¿Pasó el piloto? Una hoja de cálculo con sus criterios</h3></div><p>Vas a calcular los tres criterios de salida del piloto de borradores con datos inventados de los diez agentes del grupo piloto. Sirve cualquier hoja de cálculo en línea.</p><ol class="steps"><li><span>Copia este bloque y pégalo en la celda A1. Si queda en una sola columna, usa «Dividir texto en columnas» con la coma como separador.</span></li></ol><div class="code-copia"><pre><code>Agente,Reclamos,ConBorrador,MinutosPromedio,MuestraRevisada,CambiosMenores
+A01,210,180,6.9,5,5
+A02,190,150,7.4,5,4
+A03,205,40,10.6,5,3
+A04,220,190,6.8,5,5
+A05,180,150,7.2,5,4
+A06,200,170,7.0,5,4
+A07,195,60,10.1,5,4
+A08,215,185,7.1,5,5
+A09,185,160,7.3,5,4
+A10,200,170,6.9,5,5</code></pre><button type="button" class="copiar copiar-todo">Copiar</button></div><ol class="steps" start="2" style="counter-reset:st 1"><li><span>En H2, la adopción del grupo: <code>=SUMA(C2:C11)/SUMA(B2:B11)</code> (en una hoja en inglés, <code>=SUM(C2:C11)/SUM(B2:B11)</code>). Dale formato de porcentaje.</span></li><li><span>En H3, el ahorro en minutos frente a la línea base de 11, ponderado por reclamos: <code>=11-SUMAPRODUCTO(B2:B11;D2:D11)/SUMA(B2:B11)</code> (en inglés, <code>=11-SUMPRODUCT(B2:B11,D2:D11)/SUM(B2:B11)</code>).</span></li><li><span>En H4, la calidad: <code>=SUMA(F2:F11)/SUMA(E2:E11)</code> (en inglés, <code>=SUM(F2:F11)/SUM(E2:E11)</code>).</span></li><li><span>Compara cada valor con su criterio: 60 %, 3 minutos y 80 %. Después borra las filas de A03 y A07 y mira cómo cambian los tres números.</span></li></ol><p><b>Qué observar:</b> el grupo cumple los tres criterios (adopción cerca del 73 %, ahorro de unos 3,3 minutos y calidad del 88 %), pero dos agentes casi no usan el borrador y tiran el promedio hacia abajo. Sin ellos, la adopción sube al 85 % y el ahorro a casi 4 minutos, y es tentador sacarlos «porque no cuentan». No se sacan: en producción también habrá personas que lo usen poco, y los criterios se miden sobre todo el grupo que se acordó. Lo que sí corresponde es preguntarles por qué no lo usan: es la mejor fuente de ajustes. Si tu hoja usa coma como separador de argumentos, cambia los punto y coma; si no reconoce el punto decimal de la columna D, cámbialo por coma.</p></div></section>
+<section><h2>El plan de 30, 60 y 90 días de un caso</h2><div class="prose"><p>Un caso no pasa de «aprobado» a «en producción» de un salto. Entre los dos hay un plan corto, en tres tramos de un mes, que sirve para casi cualquier caso de los niveles 1 a 3. Cada tramo termina con algo que se puede mostrar y con una pregunta que se responde con datos.</p></div><figure class="fig fig-esquema" id="11-diagrama-2"><div class="lienzo"><svg viewBox="0 0 880 430" style="min-width:700px" role="img" aria-label="Plan de 30, 60 y 90 días en tres columnas. Días 1 a 30, funcionar: conectar fuentes, instrucciones con versión, conjunto de oro y entrega a 5 a 15 personas; puerta: ¿responde bien con datos reales? Días 31 a 60, medir: uso diario, adopción, calidad y ahorro contra la línea base y el grupo de comparación; puerta: ¿cumple los criterios de salida? Días 61 a 90, operar: soporte, monitoreo con alertas, vuelta atrás escrita, formación y traspaso; puerta: ¿opera sin el equipo que lo construyó? Abajo, lo que corre todo el tiempo: conjunto de oro semanal, registro de cada pedido y costo por caso">
+  <defs>
+    <marker id="c11d2-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="fl-muted"/></marker>
+  </defs>
+  
+  <g>
+    <rect x="20" y="14" width="250" height="44" rx="10" class="c-fis"/>
+    <text x="145" y="34" class="t t-b" text-anchor="middle">Días 1 a 30 · funcionar</text>
+    <text x="145" y="50" class="t t-s" text-anchor="middle">grupo de 5 a 15 personas</text>
+    <rect x="20" y="70" width="250" height="150" rx="10" class="caja"/>
+    <text x="32" y="92" class="t t-xs t-b t-m">SE CONSTRUYE</text>
+    <text x="32" y="112" class="t t-s">· conectar las fuentes (base, tickets)</text>
+    <text x="32" y="130" class="t t-s">· instrucciones en el repositorio,</text>
+    <text x="42" y="146" class="t t-s">con su versión</text>
+    <text x="32" y="164" class="t t-s">· correr el conjunto de oro</text>
+    <text x="32" y="182" class="t t-s">· entregarlo al grupo</text>
+    <text x="32" y="206" class="t t-xs t-b t-m">SE MIDE: calidad con datos reales</text>
+    <polygon points="145,232 160,247 145,262 130,247" class="c-red" style="stroke-width:2"/>
+    <text x="145" y="284" class="t t-s t-b" text-anchor="middle">¿Responde bien con datos</text>
+    <text x="145" y="300" class="t t-s t-b" text-anchor="middle">reales, no los de la demo?</text>
+  </g>
+  <path d="M272 120 H312" class="ln" style="stroke-width:2" marker-end="url(#c11d2-m)"/>
+  <g>
+    <rect x="315" y="14" width="250" height="44" rx="10" class="c-enl"/>
+    <text x="440" y="34" class="t t-b" text-anchor="middle">Días 31 a 60 · medir</text>
+    <text x="440" y="50" class="t t-s" text-anchor="middle">el grupo lo usa todos los días</text>
+    <rect x="315" y="70" width="250" height="150" rx="10" class="caja"/>
+    <text x="327" y="92" class="t t-xs t-b t-m">SE CONSTRUYE</text>
+    <text x="327" y="112" class="t t-s">· ajustes semanales de instrucciones</text>
+    <text x="327" y="130" class="t t-s">· documentos que faltaban</text>
+    <text x="327" y="148" class="t t-s">· cada cambio pasa por el oro</text>
+    <text x="327" y="176" class="t t-xs t-b t-m">SE MIDE</text>
+    <text x="327" y="194" class="t t-s">adopción, calidad y ahorro contra</text>
+    <text x="327" y="210" class="t t-s">la línea base y el grupo de control</text>
+    <polygon points="440,232 455,247 440,262 425,247" class="c-red" style="stroke-width:2"/>
+    <text x="440" y="284" class="t t-s t-b" text-anchor="middle">¿Cumple los criterios de</text>
+    <text x="440" y="300" class="t t-s t-b" text-anchor="middle">salida? (nivel 1: casi siempre</text>
+    <text x="440" y="316" class="t t-s t-b" text-anchor="middle">se decide aquí)</text>
+  </g>
+  <path d="M567 120 H607" class="ln" style="stroke-width:2" marker-end="url(#c11d2-m)"/>
+  <g>
+    <rect x="610" y="14" width="250" height="44" rx="10" class="c-red"/>
+    <text x="735" y="34" class="t t-b" text-anchor="middle">Días 61 a 90 · operar</text>
+    <text x="735" y="50" class="t t-s" text-anchor="middle">listo para producción</text>
+    <rect x="610" y="70" width="250" height="150" rx="10" class="caja"/>
+    <text x="622" y="92" class="t t-xs t-b t-m">SE CONSTRUYE</text>
+    <text x="622" y="112" class="t t-s">· soporte: quién atiende si falla</text>
+    <text x="622" y="130" class="t t-s">· monitoreo con alertas</text>
+    <text x="622" y="148" class="t t-s">· vuelta atrás escrita</text>
+    <text x="622" y="166" class="t t-s">· formación del resto de usuarios</text>
+    <text x="622" y="184" class="t t-s">· traspaso al equipo que opera</text>
+    <text x="622" y="208" class="t t-xs t-b t-m">SE MIDE: estabilidad y soporte</text>
+    <polygon points="735,232 750,247 735,262 720,247" class="c-red" style="stroke-width:2"/>
+    <text x="735" y="284" class="t t-s t-b" text-anchor="middle">¿Opera sin el equipo</text>
+    <text x="735" y="300" class="t t-s t-b" text-anchor="middle">que lo construyó?</text>
+  </g>
+  
+  <rect x="20" y="340" width="840" height="76" rx="10" class="d-sis"/>
+  <text x="34" y="362" class="t t-xs t-b k-sis">CORRE TODO EL TIEMPO (EN LA PLATAFORMA COMÚN)</text>
+  <rect x="34" y="374" width="250" height="30" rx="6" class="caja"/>
+  <text x="159" y="394" class="t t-s" text-anchor="middle">conjunto de oro, cada semana</text>
+  <rect x="315" y="374" width="250" height="30" rx="6" class="caja"/>
+  <text x="440" y="394" class="t t-s" text-anchor="middle">registro de cada pedido</text>
+  <rect x="596" y="374" width="250" height="30" rx="6" class="caja"/>
+  <text x="721" y="394" class="t t-s" text-anchor="middle">costo por caso en la pasarela</text>
+</svg></div><figcaption><b>El plan de 30, 60 y 90 días.</b> Tres columnas, una por tramo, con lo que se construye (arriba), lo que se mide (en el medio) y la puerta del final (el rombo). El día 30 la pregunta es si funciona con datos reales; el día 60, si lo usan y ahorra; el día 90, si puede operar sin el equipo que lo construyó. Debajo, en gris, lo que corre todo el tiempo: el conjunto de oro cada semana, el registro de cada pedido y el costo por caso en la pasarela.</figcaption></figure><div class="prose"><ul><li><b>Días 1 a 30: funcionar.</b> Conectar el caso con sus fuentes (la base de conocimiento, el sistema de tickets), escribir las instrucciones en el repositorio con su versión, correr el conjunto de oro y entregarlo a un grupo de 5 a 15 personas. La pregunta del día 30: ¿responde bien con datos reales, no con los de la demostración?</li><li><b>Días 31 a 60: medir.</b> El grupo trabaja con el caso todos los días. Se mide la adopción, la calidad y el ahorro contra la línea base y el grupo de comparación; cada semana se ajustan las instrucciones y se agregan documentos que faltaban, siempre pasando por el conjunto de oro antes de publicar. La pregunta del día 60: ¿cumple los criterios de salida? Para los casos de nivel 1, casi siempre se decide aquí.</li><li><b>Días 61 a 90: operar.</b> Se prepara lo que pide producción: soporte (quién atiende cuando falla), monitoreo con alertas, el procedimiento de vuelta atrás escrito, la formación del resto de los usuarios y el traspaso del equipo que construyó al que opera. La pregunta del día 90: ¿puede seguir funcionando si el equipo del centro de excelencia se va a otro caso?</li></ul><p>En la empresa ficticia, el piloto de borradores corrió las ocho semanas de los meses 3 y 4 y llegó al comité con estos números: adopción del 74 %, ahorro de 3,6 minutos (no los 4 del caso de negocio, pero por encima del umbral de 3), 88 % de borradores enviados con cambios menores y ningún incidente de datos de otra cuenta. El comité decidió seguir y liberó el resto de la inversión. Los 3,6 minutos reemplazaron a los 4 en el caso de negocio: el valor esperado bajó un poco y el comité lo prefirió así, porque ahora era un dato medido y no un supuesto.</p></div></section>
+<section><h2>Simular, aprobar y después automatizar</h2><div class="prose"><p>Los casos de nivel 1 generan texto que una persona lee antes de usarlo. Los de nivel 3 <b>actúan</b>: escriben en un sistema, mueven una cita, emiten un reembolso. Para esos, el piloto tiene una pieza más: la IA se gana la autonomía por peldaños, como dice la política del capítulo 9.</p></div><div class="analogia"><b>Imagínalo así</b><p>Un conductor que aprende con instructor no maneja solo el primer día. Primero va de copiloto y dice en voz alta lo que haría («ahora freno», «ahora giro»), sin tocar los pedales. Después maneja con el instructor al lado y un freno de su lado del auto. Recién cuando lleva semanas sin que el instructor tenga que frenar, sale solo, y aun así le revisan el registro de vez en cuando.</p></div><div class="prose"><p>Los tres peldaños del piloto de un caso que actúa son:</p><ol class="steps"><li><span><b>Simular.</b> La IA propone la acción y nada se ejecuta. A este modo se le llama <b>modo sombra</b> (<i>shadow mode</i>): el caso corre en paralelo al proceso real, ve los mismos pedidos y registra lo que habría hecho, mientras las personas siguen trabajando como siempre. Al final de cada día se comparan las dos columnas: lo que hizo la persona y lo que habría hecho la IA. Es la forma más barata de encontrar errores, porque ninguno llega a un cliente.</span></li><li><span><b>Aprobar cada acción.</b> La IA prepara la acción completa y una persona la aprueba o la rechaza con un clic. Solo al aprobar, el sistema la ejecuta. Lo que se mide aquí es qué parte se aprueba sin cambios y cuánto tarda la aprobación.</span></li><li><span><b>Automatizar con vigilancia.</b> Para el tipo de acción que demostró ser confiable, la IA actúa sola y una persona revisa una muestra y puede detenerla. Las acciones de otros tipos siguen pidiendo aprobación.</span></li></ol><p>La tecnología de esta secuencia es concreta. La IA no toca el sistema de órdenes directamente: llama a una <b>herramienta</b> (<i>tool</i>), una función con un formato definido («reprogramar orden: número, fecha nueva, franja horaria») que la plataforma expone, muchas veces con el <b>protocolo de contexto de modelos</b> (<i>Model Context Protocol</i>, MCP), una norma abierta para conectar modelos con sistemas. Entre la IA y la herramienta hay un <b>orquestador</b> (<i>orchestrator</i>): el programa que guarda el estado de cada pedido, decide si la acción necesita aprobación según el peldaño del caso, espera la respuesta de la persona y recién entonces llama a la API. El peldaño en el que está cada tipo de acción es una configuración del orquestador, no una promesa: cambiarlo es un cambio con versión, aprobado por el comité.</p></div><figure class="fig fig-flujo" id="11-diagrama-3"><div class="lienzo"><svg viewBox="0 0 1000 560" style="min-width:760px" role="img" aria-label="Diagrama de secuencia de una reprogramación de visita en tres peldaños. El cliente pide el cambio por chat; el asistente consulta la disponibilidad en el sistema de órdenes, solo lectura; el orquestador recibe la propuesta y mira el peldaño. En modo sombra guarda la propuesta y el coordinador hace el cambio a mano. Con aprobación, envía la propuesta al coordinador, que aprueba; el orquestador llama a la API de órdenes y el cliente recibe la confirmación. En automático, los pasos de aprobación desaparecen para los cambios simples">
+  <defs>
+    <marker id="c11d3-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="fl-muted"/></marker>
+    <marker id="c11d3-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="k-apl"/></marker>
+    <marker id="c11d3-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="k-red"/></marker>
+    <marker id="c11d3-e" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="k-enl"/></marker>
+  </defs>
+  <rect x="20" y="14" width="120" height="50" rx="10" class="d-casa"/><text x="80" y="44" class="t t-b" text-anchor="middle">Cliente</text>
+  <rect x="180" y="14" width="130" height="50" rx="10" class="c-apl"/><text x="245" y="36" class="t t-b" text-anchor="middle">Asistente</text><text x="245" y="54" class="t t-s" text-anchor="middle">en el chat</text>
+  <rect x="350" y="14" width="140" height="50" rx="10" class="c-red"/><text x="420" y="36" class="t t-b" text-anchor="middle">Orquestador</text><text x="420" y="54" class="t t-s" text-anchor="middle">sabe el peldaño</text>
+  <rect x="530" y="14" width="130" height="50" rx="10" class="caja"/><text x="595" y="36" class="t t-b" text-anchor="middle">Coordinador</text><text x="595" y="54" class="t t-s t-m" text-anchor="middle">aprueba</text>
+  <rect x="700" y="14" width="140" height="50" rx="10" class="d-sis"/><text x="770" y="36" class="t t-b" text-anchor="middle">Sistema de</text><text x="770" y="54" class="t t-b" text-anchor="middle">órdenes (API)</text>
+  <line x1="80" y1="64" x2="80" y2="540" class="vida"/>
+  <line x1="245" y1="64" x2="245" y2="540" class="vida"/>
+  <line x1="420" y1="64" x2="420" y2="540" class="vida"/>
+  <line x1="595" y1="64" x2="595" y2="540" class="vida"/>
+  <line x1="770" y1="64" x2="770" y2="540" class="vida"/>
+
+  <line x1="80" y1="100" x2="243" y2="100" class="ln s-apl" style="stroke-width:2" marker-end="url(#c11d3-a)"/>
+  <text x="88" y="92" class="t t-s">① «¿Puede ser el viernes?»</text>
+  <line x1="245" y1="138" x2="768" y2="138" class="ln" style="stroke-width:2;stroke-dasharray:6 4" marker-end="url(#c11d3-m)"/>
+  <text x="300" y="130" class="t t-s">② Consulta huecos y distancias (solo lectura)</text>
+  <line x1="245" y1="176" x2="418" y2="176" class="ln s-red" style="stroke-width:2" marker-end="url(#c11d3-r)"/>
+  <text x="252" y="168" class="t t-s">③ Propuesta: vie 9:00</text>
+
+  
+  <rect x="330" y="192" width="520" height="60" rx="8" class="caja" style="stroke-dasharray:5 4"/>
+  <text x="342" y="212" class="t t-xs t-b t-m">MODO SOMBRA (MES 7)</text>
+  <text x="342" y="232" class="t t-s">④ Guarda la propuesta en el registro; nada se ejecuta.</text>
+  <text x="342" y="247" class="t t-s t-m">El coordinador reprograma a mano y al final del día se comparan.</text>
+
+  
+  <text x="342" y="282" class="t t-xs t-b t-m">CON APROBACIÓN (MES 8)</text>
+  <line x1="420" y1="304" x2="593" y2="304" class="ln s-red" style="stroke-width:2" marker-end="url(#c11d3-r)"/>
+  <text x="428" y="298" class="t t-s">⑤ Tarjeta: vie 9:00, motivo</text>
+  <line x1="595" y1="342" x2="422" y2="342" class="ln s-enl" style="stroke-width:2" marker-end="url(#c11d3-e)"/>
+  <text x="440" y="336" class="t t-s">⑥ «Aprobar»</text>
+  <line x1="420" y1="382" x2="768" y2="382" class="ln s-red" style="stroke-width:2.4" marker-end="url(#c11d3-r)"/>
+  <text x="440" y="374" class="t t-s">⑦ reprogramar(orden, vie, 9:00) por la API</text>
+  <line x1="770" y1="420" x2="82" y2="420" class="ln s-apl" style="stroke-width:2" marker-end="url(#c11d3-a)"/>
+  <text x="96" y="412" class="t t-s">⑧ Confirmación al cliente; el registro guarda quién aprobó</text>
+
+  
+  <rect x="330" y="446" width="520" height="82" rx="8" class="c-fis"/>
+  <text x="342" y="466" class="t t-xs t-b">AUTOMÁTICO CON VIGILANCIA (MES 9, SOLO CAMBIOS SIMPLES)</text>
+  <text x="342" y="486" class="t t-s">Mismo día o el siguiente, misma zona: ⑤ y ⑥ desaparecen.</text>
+  <text x="342" y="504" class="t t-s">El coordinador revisa una muestra y puede volver al peldaño</text>
+  <text x="342" y="520" class="t t-s">anterior con un cambio de configuración.</text>
+
+  
+  <rect x="870" y="84" width="112" height="30" rx="6" class="c-apl"/><text x="926" y="104" class="t t-s" text-anchor="middle">entender</text>
+  <rect x="870" y="124" width="112" height="60" rx="6" class="c-apl"/><text x="926" y="158" class="t t-s" text-anchor="middle">proponer</text>
+  <rect x="870" y="192" width="112" height="60" rx="6" class="caja"/><text x="926" y="226" class="t t-s" text-anchor="middle">simular</text>
+  <rect x="870" y="290" width="112" height="62" rx="6" class="c-enl"/><text x="926" y="326" class="t t-s" text-anchor="middle">aprobar</text>
+  <rect x="870" y="364" width="112" height="30" rx="6" class="c-red"/><text x="926" y="384" class="t t-s" text-anchor="middle">ejecutar</text>
+  <rect x="870" y="404" width="112" height="30" rx="6" class="d-sis"/><text x="926" y="424" class="t t-s" text-anchor="middle">registrar</text>
+</svg></div><figcaption><b>Una reprogramación de visita en los tres peldaños.</b> Los participantes están arriba y el tiempo corre hacia abajo. ① El cliente pide cambiar su visita por el chat; ② el asistente consulta la disponibilidad en el sistema de órdenes (solo lectura); ③ el orquestador recibe la propuesta y mira el peldaño del caso. En modo sombra, ④ guarda la propuesta en el registro y el coordinador hace el cambio a mano, como siempre. Con aprobación, ⑤ el orquestador envía la propuesta al coordinador; ⑥ el coordinador aprueba; ⑦ el orquestador llama a la API de órdenes; ⑧ el cliente recibe la confirmación. Automático, el paso ⑤ y el ⑥ desaparecen para los cambios simples. A la derecha, las fases: entender, proponer, aprobar, ejecutar y registrar.</figcaption></figure><div class="prose"><p>En la empresa ficticia, la reprogramación de visitas es el caso 5 del portafolio, la única apuesta del año. Tuvo que esperar a que sistemas terminara la API de órdenes de trabajo, al final del mes 6. En el mes 7 corrió en modo sombra: los coordinadores descubrieron que la IA proponía franjas en las que el técnico tenía que cruzar la ciudad dos veces, y se agregó la distancia a la herramienta de disponibilidad. En el mes 8 pasó a aprobar cada reprogramación. En el mes 9, después de cuatro semanas con el 95 % de las propuestas aprobadas sin cambios, las reprogramaciones simples (para el mismo día o el siguiente, dentro de la misma zona) pasaron a aprobación por muestra; las que cambian de zona o de semana siguen pidiendo aprobación una por una.</p></div></section>
+<section><h2>Despliegue gradual: un grupo, un área, toda la empresa</h2><div class="prose"><p>Cuando un piloto cumple sus criterios, la tentación es encenderlo para todos al día siguiente. Pero diez agentes voluntarios no son noventa agentes con distintos turnos, experiencias y tipos de reclamo. Lo que funcionó con unos puede fallar con otros, y si falla para todos a la vez, el daño es grande y la vuelta atrás, urgente.</p><p>El <b>despliegue gradual</b> (<i>phased rollout</i>) enciende el caso por <b>anillos</b> (<i>rings</i>): círculos de usuarios cada vez más amplios, con una puerta entre uno y otro. El primer anillo, pequeño, funciona como un <b>canario</b> (<i>canary release</i>), por los canarios que los mineros bajaban a la mina para detectar gases antes de que afectaran a las personas: si algo sale mal, se nota ahí primero.</p></div><figure class="fig fig-esquema" id="11-diagrama-4"><div class="lienzo"><svg viewBox="0 0 920 460" style="min-width:700px" role="img" aria-label="Despliegue por anillos de los borradores: en el centro el grupo piloto de 10 agentes, luego el equipo de reclamos de 30 en el mes 5, todo atención con 90 en el mes 6 y, punteado, otras áreas en el año 2. Cada salto exige que la calidad se mantenga en 80 por ciento o más y el ahorro en 3 minutos o más durante dos semanas. A la derecha, la bandera de función que enciende o apaga el caso por anillo">
+  <circle cx="355" cy="235" r="215" class="caja" style="stroke-dasharray:6 5"/>
+  <circle cx="355" cy="235" r="165" class="c-tra"/>
+  <circle cx="355" cy="235" r="110" class="c-enl"/>
+  <circle cx="355" cy="235" r="50" class="c-fis"/>
+  <text x="355" y="232" class="t t-b" text-anchor="middle">Piloto</text>
+  <text x="355" y="250" class="t t-s" text-anchor="middle">10 · meses 3-4</text>
+  <text x="355" y="150" class="t t-b" text-anchor="middle">Equipo de reclamos</text>
+  <text x="355" y="166" class="t t-s" text-anchor="middle">30 agentes · mes 5</text>
+  <text x="355" y="94" class="t t-b" text-anchor="middle">Todo atención</text>
+  <text x="355" y="110" class="t t-s" text-anchor="middle">90 agentes · mes 6</text>
+  <text x="355" y="42" class="t t-b t-m" text-anchor="middle">Otras áreas</text>
+  <text x="355" y="58" class="t t-s t-m" text-anchor="middle">año 2</text>
+  <polygon points="390,260 400,270 390,280 380,270" class="c-red" style="stroke-width:2"/>
+  <polygon points="433,303 443,313 433,323 423,313" class="c-red" style="stroke-width:2"/>
+  <polygon points="472,342 482,352 472,362 462,352" class="c-red" style="stroke-width:2"/>
+  <text x="10" y="386" class="t t-s">puerta en cada salto:</text>
+  <text x="10" y="402" class="t t-s">calidad ≥ 80 % y ahorro</text>
+  <text x="10" y="418" class="t t-s">≥ 3 min, dos semanas</text>
+  
+  <rect x="605" y="60" width="300" height="300" rx="12" class="d-sis"/>
+  <text x="621" y="86" class="t t-xs t-b k-sis">BANDERA DE FUNCIÓN «BORRADORES»</text>
+  <g>
+    <rect x="621" y="104" width="268" height="40" rx="8" class="caja"/>
+    <text x="635" y="129" class="t t-s">piloto (lista de 10)</text>
+    <rect x="827" y="114" width="44" height="20" rx="10" class="c-fis"/><circle cx="860" cy="124" r="7" class="caja"/>
+    <rect x="621" y="152" width="268" height="40" rx="8" class="caja"/>
+    <text x="635" y="177" class="t t-s">equipo de reclamos</text>
+    <rect x="827" y="162" width="44" height="20" rx="10" class="c-fis"/><circle cx="860" cy="172" r="7" class="caja"/>
+    <rect x="621" y="200" width="268" height="40" rx="8" class="caja"/>
+    <text x="635" y="225" class="t t-s">todo atención (100 %)</text>
+    <rect x="827" y="210" width="44" height="20" rx="10" class="c-fis"/><circle cx="860" cy="220" r="7" class="caja"/>
+    <rect x="621" y="248" width="268" height="40" rx="8" class="caja"/>
+    <text x="635" y="273" class="t t-s t-m">otras áreas</text>
+    <rect x="827" y="258" width="44" height="20" rx="10" class="caja"/><circle cx="838" cy="268" r="7" class="ln"/>
+  </g>
+  <text x="621" y="314" class="t t-s">Un cambio de configuración, sin</text>
+  <text x="621" y="330" class="t t-s">publicar código; apagar todo</text>
+  <text x="621" y="346" class="t t-s">toma segundos.</text>
+</svg></div><figcaption><b>El despliegue por anillos de los borradores.</b> Cuatro anillos concéntricos, del centro hacia afuera: el grupo piloto (10 agentes), el equipo de reclamos completo (30), todo atención (90) y, en el anillo exterior punteado, otras áreas que podrían usar la misma función en el año 2. Sobre cada salto, la puerta: qué métricas deben mantenerse y durante cuánto tiempo. A la derecha, el interruptor de la bandera de función: un cambio de configuración que apaga el caso para un anillo sin tocar a los demás.</figcaption></figure><div class="prose"><p>La pieza técnica que lo hace posible es la <b>bandera de función</b> (<i>feature flag</i>): un interruptor en la configuración que decide, usuario por usuario, si ve la función nueva. La aplicación pregunta a la bandera antes de mostrar el botón «Proponer borrador»; la bandera responde según el anillo de esa persona. Pasar de un anillo al siguiente es cambiar un porcentaje o una lista, sin publicar código. Y apagar el caso para todos, si aparece un incidente grave, toma segundos. Hay productos del mercado para manejar banderas (LaunchDarkly, Unleash o Flagsmith, por ejemplo, este último y Unleash también de código abierto), y muchas plataformas las traen incluidas.</p></div><div class="practica"><div class="practica-title"><span class="tag">En la terminal</span><h3>Cómo decide una bandera de función quién entra al anillo</h3></div><p>Las herramientas de banderas reparten a las personas en anillos con una función de resumen (<i>hash</i>): convierten el identificador de cada persona en un número del 0 al 99 y encienden la función a quienes caen por debajo del porcentaje. Vas a hacer lo mismo con treinta agentes inventados. Abre la terminal (PowerShell en Windows; Terminal en macOS y Linux) y ejecuta una línea a la vez.</p><div class="cmds"><div class="cmd-tabs" role="tablist" aria-label="Sistema operativo"><button type="button" role="tab" data-so="win">Windows</button><button type="button" role="tab" data-so="mac linux">macOS y Linux</button></div><div class="cmd-panel" role="tabpanel" data-so="win"><p class="cmd-nota">Windows (PowerShell)</p><div class="cmd-l"><code>$ids = 1..30 | ForEach-Object { "agente-{0:D3}" -f $_ }</code><button type="button" class="copiar">Copiar</button></div><div class="cmd-l"><code>$md5 = [System.Security.Cryptography.MD5]::Create()</code><button type="button" class="copiar">Copiar</button></div><div class="cmd-l"><code>$ids | ForEach-Object { $h = $md5.ComputeHash([Text.Encoding]::UTF8.GetBytes("borradores:" + $_)); [pscustomobject]@{ id = $_; cubeta = ([BitConverter]::ToUInt32($h,0) % 100) } } | Where-Object { $_.cubeta -lt 33 }</code><button type="button" class="copiar">Copiar</button></div></div><div class="cmd-panel" role="tabpanel" data-so="mac linux"><div class="cmd-l"><code>python3 -c "import hashlib; [print(i, b) for i in ['agente-%03d'%n for n in range(1,31)] for b in [int.from_bytes(hashlib.md5(('borradores:'+i).encode()).digest()[:4],'little')%100] if b&lt;33]"</code><button type="button" class="copiar">Copiar</button></div></div></div><ol class="steps"><li><span>La última línea muestra los agentes que caen en el anillo del 33 %, con su número de cubeta. Cuenta cuántos son.</span></li><li><span>Vuelve a ejecutarla. Anota si la lista cambió.</span></li><li><span>Cambia <code>33</code> por <code>66</code> y ejecútala otra vez. Fíjate si los agentes de la primera lista siguen dentro.</span></li><li><span>Cambia <code>borradores:</code> por <code>manuales:</code> y ejecútala de nuevo con 33.</span></li></ol><p><b>Qué observar:</b> con 33 entran 12 de los 30 agentes, cerca de un tercio pero no exacto, porque el reparto es al azar. La lista no cambia entre ejecuciones: cada persona cae siempre en la misma cubeta, así que nadie entra y sale del caso de un día para otro. Al subir a 66, todos los del primer anillo siguen dentro y se suman otros: el anillo crece sin sacar a nadie. Con otro nombre de caso, el reparto es distinto, para que no sean siempre las mismas personas las que prueban todo primero. Los dos sistemas dan la misma lista porque usan la misma función de resumen.</p></div><div class="prose"><p>Cada puerta entre anillos tiene su criterio, más simple que el del piloto: las métricas del anillo anterior se mantienen durante un tiempo acordado. En la empresa ficticia, los borradores pasaron al equipo de reclamos completo en el mes 5 y a los 90 agentes de atención en el mes 6, con una condición en cada salto: que la calidad no bajara del 80 % y que el ahorro no cayera por debajo de 3 minutos durante dos semanas seguidas. En el segundo anillo la calidad bajó al 79 % una semana, por los reclamos de un producto nuevo que no estaba en la base de conocimiento; se agregaron sus documentos y se esperó otra semana antes de abrir el tercero.</p></div><div class="caso"><b>Un caso real</b><p><b>Un despliegue gradual que dejó medir.</b> Un estudio académico publicado en 2023 por investigadores de Stanford y del MIT siguió a más de 5.000 agentes de soporte de una empresa de software que incorporó un asistente de IA que sugería respuestas. La empresa no lo encendió para todos a la vez: lo fue habilitando por grupos a lo largo de varios meses. Eso permitió comparar, en el mismo periodo, a quienes ya lo tenían con quienes todavía no. El resultado promedio fue un 14 % más de casos resueltos por hora, pero muy desigual: los agentes nuevos o con menos experiencia mejoraron mucho más que los más experimentados, que casi no cambiaron. El despliegue gradual no solo bajó el riesgo: produjo la medición que un encendido general nunca habría dado.</p></div></section>
+<section><h2>Seguir, ajustar o cerrar: la decisión al final del piloto</h2><div class="prose"><p>El día de la decisión, el comité tiene tres salidas, y las tres son buenas si se toman con datos:</p><ul><li><b>Seguir.</b> Se cumplen los criterios de salida. El caso pasa a producción, se libera la inversión que estaba condicionada y empieza el despliegue por anillos.</li><li><b>Ajustar.</b> Algunos criterios se cumplen y otros no, y hay una causa identificada que se puede corregir: faltan documentos, el tono de las respuestas no gusta, la aprobación tarda demasiado. Se corrige y se repite el tramo de medición con una fecha nueva, una sola vez. Un caso que se ajusta dos veces sin cumplir es un caso que se cierra.</li><li><b>Cerrar.</b> Los criterios no se cumplen y no hay una causa que se pueda corregir en poco tiempo, o el problema dejó de existir. Se apaga la función, se escribe lo aprendido en el registro de casos y el equipo pasa a otro caso del portafolio.</li></ul><p>La salida que más cuesta es la tercera, por una trampa conocida: el <b>costo hundido</b> (<i>sunk cost</i>). Ya se gastaron meses y dinero, y cerrar parece desperdiciarlos. Pero ese dinero ya no vuelve de ninguna forma; lo único que se decide es si se gasta más. Un comité que nunca cierra un piloto no está midiendo: está acumulando demostraciones.</p></div><div class="lab" id="11-lab-2"><div class="lab-title"><span class="tag">Laboratorio</span><h3>El piloto en su día 90</h3></div><p class="hint">Elige uno de los tres pilotos de una empresa genérica y mira sus métricas al final del plazo, comparadas con sus criterios de salida y su umbral de parada. Decide seguir, ajustar o cerrar, y mira qué pasó en los seis meses siguientes con tu decisión y con las otras dos. La lectura explica qué señal de las métricas pesaba más.</p><style>
+[id="11-lab-2"] .c11l2-m{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:8px;margin:10px 0}
+[id="11-lab-2"] .c11l2-k{border:1px solid var(--line);border-radius:10px;background:var(--card);padding:8px 10px}
+[id="11-lab-2"] .c11l2-k b{display:block;font:700 1.15rem var(--f-display);color:var(--ink)}
+[id="11-lab-2"] .c11l2-k span{display:block;font:600 .74rem/1.3 var(--f-display);color:var(--muted)}
+[id="11-lab-2"] .c11l2-k em{font:700 .72rem var(--f-mono);font-style:normal}
+[id="11-lab-2"] .c11l2-k.ok em{color:var(--good)}
+[id="11-lab-2"] .c11l2-k.no em{color:var(--warm)}
+[id="11-lab-2"] .c11l2-k.no{border-color:var(--warm)}
+</style>
+<div class="btns" role="group" aria-label="Piloto">
+  <button type="button" id="c11l2-p0">Búsqueda en manuales</button>
+  <button type="button" id="c11l2-p1">Recordatorios de cobranza</button>
+  <button type="button" id="c11l2-p2">Clasificación de correos</button>
+</div>
+<p class="hint" id="c11l2-desc"></p>
+<div class="c11l2-m" id="c11l2-m"></div>
+<div class="btns" role="group" aria-label="Tu decisión">
+  <button type="button" id="c11l2-d0">Seguir</button>
+  <button type="button" id="c11l2-d1">Ajustar</button>
+  <button type="button" id="c11l2-d2">Cerrar</button>
+</div>
+<canvas id="c11l2-cv" role="img" aria-label="Valor neto acumulado en los seis meses después de la decisión, una línea por cada decisión posible: seguir, ajustar o cerrar; la decisión elegida se dibuja más gruesa"></canvas>
+<div class="legend"><span><i style="background:var(--good)"></i>seguir</span><span><i style="background:var(--accent)"></i>ajustar</span><span><i style="background:var(--muted)"></i>cerrar</span></div>
+<div class="readout texto" id="c11l2-out" aria-live="polite"></div></div><div class="prose"><p>En la empresa ficticia, la decisión difícil del año fue el piloto de recordatorios de cobranza (nivel 2), en los meses 5 y 6: el pago subió dos puntos frente al grupo de comparación, no los cinco de la meta, y las quejas por el tono pasaron el umbral de parada. Había una causa clara, mensajes demasiado insistentes con clientes que casi siempre pagaban a tiempo, así que el comité decidió ajustar: plantillas nuevas con tres tonos según el historial de pago, otra prueba en el mes 8 y producción en el mes 9. Cómo se leyeron esos números está en el capítulo 12.</p></div></section>
+<section><h2>El plan de doce meses: base, nivel 1, nivel 2, nivel 3 y piloto de nivel 4</h2><div class="prose"><p>Juntando los casos del portafolio, el plan del año tiene una forma que se repite en casi todas las empresas que suben la escalera del capítulo 2: <b>la base</b> en los meses 1 y 2 (datos, política, pasarela, conjuntos de oro y línea base, sin casos todavía); <b>nivel 1</b> desde el mes 3, donde se forma el hábito y se aprende a medir, con el primer <b>nivel 2</b> hacia el final del semestre; <b>nivel 3</b> en los meses 7 a 9, cuando hay una API y un proceso escrito; y un <b>piloto de nivel 4</b> al final, no para tenerlo en producción en el año, sino para saber si el año 2 puede apostar por él.</p><p>Lo que ordena el plan no son las ganas de cada área sino las <b>dependencias</b> (<i>dependencies</i>): un caso no puede empezar antes de que esté listo lo que necesita. La base de conocimiento antes que los borradores y la búsqueda en manuales; la API de órdenes antes que la reprogramación; un caso de nivel 3 funcionando antes que un agente de nivel 4. Y el centro de excelencia tiene cuatro personas: si todo se pone en el mismo trimestre, no da abasto.</p></div><div class="lab" id="11-lab-1"><div class="lab-title"><span class="tag">Laboratorio</span><h3>Arma el plan de doce meses</h3></div><p class="hint">Ubica las bases y los casos del portafolio de la empresa ficticia en los cuatro trimestres del año (o déjalos para el año 2) con los botones de cada tarjeta. El tablero marca en rojo las dependencias que se rompen y con borde punteado las que quedan justas, la barra de cada trimestre muestra la carga del centro de excelencia (15 por trimestre) y la lectura cuenta cuántos procesos cambiados tendrá la empresa al mes 12 y cuántos meses de beneficio suma el año.</p><style>
+[id="11-lab-1"] .c11l1-tab{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:10px 0}
+[id="11-lab-1"] .c11l1-col{border:1px solid var(--line);border-radius:10px;background:var(--paper);padding:6px;min-height:120px;display:flex;flex-direction:column;gap:6px}
+[id="11-lab-1"] .c11l1-col h4{margin:0;font:700 .8rem/1.2 var(--f-display);color:var(--muted);text-align:center}
+[id="11-lab-1"] .c11l1-carga{height:7px;border-radius:4px;background:var(--line);overflow:hidden}
+[id="11-lab-1"] .c11l1-carga i{display:block;height:100%;background:var(--good)}
+[id="11-lab-1"] .c11l1-carga.sobre i{background:var(--warm)}
+[id="11-lab-1"] .c11l1-cn{font:600 .7rem var(--f-mono);color:var(--muted);text-align:center}
+[id="11-lab-1"] .c11l1-t{border:1px solid var(--line);border-left:4px solid var(--muted);border-radius:8px;background:var(--card);padding:5px 6px;font:600 .74rem/1.25 var(--f-display);color:var(--ink)}
+[id="11-lab-1"] .c11l1-t.base{border-left-color:var(--accent)}
+[id="11-lab-1"] .c11l1-t.mal{border-color:var(--warm);border-left-color:var(--warm);background:var(--warm-soft)}
+[id="11-lab-1"] .c11l1-t.justo{border-style:dashed}
+[id="11-lab-1"] .c11l1-t small{display:block;font:500 .68rem var(--f-mono);color:var(--muted)}
+[id="11-lab-1"] .c11l1-t .c11l1-mv{display:flex;gap:4px;margin-top:4px}
+[id="11-lab-1"] .c11l1-t button{flex:1;font:700 .8rem var(--f-display);padding:2px 0;border-radius:6px;border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer;min-height:26px}
+[id="11-lab-1"] .c11l1-t button:disabled{opacity:.3;cursor:default}
+@media (max-width:640px){[id="11-lab-1"] .c11l1-tab{grid-template-columns:1fr}[id="11-lab-1"] .c11l1-col{min-height:0}[id="11-lab-1"] .c11l1-t{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px}[id="11-lab-1"] .c11l1-t .c11l1-mv{margin:0 0 0 auto;flex:0 0 90px}}
+</style>
+<div class="btns">
+  <button type="button" id="c11l1-todo">Todo en el primer trimestre</button>
+  <button type="button" id="c11l1-sin">Sin bases: casos primero</button>
+  <button type="button" id="c11l1-plan">Plan de la empresa ficticia</button>
+</div>
+<div class="c11l1-tab" id="c11l1-tab"></div>
+<div class="legend"><span><i style="background:var(--accent)"></i>base</span><span><i style="background:var(--muted)"></i>caso</span><span><i style="background:var(--warm)"></i>dependencia rota o sobrecarga</span><span><i style="background:var(--good)"></i>carga del centro de excelencia dentro de su capacidad</span></div>
+<div class="readout texto" id="c11l1-out" aria-live="polite"></div></div></section>
+<section><h2>Los doce meses de la empresa ficticia, uno por uno</h2><div class="prose"><p>Con el laboratorio en mente, este es el plan que la empresa ficticia aprobó en el mes 2 y lo que pasó al ejecutarlo. Las decisiones del comité están en la columna de la derecha.</p></div><figure class="fig fig-esquema" id="11-diagrama-5"><div class="lienzo"><svg viewBox="0 0 900 470" style="min-width:740px" role="img" aria-label="Plan de doce meses de la empresa ficticia. Base en los meses 1 y 2 y la API de órdenes de los meses 3 a 6. Nivel 1: base de conocimiento en producción desde el mes 3; borradores en piloto meses 3 y 4 y en producción desde el mes 5; búsqueda en manuales en piloto meses 4 y 5 y en producción desde el mes 6. Nivel 2: recordatorios de cobranza en piloto meses 5 y 6, ajuste en 7, vuelve en 8 y producción en 9; asistente de técnicos meses 8 y 9. Nivel 3: reprogramación en modo sombra mes 7, aprobación mes 8, muestra mes 9 en adelante. Nivel 4: agente de avería masiva en modo sombra meses 10 y 11 y aprobando cada acción en el mes 12. Rombos con las decisiones del comité">
+  <defs>
+    <marker id="c11d5-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="fl-muted"/></marker>
+  </defs>
+  <g class="t t-xs t-b t-m" text-anchor="middle">
+    <text x="191" y="22">M1</text><text x="247" y="22">M2</text><text x="303" y="22">M3</text><text x="359" y="22">M4</text><text x="415" y="22">M5</text><text x="471" y="22">M6</text><text x="527" y="22">M7</text><text x="583" y="22">M8</text><text x="639" y="22">M9</text><text x="695" y="22">M10</text><text x="751" y="22">M11</text><text x="807" y="22">M12</text>
+  </g>
+  <g class="vida"><line x1="163" y1="30" x2="163" y2="400"/><line x1="275" y1="30" x2="275" y2="400"/><line x1="499" y1="30" x2="499" y2="400"/><line x1="667" y1="30" x2="667" y2="400"/><line x1="835" y1="30" x2="835" y2="400"/></g>
+  
+  <rect x="10" y="38" width="145" height="62" rx="8" class="caja"/><text x="20" y="62" class="t t-b">Base</text><text x="20" y="80" class="t t-s t-m">datos, política,</text><text x="20" y="94" class="t t-s t-m">pasarela, API</text>
+  <rect x="10" y="108" width="145" height="92" rx="8" class="c-fis"/><text x="20" y="132" class="t t-b">Nivel 1</text>
+  <rect x="10" y="208" width="145" height="62" rx="8" class="c-enl"/><text x="20" y="232" class="t t-b">Nivel 2</text>
+  <rect x="10" y="278" width="145" height="40" rx="8" class="c-tra"/><text x="20" y="303" class="t t-b">Nivel 3</text>
+  <rect x="10" y="326" width="145" height="40" rx="8" class="c-red"/><text x="20" y="351" class="t t-b">Nivel 4</text>
+  
+  <rect x="165" y="44" width="108" height="24" rx="5" class="caja"/><text x="172" y="60" class="t t-s">bases y línea base</text>
+  <rect x="277" y="72" width="220" height="22" rx="5" class="d-sis"/><text x="284" y="87" class="t t-s">API de órdenes (sistemas)</text>
+  
+  <rect x="277" y="114" width="556" height="22" rx="5" class="c-fis"/><text x="284" y="129" class="t t-s">base de conocimiento con fuentes</text>
+  <rect x="277" y="142" width="108" height="22" rx="5" class="caja" style="stroke-dasharray:4 3"/><text x="284" y="157" class="t t-s">piloto</text>
+  <rect x="389" y="142" width="444" height="22" rx="5" class="c-fis"/><text x="396" y="157" class="t t-s">borradores: 30 en M5, 90 en M6</text>
+  <rect x="333" y="170" width="108" height="22" rx="5" class="caja" style="stroke-dasharray:4 3"/><text x="340" y="185" class="t t-s">piloto</text>
+  <rect x="445" y="170" width="388" height="22" rx="5" class="c-fis"/><text x="452" y="185" class="t t-s">búsqueda en manuales: 120 técnicos</text>
+  
+  <rect x="389" y="214" width="108" height="22" rx="5" class="caja" style="stroke-dasharray:4 3"/><text x="396" y="229" class="t t-s">piloto</text>
+  <rect x="501" y="214" width="52" height="22" rx="5" class="caja"/><text x="507" y="229" class="t t-s">ajuste</text>
+  <rect x="557" y="214" width="52" height="22" rx="5" class="caja" style="stroke-dasharray:4 3"/>
+  <rect x="613" y="214" width="220" height="22" rx="5" class="c-enl"/><text x="620" y="229" class="t t-s">recordatorios de cobranza</text>
+  <rect x="557" y="242" width="276" height="22" rx="5" class="c-enl"/><text x="564" y="257" class="t t-s">asistente de técnicos en el celular</text>
+  
+  <rect x="501" y="286" width="52" height="24" rx="5" class="caja" style="stroke-dasharray:4 3"/><text x="507" y="302" class="t t-s">sombra</text>
+  <rect x="557" y="286" width="52" height="24" rx="5" class="c-tra" style="opacity:.6"/><text x="561" y="302" class="t t-s">aprueba</text>
+  <rect x="613" y="286" width="220" height="24" rx="5" class="c-tra"/><text x="620" y="302" class="t t-s">reprogramación: simples por muestra</text>
+  
+  <rect x="669" y="334" width="108" height="24" rx="5" class="caja" style="stroke-dasharray:4 3"/><text x="676" y="350" class="t t-s">modo sombra</text>
+  <rect x="781" y="334" width="52" height="24" rx="5" class="c-red" style="opacity:.6"/><text x="785" y="350" class="t t-s">aprueba</text>
+  
+  <path d="M497 83 H499 V284" class="ln" style="stroke-width:1.6" marker-end="url(#c11d5-m)"/>
+  
+  <g class="c-red" style="stroke-width:2">
+    <polygon points="387,382 395,390 387,398 379,390"/><polygon points="443,382 451,390 443,398 435,390"/><polygon points="499,382 507,390 499,398 491,390"/><polygon points="667,382 675,390 667,398 659,390"/><polygon points="835,382 843,390 835,398 827,390"/>
+  </g>
+  <text x="372" y="418" class="t t-s" text-anchor="end">borradores: seguir</text>
+  <text x="450" y="436" class="t t-s" text-anchor="middle">manuales: seguir</text>
+  <text x="520" y="418" class="t t-s">recordatorios: ajustar</text>
+  <text x="667" y="454" class="t t-s" text-anchor="middle">reprogramación simple: subir un peldaño</text>
+  <text x="835" y="418" class="t t-s" text-anchor="end">agente: piloto en año 2</text>
+  
+  <rect x="165" y="444" width="22" height="12" rx="3" class="caja" style="stroke-dasharray:4 3"/><text x="192" y="454" class="t t-xs t-m">PILOTO O SOMBRA</text>
+  <rect x="300" y="444" width="22" height="12" rx="3" class="c-fis"/><text x="327" y="454" class="t t-xs t-m">PRODUCCIÓN</text>
+</svg></div><figcaption><b>Los doce meses de la empresa ficticia.</b> Las columnas son los meses y las filas, los frentes: la base, los casos de nivel 1, el nivel 2, el nivel 3 y el piloto de nivel 4. Cada barra es un caso, con su color según el peldaño en que está (piloto o modo sombra, aprobación, producción); los rombos son las decisiones del comité. La flecha fina marca la dependencia que más pesó: la reprogramación no empieza hasta que la API de órdenes está lista. La barra larga del nivel 1, la base de conocimiento, sostiene los borradores y la búsqueda en manuales, que empiezan cuando ella ya está en producción.</figcaption></figure><div class="prose"><div class="tbl"><table><thead><tr><th>Mes</th><th>Qué pasa</th><th>Decisión</th></tr></thead><tbody><tr><td>1</td><td>Base: dueños de documentos, clasificación de datos, pasarela con SSO y registro, línea base de los KPI</td><td>—</td></tr><tr><td>2</td><td>Se firma la política; se abre el asistente general aprobado para todos; conjuntos de oro de los dos primeros casos</td><td>El comité aprueba el plan del año</td></tr><tr><td>3</td><td>La base de conocimiento con fuentes entra en producción para atención; empieza el piloto de borradores con 10 agentes; sistemas empieza la API de órdenes</td><td>—</td></tr><tr><td>4</td><td>Sigue el piloto de borradores; empieza el piloto de búsqueda en manuales con 15 técnicos de una zona</td><td>Borradores: <b>seguir</b> (74 %, 3,6 min, 88 %)</td></tr><tr><td>5</td><td>Borradores para los 30 del equipo de reclamos; piloto de recordatorios de cobranza con 2.000 clientes y su grupo de comparación</td><td>Búsqueda en manuales: <b>seguir</b></td></tr><tr><td>6</td><td>Borradores para los 90 agentes; búsqueda en manuales para los 120 técnicos; la API de órdenes queda lista; revisión de mitad de año</td><td>Recordatorios: <b>ajustar</b> (tono y quejas)</td></tr><tr><td>7</td><td>Reprogramación de visitas en modo sombra; se reescriben las plantillas de cobranza</td><td>—</td></tr><tr><td>8</td><td>Reprogramación con aprobación de cada una; vuelven los recordatorios ajustados; empieza el asistente de técnicos en el celular</td><td>—</td></tr><tr><td>9</td><td>Reprogramaciones simples con aprobación por muestra; recordatorios en producción; asistente de técnicos para todos</td><td>Reprogramación simple: <b>subir un peldaño</b></td></tr><tr><td>10</td><td>Piloto de nivel 4: el agente de avería masiva corre en modo sombra en una zona, con un revisor del centro de operaciones</td><td>—</td></tr><tr><td>11</td><td>Sigue el modo sombra; se ajustan sus límites de gasto y las acciones que puede proponer</td><td>—</td></tr><tr><td>12</td><td>El agente pasa a aprobar cada acción; se repite el diagnóstico; se arma el plan del año 2</td><td>Agente: <b>seguir en piloto</b> el año 2</td></tr></tbody></table></div><p>Dos detalles explican por qué el año funcionó. El plan dejó holgura en el segundo semestre, y por eso el ajuste de los recordatorios no atrasó la reprogramación. Y los casos con más riesgo de cerrarse (el agente de cierre contable, el modelo propio para clasificar correos) se habían dejado fuera en el capítulo 5.</p></div><div class="ml"><b>En la práctica</b><p><b>El agente que no pasó a producción, a propósito.</b> En el mes 12, el agente de avería masiva completaba bien siete de cada diez avisos en modo sombra, justo la meta de nivel 4, pero el revisor del centro de operaciones encontró que en dos ocasiones había propuesto visitas a clientes que no estaban en la zona afectada. El líder del centro de excelencia propuso pasarlo a producción con aprobación de cada acción; la directora de operaciones prefirió dejarlo como piloto en el año 2, con aprobación de cada acción y un objetivo de tres meses sin errores de zona antes de volver a discutirlo. Es la decisión que deja este capítulo: escalar lo que demostró su valor y darle al resto un criterio y una fecha, no un «más adelante».</p></div></section>
+<section><h2>La idea clave</h2><div class="prose"><p>Un piloto sin criterio de salida no termina: se queda como demostración para siempre. El que escala tiene una carta firmada antes de empezar (grupo, fechas, criterios, umbral de parada), un plan de 30, 60 y 90 días que termina con algo que opera sin sus constructores, una secuencia de simular, aprobar y automatizar para los casos que actúan, y un despliegue por anillos con una bandera que lo apaga en segundos. Ordenados por sus dependencias, esos pilotos forman el plan del año: base, nivel 1, nivel 2, nivel 3 y un piloto de nivel 4.</p></div></section>
+<section><h2>Pruébate</h2><div class="quiz"><h3>Pruébate</h3><details><summary>¿Por qué los criterios de salida se escriben antes de empezar el piloto y no al final?</summary><p>Porque si se escriben al final se eligen mirando los resultados y siempre se cumplen. Escritos antes y firmados por el patrocinador, son una regla de decisión y no una justificación.</p></details><details><summary>¿Para qué sirve el grupo de comparación de un piloto?</summary><p>Para separar el efecto de la IA de todo lo demás que cambia en el mismo periodo. Si los tiempos bajan en los dos grupos, la diferencia entre ellos es lo que se le puede atribuir al caso.</p></details><details><summary>¿Qué es el modo sombra y por qué es el primer peldaño de un caso que actúa en los sistemas?</summary><p>Es correr el caso en paralelo al proceso real, registrando lo que haría sin ejecutar nada mientras las personas trabajan como siempre. Encuentra los errores sin que ninguno llegue a un cliente.</p></details><details><summary>¿Qué hace una bandera de función en un despliegue por anillos?</summary><p>Decide, persona por persona, si ve la función nueva. Permite pasar de un anillo al siguiente cambiando una configuración y apagar el caso para todos en segundos si aparece un incidente.</p></details><details><summary>¿Cuándo conviene ajustar en lugar de seguir o cerrar?</summary><p>Cuando algunos criterios se cumplen y otros no, y hay una causa identificada que se puede corregir pronto. Se corrige y se mide una vez más; si vuelve a fallar, se cierra.</p></details><details><summary>¿Por qué el piloto de nivel 4 va al final del año y no al principio?</summary><p>Porque depende de lo anterior: necesita la base de conocimiento, sistemas con API, un caso de nivel 3 funcionando y un equipo que ya sabe evaluar y operar. Sin eso, un agente actúa sobre datos y sistemas que no están listos.</p></details></div></section>
+<section><h2>Para investigar</h2><div class="investiga"><h3>Para investigar</h3><p class="hint">Estas preguntas no se responden en el capítulo: búscalas por tu cuenta.</p><ol><li>¿Qué es el efecto Hawthorne y por qué puede inflar los resultados de un piloto con voluntarios?<small>Pista: busca los estudios de la planta Hawthorne de Western Electric.</small></li><li>¿Cuántas personas hacen falta en un piloto para distinguir un ahorro de 3 minutos de la variación normal entre agentes?<small>Pista: busca «tamaño de muestra» y «potencia estadística».</small></li><li>¿Qué es una clave de idempotencia y por qué importa cuando una automatización reintenta una llamada a una API?<small>Pista: busca «idempotency key».</small></li><li>¿En qué se diferencia un despliegue azul-verde (<i>blue-green deployment</i>) de un despliegue canario?</li><li>¿Qué es el método de la ruta crítica (<i>critical path method</i>) y cómo encuentra las tareas que no pueden atrasarse en un plan?</li></ol></div></section>
+<section><h2>Para saber más</h2><div class="vids"><span>Para saber más</span><a class="vid" href="https://www.nber.org/papers/w31161" target="_blank" rel="noopener">Generative AI at Work, NBER <small>el estudio de los agentes de soporte, en inglés</small></a><a class="vid" href="https://sre.google/workbook/canarying-releases/" target="_blank" rel="noopener">Canarying releases, libro de SRE de Google <small>cómo se hace un despliegue canario, en inglés</small></a><a class="vid" href="https://martinfowler.com/articles/feature-toggles.html" target="_blank" rel="noopener">Feature Toggles, Martin Fowler <small>los tipos de banderas de función, en inglés</small></a><a class="vid" href="https://aaramirez.github.io/aplicaciones-con-ia/temario.html" target="_blank" rel="noopener">Aplicaciones con IA: cómo se construye cada nivel <small>curso del sitio</small></a></div></section>
+<label class="got"><input type="checkbox" id="got"> Lo tengo claro</label>
+<nav class="pager" id="pager" aria-label="Capítulo anterior y siguiente"></nav>
+</main>
+</div>
+<footer><span>Curso abierto de aaramirez.github.io.</span><span>Sitio publicado: <a href="https://github.com/aaramirez/adopcion-de-ia" target="_blank" rel="noopener">github.com/aaramirez/adopcion-de-ia</a></span></footer>
+</div>
+<script src="assets/lab.js"></script>
+<script>
+(function(){
+  const {$,tok,canvasWidget}=window.Lab;
+  // m: [nombre, valor, criterio texto, cumple]; v: valor neto acumulado M0..M6 por decisión [seguir, ajustar, cerrar]
+  const P=[
+    {n:'Búsqueda en manuales para técnicos (nivel 1)',d:'15 técnicos de una zona, ocho semanas, en el celular. Criterios acordados antes: uso, respuestas correctas y menos llamadas al soporte. Resguardo: ninguna respuesta con un procedimiento de seguridad equivocado.',
+     m:[['Técnicos que la usan cada semana','87 %','≥ 60 %',1],['Respuestas correctas (muestra)','84 %','≥ 80 %',1],['Llamadas al soporte interno','−31 %','≤ −20 %',1],['Procedimientos de seguridad equivocados','0','parar si ≥ 1',1]],
+     best:0,v:[[0,1.5,3.5,6,8.5,11,13.5],[0,-1,0,1.5,3.5,5.5,7.5],[0,-.5,-.5,-.5,-.5,-.5,-.5]],
+     r:['Seguir era lo indicado: los cuatro criterios se cumplen con margen. En seis meses llegó a los 120 técnicos y su valor siguió creciendo.','Ajustar sin una causa que corregir solo atrasó dos meses un caso que ya funcionaba: el equipo pasó ocho semanas midiendo lo que ya sabía.','Cerrar un caso que cumple todo tira la inversión hecha y deja a los técnicos llamando al soporte como antes.']},
+    {n:'Recordatorios de cobranza personalizados (nivel 2)',d:'2.000 clientes atrasados contra un grupo de comparación de 2.000. Criterios: pago a 30 días +5 puntos frente al grupo. Resguardo: quejas por el tono por debajo de 0,5 %.',
+     m:[['Pago a 30 días frente al grupo','+2 puntos','≥ +5',0],['Mensajes entregados','98 %','≥ 95 %',1],['Quejas por el tono','0,6 %','parar si > 0,5 %',0],['Costo por mensaje','0,01','≤ 0,02',1]],
+     best:1,v:[[0,-1,-2.5,-4,-5,-6.5,-8],[0,-1,-1.5,0,2,4,6],[0,-.5,-.5,-.5,-.5,-.5,-.5]],
+     r:['Seguir con el resguardo en rojo fue un error: las quejas siguieron, el tono dañó la relación con buenos clientes y el comité terminó deteniéndolo igual, más tarde y con más costo.','Ajustar era lo indicado: había una causa clara (el tono con clientes que siempre pagaban) que se corrigió con tres plantillas según el historial. Volvió en dos meses y pasó a producción.','Cerrar habría perdido un caso con una causa corregible: el pago mejoró algo y el problema era de redacción, no de idea.']},
+    {n:'Clasificación automática de correos entrantes (nivel 1)',d:'Clasifica y enruta los correos de clientes. Criterios: clasificación correcta y menos espera en la cola. Se ajustó una vez, a mitad del piloto, sin mejorar.',
+     m:[['Clasificación correcta','71 %','≥ 90 %',0],['Espera en la cola','−4 %','≤ −20 %',0],['Correos reenviados a mano','22 %','≤ 10 %',0],['Ya se ajustó antes','1 vez','máximo 1',0]],
+     best:2,v:[[0,-1.5,-3,-4.5,-6,-7.5,-9],[0,-1.5,-3,-4,-5,-6,-7],[0,-.5,-.5,-.5,-.5,-.5,-.5]],
+     r:['Seguir sostuvo un caso que no cumplía nada: cada mes costó más que lo que liberaba, y los agentes siguieron reenviando a mano.','Ajustar por segunda vez no encontró una causa nueva y alargó el gasto. Un caso que se ajusta dos veces sin cumplir es un caso que se cierra.','Cerrar era lo indicado: ningún criterio se cumplía y ya se había ajustado una vez. El equipo pasó a otro caso y lo aprendido (las categorías del sistema estaban mal definidas) quedó en el registro.']}
+  ];
+  const DN=['seguir','ajustar','cerrar'];
+  let p=0,d=-1;
+  const dibujar=canvasWidget($('#c11l2-cv'),w=>(w<520?.62:.36),(ctx,w,h)=>{
+    ctx.clearRect(0,0,w,h);const S=P[p];const L=44,R=14,T=12,B=26;
+    const all=S.v.flat(),mn=Math.min(-2,...all),mx=Math.max(2,...all);
+    const X=t=>L+t/6*(w-L-R),Y=v=>T+(mx-v)/(mx-mn)*(h-T-B);
+    ctx.font='11px '+tok('--f-mono');ctx.fillStyle=tok('--muted');ctx.strokeStyle=tok('--grid');ctx.lineWidth=1;
+    for(let v=Math.ceil(mn/2)*2;v<=mx;v+=2){ctx.beginPath();ctx.moveTo(L,Y(v));ctx.lineTo(w-R,Y(v));ctx.stroke();ctx.textAlign='right';ctx.textBaseline='middle';ctx.fillText((v>0?'+':'')+v+' k',L-5,Y(v));}
+    ctx.strokeStyle=tok('--muted');ctx.lineWidth=1.3;ctx.beginPath();ctx.moveTo(L,Y(0));ctx.lineTo(w-R,Y(0));ctx.stroke();
+    ctx.textAlign='center';ctx.textBaseline='top';for(let t=0;t<=6;t++)ctx.fillText(t===0?(w<520?'d90':'día 90'):'+'+t+(w<520?'':' m'),X(t),h-B+7);
+    const col=[tok('--good'),tok('--accent'),tok('--muted')];
+    if(d>=0)[2,1,0].forEach(k=>{const ver=d>=0;ctx.globalAlpha=!ver||k===d?1:.3;ctx.strokeStyle=col[k];ctx.lineWidth=k===d?3.5:1.8;ctx.setLineDash(ver?[]:[5,4]);
+      ctx.beginPath();S.v[k].forEach((v,t)=>t?ctx.lineTo(X(t),Y(v)):ctx.moveTo(X(t),Y(v)));ctx.stroke();ctx.setLineDash([]);
+      if(ver){ctx.fillStyle=col[k];ctx.font='600 11px '+tok('--f-display');ctx.textAlign='right';ctx.textBaseline='bottom';ctx.fillText(DN[k],X(6)-2,Y(S.v[k][6])-4);}});
+    ctx.globalAlpha=1;
+    if(d<0){ctx.fillStyle=tok('--ink');ctx.font='600 12px '+tok('--f-display');ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('Decide para ver qué pasó',L+(w-L-R)/2,T+14);}
+  });
+  function pintar(){
+    const S=P[p];
+    document.querySelectorAll('[id^="c11l2-p"]').forEach((b,i)=>b.setAttribute('aria-pressed',i===p?'true':'false'));
+    document.querySelectorAll('[id^="c11l2-d"]').forEach((b,i)=>b.setAttribute('aria-pressed',i===d?'true':'false'));
+    $('#c11l2-desc').textContent=S.n+'. '+S.d;
+    $('#c11l2-m').innerHTML=S.m.map(([n,v,c,ok])=>'<div class="c11l2-k '+(ok?'ok':'no')+'"><span>'+n+'</span><b>'+v+'</b><em>'+(ok?'✓ cumple':'✗ no cumple')+' · '+c+'</em></div>').join('');
+    const cumple=S.m.filter(x=>x[3]).length;
+    let h='';
+    if(d<0)h='<span class="big">Cumple '+cumple+' de '+S.m.length+' criterios. ¿Seguir, ajustar o cerrar?</span><span>Mira primero las tarjetas de resguardo (las que dicen «parar si») y después si hay una causa que se pueda corregir.</span>';
+    else{const fin=S.v[d][6],mej=S.v[S.best][6];
+      h='<span class="big">Decidiste '+DN[d]+': valor neto a seis meses '+(fin>0?'+':'')+fin.toLocaleString('es')+' mil.</span>';
+      h+='<span class="'+(d===S.best?'ok':'warn')+'">'+S.r[d]+'</span>';
+      if(d!==S.best)h+='<span>La mejor decisión era '+DN[S.best]+' ('+(mej>0?'+':'')+mej.toLocaleString('es')+' mil a seis meses).</span>';}
+    $('#c11l2-out').innerHTML=h;dibujar();
+  }
+  [0,1,2].forEach(i=>{$('#c11l2-p'+i).addEventListener('click',()=>{p=i;d=-1;pintar();});$('#c11l2-d'+i).addEventListener('click',()=>{d=i;pintar();});});
+  pintar();
+})();
+</script>
+<script>
+(function(){
+  const {$}=window.Lab;
+  const COLS=['T1 · meses 1-3','T2 · meses 4-6','T3 · meses 7-9','T4 · meses 10-12','Año 2'];
+  const CAP=15;
+  // e: esfuerzo del centro de excelencia; d: dependencias [id, permite mismo trimestre]; p: proceso cambiado
+  const IT=[
+    {k:'B1',n:'Datos con dueño y vigencia',b:1,e:3,d:[]},
+    {k:'B2',n:'Política y clasificación de datos',b:1,e:1,d:[]},
+    {k:'B3',n:'Pasarela, SSO y registro',b:1,e:4,d:[]},
+    {k:'B4',n:'API de órdenes (la hace sistemas)',b:1,e:0,d:[]},
+    {k:'C1',n:'N1 · Base de conocimiento con fuentes',e:4,d:[['B1',1],['B2',1],['B3',1]]},
+    {k:'C2',n:'N1 · Borradores de reclamos',e:3,p:1,d:[['C1',1]]},
+    {k:'C3',n:'N1 · Búsqueda en manuales',e:2,p:1,d:[['C1',1]]},
+    {k:'C4',n:'N2 · Recordatorios de cobranza',e:3,p:1,d:[['B2',1],['B3',1],['C2',0]]},
+    {k:'C5',n:'N2 · Asistente de técnicos',e:3,p:1,d:[['C3',0]]},
+    {k:'C6',n:'N3 · Reprogramación de visitas',e:5,p:1,d:[['B4',0],['C3',0]]},
+    {k:'C7',n:'N4 · Piloto del agente de avería',e:4,d:[['C6',0],['C2',0]]}
+  ];
+  const PLAN=[0,0,0,1,0,0,1,1,2,2,3];
+  const TODO=[0,0,0,0,0,0,0,0,0,0,0];
+  const SIN=[2,2,3,3,0,0,0,1,1,1,2];
+  let Q=PLAN.slice();
+  const nombre=k=>IT.find(x=>x.k===k).n;
+  function evaluar(){
+    const est=IT.map(()=>({rota:[],justa:[]}));
+    IT.forEach((it,i)=>{if(Q[i]===4)return;it.d.forEach(([k,mismo])=>{const j=IT.findIndex(x=>x.k===k),q=Q[j];
+      if(q===4||q>Q[i]||(q===Q[i]&&!mismo))est[i].rota.push(k);else if(q===Q[i])est[i].justa.push(k);});});
+    const carga=[0,0,0,0];IT.forEach((it,i)=>{if(Q[i]<4)carga[Q[i]]+=it.e;});
+    return {est,carga};
+  }
+  function pintar(){
+    const {est,carga}=evaluar();const tab=$('#c11l1-tab');tab.innerHTML='';
+    COLS.forEach((c,q)=>{const col=document.createElement('div');col.className='c11l1-col';
+      let h='<h4>'+c+'</h4>';
+      if(q<4){const pct=Math.min(100,carga[q]/CAP*100);h+='<div class="c11l1-carga'+(carga[q]>CAP?' sobre':'')+'" role="img" aria-label="Carga '+carga[q]+' de '+CAP+'"><i style="width:'+pct+'%"></i></div><div class="c11l1-cn">carga: '+carga[q]+' / '+CAP+'</div>';}
+      col.innerHTML=h;
+      IT.forEach((it,i)=>{if(Q[i]!==q)return;const t=document.createElement('div');
+        t.className='c11l1-t'+(it.b?' base':'')+(est[i].rota.length?' mal':est[i].justa.length?' justo':'');
+        let info=est[i].rota.length?'espera: '+est[i].rota.join(', '):est[i].justa.length?'justo: '+est[i].justa.join(', '):'esfuerzo '+it.e;
+        t.innerHTML='<span>'+it.k+' · '+it.n+'<small>'+info+'</small></span><span class="c11l1-mv"><button type="button" aria-label="Adelantar '+it.n+'" data-i="'+i+'" data-d="-1"'+(q===0?' disabled':'')+'>◀</button><button type="button" aria-label="Atrasar '+it.n+'" data-i="'+i+'" data-d="1"'+(q===4?' disabled':'')+'>▶</button></span>';
+        col.appendChild(t);});
+      tab.appendChild(col);});
+    leer(est,carga);
+  }
+  function leer(est,carga){
+    const rotas=[],justas=[];
+    IT.forEach((it,i)=>{est[i].rota.forEach(k=>rotas.push(it.k+' necesita '+k+' ('+nombre(k).toLowerCase()+') listo antes'));est[i].justa.forEach(k=>justas.push(it.k+' con '+k));});
+    const sobre=carga.map((c,q)=>c>CAP?COLS[q].split(' ·')[0]+' ('+c+' de '+CAP+')':null).filter(Boolean);
+    // un proceso cambia al mes 12 si su caso está en T1-T3 (o T4 para nivel 1-2) y sin dependencias rotas; meses de beneficio = 12 - fin del trimestre
+    let proc=0,meses=0;
+    IT.forEach((it,i)=>{if(!it.p||Q[i]>3||est[i].rota.length)return;proc++;meses+=Math.max(0,12-3*(Q[i]+1));});
+    const okC7=Q[10]<4&&!est[10].rota.length;
+    let h='<span class="big">Al mes 12: '+proc+' procesos cambiados'+(okC7?' y un piloto de nivel 4':'')+'; '+meses+' meses-caso de beneficio en el año.</span>';
+    if(rotas.length)h+='<span class="warn">Dependencias rotas ('+rotas.length+'): '+rotas.join('; ')+'. Esos casos no pueden empezar: no cuentan.</span>';
+    if(sobre.length)h+='<span class="warn">Centro de excelencia sobrecargado en '+sobre.join(', ')+'. Con cuatro personas, algo se atrasa o se hace mal.</span>';
+    if(justas.length&&!rotas.length)h+='<span>Quedan justas (mismo trimestre): '+justas.join('; ')+'. Funciona si la base termina en el primer mes y medio del trimestre.</span>';
+    if(!rotas.length&&!sobre.length)h+='<span class="ok">Ninguna dependencia rota y nadie sobrecargado. '+(Q[10]===3?'El piloto de nivel 4 llega al final del año, sobre un nivel 3 que ya funciona.':'')+'</span>';
+    if(Q.every((q,i)=>q===PLAN[i]))h+='<span>Es el plan que aprobó la empresa ficticia: la carga más alta es la del primer trimestre (las bases), y queda holgura en el segundo semestre para ajustar un caso sin atrasar los demás.</span>';
+    $('#c11l1-out').innerHTML=h;
+  }
+  $('#c11l1-tab').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const i=+b.dataset.i;Q[i]=Math.max(0,Math.min(4,Q[i]+ +b.dataset.d));
+    document.querySelectorAll('#c11l1-todo,#c11l1-sin,#c11l1-plan').forEach(x=>x.setAttribute('aria-pressed','false'));pintar();
+    const nb=document.querySelector('#c11l1-tab button[data-i="'+i+'"][data-d="'+b.dataset.d+'"]');if(nb&&!nb.disabled)nb.focus();});
+  const pon=(arr,id)=>{Q=arr.slice();document.querySelectorAll('#c11l1-todo,#c11l1-sin,#c11l1-plan').forEach(x=>x.setAttribute('aria-pressed',x.id===id?'true':'false'));pintar();};
+  $('#c11l1-todo').addEventListener('click',()=>pon(TODO,'c11l1-todo'));
+  $('#c11l1-sin').addEventListener('click',()=>pon(SIN,'c11l1-sin'));
+  $('#c11l1-plan').addEventListener('click',()=>pon(PLAN,'c11l1-plan'));
+  pon(PLAN,'c11l1-plan');
+})();
+</script>
+</body>
+</html>

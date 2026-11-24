@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KX76XF8R');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Comprar o construir · IA en la empresa · IA en la empresa</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Los pasos que da una empresa para adoptar la IA: diagnóstico, portafolio de casos, caso de negocio, modelo operativo, personas, pilotos que escalan, KPI y gobierno, recorridos con una empresa de servicios que sube la escalera de cinco niveles en doce meses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX76XF8R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="wrap" data-page="comprar-o-construir">
+<header class="topbar"><a class="brand" href="index.html">IA en la <b>empresa</b></a><span class="eyebrow">Curso visual e interactivo · Datos e inteligencia artificial</span><a class="al-sitio" href="https://aaramirez.github.io/">← Todos los cursos</a></header>
+<div class="layout">
+<nav class="toc" id="toc" aria-label="Ruta de aprendizaje"></nav>
+<main>
+<header class="page-head"><span class="num">CAPÍTULO 08 DE 14</span><h1>Comprar, construir o combinar: plataforma y proveedores</h1><p class="lede">Cada caso del portafolio pide herramientas, y casi todas se pueden comprar hechas, construir sobre una plataforma propia o armar con una mezcla de las dos. Este capítulo muestra qué herramientas pide cada nivel de la escalera, qué conviene compartir entre todos los casos y cómo elegir proveedores sin quedar atrapado.</p></header>
+<section><div class="prose"><p>La empresa ficticia ya tiene un portafolio de cinco casos (capítulo 5), un caso de negocio para el primero (capítulo 6) y un centro de excelencia de cuatro personas que coordina la IA (capítulo 7). La pregunta que llega ahora a la mesa del comité viene con folletos: un proveedor ofrece «un asistente para atención al cliente listo en dos semanas», otro ofrece «una plataforma para construir todos sus casos», y el área de sistemas dice que puede hacerlo «en casa» con un modelo abierto. Los tres tienen algo de razón.</p></div><div class="analogia"><b>Imagínalo así</b><p>Piensa en cómo se equipa una cocina de restaurante. Nadie fabrica su propio horno ni su refrigerador: se compran, porque todos los restaurantes los necesitan iguales. La receta de la casa, en cambio, no se compra: es lo que hace que la gente vuelva. Y entre las dos cosas hay una mezcla: la masa de hojaldre se compra hecha y el relleno se prepara en la cocina. Además, el gas, el agua y la cámara de frío son de todos los platos: se instalan una vez y los usan todos. Con la IA es igual: hay hornos, hay recetas y hay instalaciones comunes.</p></div><div class="prose"><p>Este capítulo ordena esa decisión en cuatro pasos: qué herramientas pide cada nivel, qué se comparte entre todos los casos, cómo decidir caso por caso entre comprar, construir o combinar, y cómo elegir y contratar a los proveedores.</p></div></section>
+<section><h2>Las herramientas por nivel, como categorías</h2><div class="prose"><p>Los productos cambian cada mes; las categorías, mucho menos. Por eso conviene pensar en <b>categorías de herramientas</b> y no en marcas. Cada nivel de la escalera del capítulo 2 agrega categorías nuevas y usa las del nivel anterior.</p><p><b>Nivel 1, generar con contexto.</b> El corazón es la búsqueda en los documentos de la empresa con respuesta citada (la técnica <b>RAG</b>, <i>Retrieval-Augmented Generation</i>, generación aumentada con recuperación). Pide:</p><ul><li>un <b>proveedor de modelos</b> (<i>model provider</i>): la empresa que ofrece el modelo de lenguaje por API;</li><li><b>conectores</b> (<i>connectors</i>) que leen las carpetas compartidas, el gestor de documentos o la wiki, respetando los permisos;</li><li>un <b>modelo de incrustaciones</b> (<i>embedding model</i>), que convierte cada fragmento de texto en una lista de números que representa su significado, y una <b>base de datos vectorial</b> (<i>vector database</i>), que guarda esas listas y encuentra los fragmentos parecidos a una pregunta;</li><li>lectores de PDF y de documentos escaneados (<b>OCR</b>, <i>Optical Character Recognition</i>, reconocimiento óptico de caracteres);</li><li>un <b>repositorio de instrucciones</b> (<i>prompt repository</i>) con versiones y un <b>banco de evaluación</b> (<i>evaluation harness</i>) que mide si las respuestas son correctas.</li></ul><p><b>Nivel 2, interacciones personalizadas.</b> Se agregan la identidad y la memoria: el <b>inicio de sesión único</b> (<i>single sign-on</i>, SSO) y el <b>control de acceso por rol</b> (<i>role-based access control</i>, RBAC), un almacén de memoria de la conversación con reglas de retención, y los <b>adaptadores de canal</b> (<i>channel adapters</i>) para el chat web, el correo, la mensajería corporativa o WhatsApp. Si hay voz, también <b>reconocimiento de voz</b> (<i>speech-to-text</i>) y <b>síntesis de voz</b> (<i>text-to-speech</i>).</p><p><b>Nivel 3, automatizaciones.</b> La IA empieza a actuar en los sistemas, y aparecen las integraciones: clientes de API para el CRM, los tickets o las órdenes de trabajo; servidores de herramientas con el <b>MCP</b> (<i>Model Context Protocol</i>, protocolo de contexto de modelos), una norma abierta para describirle a un modelo qué herramientas puede usar y con qué datos; un <b>orquestador de flujos</b> (<i>workflow orchestrator</i>) que ejecuta los pasos, reintenta y deja registro; un servicio de <b>aprobaciones</b> y un <b>motor de políticas</b> (<i>policy engine</i>) que decide qué acción está permitida para quién.</p><p><b>Nivel 4, agentes con objetivos.</b> Una <b>plataforma de agentes</b> (<i>agent runtime</i>) que planifica, ejecuta y revisa; un gestor de <b>presupuestos</b> de tiempo, costo y pasos; y evaluadores de tareas completas.</p><p><b>Nivel 5, modelos ajustados.</b> Infraestructura de entrenamiento (normalmente alquilada en la nube), un <b>registro de modelos</b> (<i>model registry</i>) con sus versiones y un <b>enrutador de modelos</b> (<i>model router</i>) que manda cada pedido al modelo que corresponde.</p></div><figure class="fig fig-capas" id="08-diagrama-1"><div class="lienzo"><svg viewBox="0 0 900 470" style="min-width:700px" role="img" aria-label="Capas de herramientas por nivel de la escalera, de abajo hacia arriba: nivel 1 con proveedor de modelos, conectores, incrustaciones y base vectorial, lectores de documentos y banco de evaluación; nivel 2 con SSO y permisos por rol, memoria con retención y adaptadores de canal y voz; nivel 3 con integraciones por API y MCP, orquestador, aprobaciones y motor de políticas; nivel 4 con plataforma de agentes, presupuestos y evaluadores; nivel 5 con infraestructura de entrenamiento, registro de modelos y enrutador. Al fondo, la plataforma común: identidad, monitoreo, costos y registro de auditoría">
+  <text x="20" y="24" class="t t-xs t-b t-m">NIVEL DE LA ESCALERA</text>
+  <text x="250" y="24" class="t t-xs t-b t-m">CATEGORÍAS DE HERRAMIENTAS QUE AGREGA</text>
+
+  
+  <rect x="20" y="36" width="860" height="58" rx="10" class="c-apl"/>
+  <text x="36" y="60" class="t t-xs t-b t-m">NIVEL 5</text>
+  <text x="36" y="80" class="t t-b">Modelos ajustados</text>
+  <g class="t t-s">
+    <rect x="250" y="48" width="190" height="34" rx="6" class="caja"/><text x="345" y="69" text-anchor="middle">Infraestructura de entrenamiento</text>
+    <rect x="452" y="48" width="190" height="34" rx="6" class="caja"/><text x="547" y="69" text-anchor="middle">Registro de modelos</text>
+    <rect x="654" y="48" width="210" height="34" rx="6" class="caja"/><text x="759" y="69" text-anchor="middle">Enrutador de modelos</text>
+  </g>
+
+  
+  <rect x="20" y="102" width="860" height="58" rx="10" class="c-tra"/>
+  <text x="36" y="126" class="t t-xs t-b t-m">NIVEL 4</text>
+  <text x="36" y="146" class="t t-b">Agentes con objetivos</text>
+  <g class="t t-s">
+    <rect x="250" y="114" width="190" height="34" rx="6" class="caja"/><text x="345" y="135" text-anchor="middle">Plataforma de agentes</text>
+    <rect x="452" y="114" width="190" height="34" rx="6" class="caja"/><text x="547" y="135" text-anchor="middle">Presupuestos y límites</text>
+    <rect x="654" y="114" width="210" height="34" rx="6" class="caja"/><text x="759" y="135" text-anchor="middle">Evaluadores de tareas</text>
+  </g>
+
+  
+  <rect x="20" y="168" width="860" height="58" rx="10" class="c-red"/>
+  <text x="36" y="192" class="t t-xs t-b t-m">NIVEL 3</text>
+  <text x="36" y="212" class="t t-b">Automatizaciones</text>
+  <g class="t t-s">
+    <rect x="250" y="180" width="148" height="34" rx="6" class="caja"/><text x="324" y="201" text-anchor="middle">APIs y servidores MCP</text>
+    <rect x="404" y="180" width="148" height="34" rx="6" class="caja"/><text x="478" y="201" text-anchor="middle">Orquestador</text>
+    <rect x="558" y="180" width="148" height="34" rx="6" class="caja"/><text x="632" y="201" text-anchor="middle">Aprobaciones</text>
+    <rect x="712" y="180" width="152" height="34" rx="6" class="caja"/><text x="788" y="201" text-anchor="middle">Motor de políticas</text>
+  </g>
+
+  
+  <rect x="20" y="234" width="860" height="58" rx="10" class="c-enl"/>
+  <text x="36" y="252" class="t t-xs t-b t-m">NIVEL 2</text>
+  <text x="36" y="269" class="t t-b">Interacciones</text>
+  <text x="36" y="285" class="t t-b">personalizadas</text>
+  <g class="t t-s">
+    <rect x="250" y="246" width="190" height="34" rx="6" class="caja"/><text x="345" y="267" text-anchor="middle">SSO y permisos por rol</text>
+    <rect x="452" y="246" width="190" height="34" rx="6" class="caja"/><text x="547" y="267" text-anchor="middle">Memoria con retención</text>
+    <rect x="654" y="246" width="210" height="34" rx="6" class="caja"/><text x="759" y="267" text-anchor="middle">Canales y voz</text>
+  </g>
+
+  
+  <rect x="20" y="300" width="860" height="92" rx="10" class="c-fis"/>
+  <text x="36" y="324" class="t t-xs t-b t-m">NIVEL 1</text>
+  <text x="36" y="344" class="t t-b">Generar con</text>
+  <text x="36" y="361" class="t t-b">contexto</text>
+  <g class="t t-s">
+    <rect x="250" y="312" width="190" height="34" rx="6" class="caja"/><text x="345" y="333" text-anchor="middle">Proveedor de modelos (API)</text>
+    <rect x="452" y="312" width="190" height="34" rx="6" class="caja"/><text x="547" y="333" text-anchor="middle">Conectores a documentos</text>
+    <rect x="654" y="312" width="210" height="34" rx="6" class="caja"/><text x="759" y="333" text-anchor="middle">Incrustaciones + base vectorial</text>
+    <rect x="250" y="352" width="190" height="34" rx="6" class="caja"/><text x="345" y="373" text-anchor="middle">Lectores de PDF y OCR</text>
+    <rect x="452" y="352" width="190" height="34" rx="6" class="caja"/><text x="547" y="373" text-anchor="middle">Instrucciones con versiones</text>
+    <rect x="654" y="352" width="210" height="34" rx="6" class="caja"/><text x="759" y="373" text-anchor="middle">Banco de evaluación</text>
+  </g>
+
+  
+  <rect x="20" y="402" width="860" height="56" rx="10" class="caja" style="stroke-width:2.2"/>
+  <text x="36" y="426" class="t t-xs t-b">PLATAFORMA COMÚN</text>
+  <text x="36" y="446" class="t t-s t-m">la usan todos los niveles</text>
+  <text x="560" y="436" class="t t-s" text-anchor="middle"><tspan class="t-b">Pasarela de IA:</tspan> identidad · monitoreo · costos por caso · registro de auditoría</text>
+</svg></div><figcaption><b>Las herramientas que pide cada nivel.</b> Cada fila es un nivel de la escalera, con el mismo color que en el capítulo 2, y a la derecha las categorías de herramientas que agrega. Se lee de abajo hacia arriba: cada nivel usa todo lo de las filas inferiores. La franja de abajo, con borde grueso, es la plataforma común, que no pertenece a ningún nivel porque la usan todos.</figcaption></figure><div class="prose"><p>Una advertencia práctica: la empresa no necesita todas las categorías el primer año. La empresa ficticia, con tres casos de nivel 1, uno de nivel 2 y uno de nivel 3 para el segundo semestre, necesita las filas 1 y 2 completas, una parte de la fila 3 y nada de las filas 4 y 5. Comprar una «plataforma de agentes» en el mes dos es pagar por un piso que todavía no se construye.</p></div></section>
+<section><h2>Lo que se comparte entre todos los casos</h2><div class="prose"><p>Si cada caso compra o construye todo lo suyo, en un año la empresa tiene cinco proveedores de modelos, cinco formas de iniciar sesión, cinco facturas por consumo y ningún lugar donde ver qué datos salieron hacia dónde. Es el «cementerio de pilotos» del capítulo 1, pero en producción.</p></div><div class="analogia"><b>Imagínalo así</b><p>En un edificio de oficinas, cada empresa decora su piso como quiere, pero la entrada con control de acceso, el ascensor, la electricidad con su medidor y las cámaras del pasillo son del edificio. Nadie instala su propio ascensor. Lo compartido no es lo que se ve; es lo que hace posible que cada piso funcione y que alguien sepa quién entró.</p></div><div class="prose"><p>La <b>plataforma común</b> (<i>shared platform</i>) es el conjunto de piezas que usan todos los casos. Tiene cuatro que no se negocian:</p><ol class="steps"><li><span><b>Identidad.</b> Todo pedido a la IA llega con la cuenta corporativa de quien lo hace (SSO) y sus permisos (RBAC). Así el asistente solo encuentra los documentos que esa persona ya podía ver.</span></li><li><span><b>Monitoreo.</b> La <b>observabilidad</b> (<i>observability</i>) es la capacidad de ver qué pasa dentro del sistema: cuántos pedidos, cuánto tardan, cuántos fallan y qué calidad tuvieron las respuestas. Sin ella, un problema se descubre por la queja de un cliente.</span></li><li><span><b>Costos.</b> Los proveedores cobran por <b>token</b> (<i>token</i>), un trozo de palabra que el modelo procesa; la plataforma cuenta los tokens de cada caso y de cada área, fija topes y avisa antes de que llegue la factura.</span></li><li><span><b>Registro de auditoría</b> (<i>audit log</i>): quién pidió qué, con qué datos, qué respondió el modelo, qué versión de las instrucciones se usó y quién aprobó.</span></li></ol><p>En la práctica, esas cuatro piezas se juntan en la <b>pasarela de IA</b> (<i>AI gateway</i>) que apareció en el capítulo 6 para medir el consumo: un servicio intermedio por el que pasan todos los pedidos de todos los casos antes de llegar a cualquier proveedor de modelos. Es la portería del edificio. Hay pasarelas como producto del mercado (las ofrecen los grandes proveedores de nube y empresas especializadas, y existen opciones de código abierto como LiteLLM), y también se construyen sobre un <b>proxy de API</b> que la empresa ya tenga.</p></div><figure class="fig fig-flujo" id="08-diagrama-2"><div class="lienzo"><svg viewBox="0 0 1000 540" style="min-width:740px" role="img" aria-label="Diagrama de secuencia de un pedido que pasa por la plataforma común: el agente pide un borrador en el sistema de tickets, la aplicación llama a la pasarela de IA con el token del agente, la pasarela verifica identidad y rol con el SSO, aplica la política y elige el modelo, envía el pedido al proveedor, recibe la respuesta y los tokens, escribe el registro de auditoría y el costo, y devuelve el borrador">
+  <defs>
+    <marker id="c8d2-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="fl-muted"/></marker>
+    <marker id="c8d2-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="k-red"/></marker>
+    <marker id="c8d2-e" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="k-enl"/></marker>
+    <marker id="c8d2-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="k-apl"/></marker>
+  </defs>
+  
+  <rect x="20" y="14" width="130" height="56" rx="10" class="caja"/><text x="85" y="38" class="t t-b" text-anchor="middle">Agente de</text><text x="85" y="56" class="t t-b" text-anchor="middle">atención</text>
+  <rect x="180" y="14" width="140" height="56" rx="10" class="c-red"/><text x="250" y="38" class="t t-b" text-anchor="middle">Sistema de</text><text x="250" y="56" class="t t-b" text-anchor="middle">tickets (caso)</text>
+  <rect x="360" y="14" width="160" height="56" rx="10" class="d-sis"/><text x="440" y="38" class="t t-b" text-anchor="middle">Pasarela de IA</text><text x="440" y="56" class="t t-s t-m" text-anchor="middle">plataforma común</text>
+  <rect x="560" y="14" width="120" height="56" rx="10" class="c-enl"/><text x="620" y="38" class="t t-b" text-anchor="middle">SSO</text><text x="620" y="56" class="t t-s t-m" text-anchor="middle">identidad y rol</text>
+  <rect x="720" y="14" width="150" height="56" rx="10" class="c-apl"/><text x="795" y="38" class="t t-b" text-anchor="middle">Proveedor</text><text x="795" y="56" class="t t-b" text-anchor="middle">de modelos</text>
+  <line x1="85" y1="70" x2="85" y2="520" class="vida"/>
+  <line x1="250" y1="70" x2="250" y2="520" class="vida"/>
+  <line x1="440" y1="70" x2="440" y2="520" class="vida"/>
+  <line x1="620" y1="70" x2="620" y2="520" class="vida"/>
+  <line x1="795" y1="70" x2="795" y2="520" class="vida"/>
+
+  
+  <line x1="85" y1="110" x2="248" y2="116" class="ln" style="stroke-width:2" marker-end="url(#c8d2-m)"/>
+  <text x="92" y="102" class="t t-s">① «Borrador, por favor»</text>
+  
+  <line x1="250" y1="152" x2="438" y2="158" class="ln s-red" style="stroke-width:2" marker-end="url(#c8d2-r)"/>
+  <text x="258" y="144" class="t t-s">② API + token de sesión</text>
+  
+  <line x1="440" y1="192" x2="618" y2="198" class="ln s-enl" style="stroke-width:2" marker-end="url(#c8d2-e)"/>
+  <text x="448" y="184" class="t t-s">③ ¿Quién es? ¿Qué rol?</text>
+  <line x1="620" y1="222" x2="442" y2="228" class="ln s-enl" style="stroke-width:2" marker-end="url(#c8d2-e)"/>
+  <text x="470" y="244" class="t t-s">agente · atención · nivel 1</text>
+  
+  <path d="M440 266 h50 v40 h-48" class="ln s-red" style="stroke-width:2" marker-end="url(#c8d2-r)"/>
+  <text x="498" y="278" class="t t-s">④ Política: enmascara datos</text>
+  <text x="498" y="294" class="t t-s">sensibles, revisa el tope de</text>
+  <text x="498" y="310" class="t t-s">gasto y elige el modelo</text>
+  
+  <line x1="440" y1="346" x2="793" y2="352" class="ln s-apl" style="stroke-width:2.4" marker-end="url(#c8d2-a)"/>
+  <text x="560" y="338" class="t t-s">⑤ Pedido al modelo pequeño</text>
+  
+  <line x1="795" y1="380" x2="442" y2="386" class="ln s-apl" style="stroke-width:2.4" marker-end="url(#c8d2-a)"/>
+  <text x="560" y="402" class="t t-s">⑥ Respuesta + 4.400 tokens</text>
+  
+  <path d="M440 422 h50 v34 h-48" class="ln s-red" style="stroke-width:2" marker-end="url(#c8d2-r)"/>
+  <text x="498" y="434" class="t t-s">⑦ Registro: quién, qué, versión</text>
+  <text x="498" y="450" class="t t-s">de instrucciones, costo del caso</text>
+  
+  <line x1="440" y1="486" x2="252" y2="492" class="ln s-red" style="stroke-width:2" marker-end="url(#c8d2-r)"/>
+  <text x="270" y="480" class="t t-s">⑧ Borrador</text>
+
+  
+  <g class="t t-xs t-b">
+    <path d="M900 100v136" class="ln s-enl" style="stroke-width:3"/><text x="910" y="160" class="k-enl">IDENTIFICAR</text><text x="910" y="176" class="t-m">SSO y rol</text>
+    <path d="M900 260v56" class="ln s-red" style="stroke-width:3"/><text x="910" y="284" class="k-red">CONTROLAR</text><text x="910" y="300" class="t-m">política</text>
+    <path d="M900 336v60" class="ln s-apl" style="stroke-width:3"/><text x="910" y="362" class="k-apl">GENERAR</text><text x="910" y="378" class="t-m">modelo</text>
+    <path d="M900 416v84" class="ln s-red" style="stroke-width:3"/><text x="910" y="450" class="k-red">REGISTRAR</text><text x="910" y="466" class="t-m">y devolver</text>
+  </g>
+  <text x="10" y="320" class="t t-xs t-m" transform="rotate(-90 10 320)">EL TIEMPO CORRE HACIA ABAJO ↓</text>
+</svg></div><figcaption><b>Un pedido que pasa por la plataforma común.</b> Los participantes están arriba y el tiempo corre hacia abajo. ① Un agente de atención pide un borrador desde el sistema de tickets; ② la aplicación del caso llama a la pasarela con el token de sesión del agente; ③ la pasarela verifica su identidad y su rol con el SSO; ④ aplica la política (datos sensibles enmascarados, tope de gasto del caso) y elige el modelo; ⑤ envía el pedido al proveedor; ⑥ recibe la respuesta y los tokens usados; ⑦ escribe el registro de auditoría y el costo; ⑧ devuelve el borrador a la aplicación. A la derecha, las fases: identificar, controlar, generar y registrar.</figcaption></figure><div class="prose"><p>La ventaja de la pasarela se nota el día que algo cambia. Si un proveedor sube precios, falla o cambia su política de datos, se cambia una configuración en la pasarela y todos los casos siguen funcionando. Si el comité pregunta cuánto gastó atención en noviembre, la respuesta sale de un tablero y no de cinco facturas.</p></div><div class="practica"><div class="practica-title"><span class="tag">En la terminal</span><h3>Una sola API, muchos proveedores</h3></div><p>Vas a consultar la lista pública de modelos de un servicio que reúne a muchos proveedores detrás de una sola API (OpenRouter, un ejemplo del mercado; esta consulta no necesita cuenta). Es lo mismo que hace una pasarela de IA: un formato común delante de varios proveedores. Ejecuta una línea a la vez. Si en macOS o Linux no tienes <code>python3</code>, instálalo o usa solo la primera línea para ver el JSON crudo.</p><div class="cmds"><div class="cmd-tabs" role="tablist" aria-label="Sistema operativo"><button type="button" role="tab" data-so="win">Windows</button><button type="button" role="tab" data-so="mac linux">macOS y Linux</button></div><div class="cmd-panel" role="tabpanel" data-so="win"><p class="cmd-nota">Windows (PowerShell)</p><div class="cmd-l"><code>curl.exe -s https://openrouter.ai/api/v1/models -o modelos.json</code><button type="button" class="copiar">Copiar</button></div><div class="cmd-l"><code>(Get-Content modelos.json -Raw | ConvertFrom-Json).data | Group-Object { $_.id.Split('/')[0] } | Sort-Object Count -Descending | Select-Object -First 15 Count, Name</code><button type="button" class="copiar">Copiar</button></div><div class="cmd-l"><code>(Get-Content modelos.json -Raw | ConvertFrom-Json).data | Where-Object { $_.id -like 'google/*' } | Select-Object id, @{n='entrada_usd_millon';e={[double]$_.pricing.prompt*1e6}}, @{n='salida_usd_millon';e={[double]$_.pricing.completion*1e6}} | Format-Table -AutoSize</code><button type="button" class="copiar">Copiar</button></div></div><div class="cmd-panel" role="tabpanel" data-so="mac linux"><div class="cmd-l"><code>curl -s https://openrouter.ai/api/v1/models -o modelos.json</code><button type="button" class="copiar">Copiar</button></div><div class="cmd-l"><code>python3 -c "import json,collections; c=collections.Counter(m['id'].split('/')[0] for m in json.load(open('modelos.json',encoding='utf-8'))['data']); [print(n,k) for k,n in c.most_common(15)]"</code><button type="button" class="copiar">Copiar</button></div><div class="cmd-l"><code>python3 -c "import json; [print(m['id'], round(float(m['pricing']['prompt'])*1e6,3), round(float(m['pricing']['completion'])*1e6,3)) for m in json.load(open('modelos.json',encoding='utf-8'))['data'] if m['id'].startswith('google/')]"</code><button type="button" class="copiar">Copiar</button></div></div></div><ol class="steps"><li><span>La primera línea descarga la lista. La segunda cuenta cuántos modelos ofrece cada proveedor a través de la misma API.</span></li><li><span>La tercera muestra, para los modelos de un proveedor, el precio en dólares por millón de tokens de entrada y de salida. Cambia <code>google/</code> por otro proveedor de la lista de la segunda línea y vuelve a correrla.</span></li><li><span>Abre el archivo <code>modelos.json</code> con cualquier editor y fíjate en que todos los modelos, de todos los proveedores, se describen con los mismos campos (<code>id</code>, <code>pricing</code>, <code>context_length</code>).</span></li></ol><p><b>Qué observar:</b> decenas de proveedores y cientos de modelos responden con el mismo formato, así que cambiar de modelo es cambiar un nombre en la configuración y no reescribir la aplicación. Esa es la llave de salida que da una pasarela. Los precios confirman además lo que viste en el capítulo 6: dentro de una misma familia, el modelo grande cuesta muchas veces más que el pequeño. Los modelos y precios cambian todo el tiempo.</p></div></section>
+<section><h2>Comprar, construir o combinar: criterios para decidir</h2><div class="prose"><p>Con la plataforma común definida, cada caso se decide por separado. Hay tres caminos:</p><ul><li><b>Comprar</b> una solución hecha: un producto <b>SaaS</b> (<i>Software as a Service</i>, software como servicio) que se paga por usuario o por uso y se configura, sin programar. Ejemplos de categorías: el asistente general de oficina, la transcripción de llamadas que viene con la plataforma de telefonía, el agente de mesa de ayuda incluido en un sistema de tickets.</li><li><b>Construir</b> sobre la plataforma común: el equipo arma el caso con modelos por API, los conectores y la pasarela. Da control total y obliga a mantenerlo.</li><li><b>Combinar</b>: se compra la pieza genérica y se construye la parte propia. Por ejemplo, se usa la función de IA que trae el sistema de tickets, pero conectada por la pasarela y alimentada con la base de conocimiento propia.</li></ul></div><div class="analogia"><b>Imagínalo así</b><p>Es la vieja pregunta de alquilar, comprar o construir una casa. Alquilar es rápido y no exige saber de albañilería, pero no puedes tirar paredes. Construir te da exactamente lo que quieres, pero tarda, cuesta y después hay que mantenerla. Comprar una casa hecha y remodelar la cocina es lo que hace casi todo el mundo.</p></div><div class="prose"><p>Ocho preguntas ordenan la decisión. Ninguna decide sola; juntas inclinan la balanza:</p><div class="tbl"><table><thead><tr><th>Pregunta</th><th>Si la respuesta es «sí», empuja hacia…</th></tr></thead><tbody><tr><td>¿El caso diferencia a la empresa frente a la competencia?</td><td>Construir</td></tr><tr><td>¿Hay un producto en el mercado que cubre al menos el 80 % del caso?</td><td>Comprar</td></tr><tr><td>¿Necesita integrarse con varios sistemas propios (CRM, órdenes, facturación)?</td><td>Construir o combinar</td></tr><tr><td>¿Hay equipo técnico para construirlo y mantenerlo durante años?</td><td>Construir</td></tr><tr><td>¿Se necesita valor en menos de tres meses?</td><td>Comprar</td></tr><tr><td>¿Usa datos que no pueden salir de la empresa o del país?</td><td>Construir o combinar</td></tr><tr><td>¿El volumen es tan alto que el precio por usuario se vuelve caro?</td><td>Construir</td></tr><tr><td>¿El proceso cambia seguido y exige ajustar la lógica?</td><td>Construir o combinar</td></tr></tbody></table></div></div><figure class="fig fig-esquema" id="08-diagrama-3"><div class="lienzo"><svg viewBox="0 0 880 470" style="min-width:680px" role="img" aria-label="Árbol de decisión: si el caso no diferencia a la empresa y hay un producto que cubre el 80 por ciento, se compra; si no lo hay, se combina. Si el caso diferencia y hay equipo para mantenerlo, se construye sobre la plataforma común; si no hay equipo, se combina con un socio. En los tres caminos: identidad corporativa, registro de auditoría y salida escrita en el contrato">
+  <defs>
+    <marker id="c8d3-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="fl-muted"/></marker>
+  </defs>
+  
+  <polygon points="440,14 600,64 440,114 280,64" class="caja" style="stroke-width:1.8"/>
+  <text x="440" y="60" class="t t-b" text-anchor="middle">¿El caso diferencia</text>
+  <text x="440" y="78" class="t t-b" text-anchor="middle">a la empresa?</text>
+
+  
+  <path d="M280 64 H180 V142" class="ln" style="stroke-width:1.8" marker-end="url(#c8d3-m)"/>
+  <text x="230" y="56" class="t t-s t-b" text-anchor="middle">No</text>
+  <path d="M600 64 H700 V142" class="ln" style="stroke-width:1.8" marker-end="url(#c8d3-m)"/>
+  <text x="650" y="56" class="t t-s t-b" text-anchor="middle">Sí</text>
+
+  
+  <polygon points="180,146 320,192 180,238 40,192" class="caja" style="stroke-width:1.8"/>
+  <text x="180" y="188" class="t t-s t-b" text-anchor="middle">¿Hay un producto que</text>
+  <text x="180" y="204" class="t t-s t-b" text-anchor="middle">cubre el 80 %?</text>
+  
+  <polygon points="700,146 840,192 700,238 560,192" class="caja" style="stroke-width:1.8"/>
+  <text x="700" y="188" class="t t-s t-b" text-anchor="middle">¿Hay equipo para</text>
+  <text x="700" y="204" class="t t-s t-b" text-anchor="middle">mantenerlo años?</text>
+
+  <path d="M110 215 V286" class="ln" style="stroke-width:1.8" marker-end="url(#c8d3-m)"/>
+  <text x="96" y="256" class="t t-s t-b" text-anchor="end">Sí</text>
+  <path d="M250 215 V286" class="ln" style="stroke-width:1.8" marker-end="url(#c8d3-m)"/>
+  <text x="264" y="256" class="t t-s t-b">No</text>
+  <path d="M630 215 V286" class="ln" style="stroke-width:1.8" marker-end="url(#c8d3-m)"/>
+  <text x="616" y="256" class="t t-s t-b" text-anchor="end">No</text>
+  <path d="M770 215 V286" class="ln" style="stroke-width:1.8" marker-end="url(#c8d3-m)"/>
+  <text x="784" y="256" class="t t-s t-b">Sí</text>
+
+  
+  <rect x="30" y="290" width="160" height="92" rx="10" class="c-fis"/>
+  <text x="110" y="314" class="t t-b" text-anchor="middle">COMPRAR</text>
+  <text x="110" y="334" class="t t-s" text-anchor="middle">producto del mercado</text>
+  <text x="110" y="350" class="t t-s" text-anchor="middle">conectado a la</text>
+  <text x="110" y="366" class="t t-s" text-anchor="middle">plataforma común</text>
+
+  <rect x="200" y="290" width="200" height="92" rx="10" class="c-enl"/>
+  <text x="300" y="314" class="t t-b" text-anchor="middle">COMBINAR</text>
+  <text x="300" y="334" class="t t-s" text-anchor="middle">comprar la pieza genérica</text>
+  <text x="300" y="350" class="t t-s" text-anchor="middle">y construir lo que falta</text>
+  <text x="300" y="366" class="t t-s t-m" text-anchor="middle">(integraciones, datos)</text>
+
+  <rect x="480" y="290" width="200" height="92" rx="10" class="c-enl"/>
+  <text x="580" y="314" class="t t-b" text-anchor="middle">COMBINAR</text>
+  <text x="580" y="334" class="t t-s" text-anchor="middle">un socio construye sobre</text>
+  <text x="580" y="350" class="t t-s" text-anchor="middle">tu plataforma; el</text>
+  <text x="580" y="366" class="t t-s" text-anchor="middle">conocimiento queda en casa</text>
+
+  <rect x="690" y="290" width="170" height="92" rx="10" class="c-red"/>
+  <text x="775" y="314" class="t t-b" text-anchor="middle">CONSTRUIR</text>
+  <text x="775" y="334" class="t t-s" text-anchor="middle">sobre la plataforma</text>
+  <text x="775" y="350" class="t t-s" text-anchor="middle">común, con modelos</text>
+  <text x="775" y="366" class="t t-s" text-anchor="middle">por API</text>
+
+  
+  <rect x="30" y="404" width="830" height="50" rx="10" class="caja" style="stroke-width:2.2"/>
+  <text x="445" y="424" class="t t-s t-b" text-anchor="middle">En los tres caminos, sin excepción:</text>
+  <text x="445" y="442" class="t t-s" text-anchor="middle">identidad corporativa (SSO) · registro de auditoría · costo medido por caso · salida escrita en el contrato</text>
+</svg></div><figcaption><b>El árbol de decisión de comprar, construir o combinar.</b> Se lee de arriba abajo, respondiendo una pregunta por rombo. La primera es la más importante: si el caso no diferencia a la empresa y existe un producto que lo cubre, se compra, aunque conectado a la plataforma común. Si diferencia, la pregunta siguiente es si hay equipo para mantenerlo. Las hojas de abajo dicen el camino y lo que nunca se negocia en ninguno: identidad, registro y salida.</figcaption></figure><div class="prose"><p>Dos trampas frecuentes. La primera es construir lo que no diferencia: un equipo pasa seis meses haciendo su propio transcriptor de llamadas, que el mercado vende por centavos el minuto. La segunda es comprar lo que sí diferencia: el conocimiento de cómo la empresa resuelve sus reclamos termina viviendo en la configuración de un proveedor del que no se puede salir.</p></div><div class="lab" id="08-lab-1"><div class="lab-title"><span class="tag">Laboratorio</span><h3>Comprar o construir</h3></div><p class="hint">Elige uno de los casos de la empresa ficticia (o empieza de cero) y responde las ocho preguntas. Las barras muestran hacia dónde empuja cada respuesta, y la lectura da la recomendación con su porqué. Cambia una respuesta a la vez para ver cuál pesa más.</p><style>
+[id="08-lab-1"] .c8l1-q{display:grid;gap:6px}
+[id="08-lab-1"] .c8l1-fila{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:center;padding:6px 8px;border:1px solid var(--line);border-radius:8px;font:500 .86rem/1.3 var(--f-display)}
+[id="08-lab-1"] .c8l1-fila .btns button{font-size:.78rem;padding:4px 10px}
+[id="08-lab-1"] .c8l1-fila small{display:block;color:var(--muted);font-size:.74rem;margin-top:2px}
+@media (max-width:520px){[id="08-lab-1"] .c8l1-fila{grid-template-columns:1fr}}
+[id="08-lab-1"] .c8l1-barras{display:grid;gap:8px}
+[id="08-lab-1"] .c8l1-b{display:grid;grid-template-columns:92px 1fr 44px;gap:8px;align-items:center;font:600 .84rem var(--f-display)}
+[id="08-lab-1"] .c8l1-b .pista{height:22px;border-radius:6px;background:var(--paper);border:1px solid var(--line);overflow:hidden}
+[id="08-lab-1"] .c8l1-b .pista i{display:block;height:100%;transition:width .3s ease}
+[id="08-lab-1"] .c8l1-b b{font:600 .82rem var(--f-mono);text-align:right}
+@media (prefers-reduced-motion: reduce){[id="08-lab-1"] .c8l1-b .pista i{transition:none}}
+</style>
+<div class="opciones">
+  <label>Caso de la empresa ficticia
+    <select id="c8l1-caso">
+      <option value="cero">Empezar de cero</option>
+      <option value="asis">Asistente general de oficina</option>
+      <option value="trans">Transcripción de llamadas</option>
+      <option value="borr" selected>Borradores de respuesta a reclamos</option>
+      <option value="repro">Reprogramación de visitas con aprobación</option>
+    </select>
+  </label>
+</div>
+<div class="c8l1-q" id="c8l1-q" role="group" aria-label="Ocho preguntas sobre el caso"></div>
+<div class="c8l1-barras" id="c8l1-barras" aria-hidden="true"></div>
+<div class="readout texto" id="c8l1-out" aria-live="polite"></div></div></section>
+<section><h2>El modelo más pequeño que alcanza la calidad</h2><div class="prose"><p>Un principio de operación del capítulo 1 dice: usar el modelo más pequeño que alcance la calidad pedida y subir solo cuando haga falta. Tiene una razón económica y una técnica.</p><p>La económica ya apareció en el capítulo 6 y en la práctica anterior: entre el modelo pequeño y el grande de una misma familia puede haber un factor de 10 a 100 en el precio por token. Si el caso procesa 20.000 llamadas al mes, esa diferencia es el caso de negocio entero. La técnica es la <b>latencia</b> (<i>latency</i>), el tiempo que tarda la respuesta: los modelos pequeños responden más rápido, y en una conversación con un cliente cada segundo cuenta.</p></div><div class="analogia"><b>Imagínalo así</b><p>Para ir a la panadería de la esquina no se pide un camión de mudanzas. El camión puede hacer el viaje, claro, pero cuesta más, tarda más en arrancar y no cabe en la calle. Y para mudarte no sirve la bicicleta. El truco es saber qué viaje es cada pedido.</p></div><div class="prose"><p>¿Cómo se sabe si el modelo pequeño alcanza? Con un <b>conjunto de oro</b> (<i>golden set</i>): unas cien a doscientas preguntas reales del caso, con la respuesta correcta acordada por los expertos del área. Se corre cada modelo candidato sobre el conjunto y se mide qué porcentaje responde bien. Se elige el más barato que supera el umbral que el dueño del caso fijó antes de empezar. Las tablas públicas de comparación (<i>benchmarks</i>) sirven para hacer una primera lista, pero no reemplazan el conjunto de oro: miden tareas generales, no los reclamos de tu empresa.</p><p>Cuando los pedidos de un mismo caso son de dificultad muy distinta, el <b>enrutador de modelos</b> manda los fáciles al modelo pequeño y los difíciles al grande. Eso también vive en la pasarela.</p></div><div class="lab" id="08-lab-2"><div class="lab-title"><span class="tag">Laboratorio</span><h3>El modelo más pequeño que alcanza</h3></div><p class="hint">Cuatro tareas de la empresa ficticia, cada una con su volumen mensual y su umbral de calidad. Elige para cada tarea el modelo pequeño, mediano o grande y mira la calidad contra el umbral y el costo mensual. Después pulsa «El más pequeño que alcanza» y compara con «Todo con el grande».</p><style>
+[id="08-lab-2"] .c8l2-tareas{display:grid;gap:6px}
+[id="08-lab-2"] .c8l2-t{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:center;padding:6px 8px;border:1px solid var(--line);border-radius:8px;font:600 .86rem/1.3 var(--f-display)}
+[id="08-lab-2"] .c8l2-t small{display:block;font:500 .74rem var(--f-display);color:var(--muted)}
+[id="08-lab-2"] .c8l2-t .btns button{font-size:.78rem;padding:4px 9px}
+@media (max-width:520px){[id="08-lab-2"] .c8l2-t{grid-template-columns:1fr}}
+</style>
+<div class="btns">
+  <button type="button" id="c8l2-auto" class="primary">El más pequeño que alcanza</button>
+  <button type="button" id="c8l2-grande">Todo con el grande</button>
+  <button type="button" id="c8l2-chico">Todo con el pequeño</button>
+</div>
+<div class="c8l2-tareas" id="c8l2-tareas" role="group" aria-label="Modelo elegido para cada tarea"></div>
+<canvas id="c8l2-c" role="img" aria-label="Para cada tarea, una barra con la calidad del modelo elegido en el conjunto de oro y una marca con el umbral; al lado, el costo mensual. Abajo, el costo total del mes comparado con hacerlo todo con el modelo grande"></canvas>
+<div class="legend"><span><i style="background:var(--good)"></i>alcanza el umbral</span><span><i style="background:var(--warm)"></i>no alcanza</span><span><i style="background:var(--ink)"></i>umbral del dueño del caso</span></div>
+<div class="readout texto" id="c8l2-out" aria-live="polite"></div></div></section>
+<section><h2>Evaluar proveedores: calidad, costo, datos, soporte y salida</h2><div class="prose"><p>Elegir proveedor no es elegir «el mejor modelo». Es elegir con quién se va a trabajar varios años. Cinco criterios cubren lo importante:</p><ol class="steps"><li><span><b>Calidad</b>: el resultado en el conjunto de oro de los casos de la empresa, no en la demostración del vendedor.</span></li><li><span><b>Costo</b>: precio por token o por usuario, descuentos por volumen, costo del procesamiento en lote y lo que cuesta la integración.</span></li><li><span><b>Datos</b>: dónde se procesan y se guardan (la <b>residencia de datos</b>, <i>data residency</i>), cuánto tiempo se retienen, si se usan para entrenar modelos y qué certificaciones de seguridad tiene el proveedor.</span></li><li><span><b>Soporte</b>: el <b>acuerdo de nivel de servicio</b> (<i>service level agreement</i>, SLA), que fija la disponibilidad comprometida y qué pasa si no se cumple; los límites de uso; y si hay a quién llamar en un incidente.</span></li><li><span><b>Salida</b>: qué tan fácil es irse. Si las instrucciones, los datos y las integraciones quedan en formatos propios del proveedor, la empresa sufre <b>dependencia del proveedor</b> (<i>vendor lock-in</i>): cambiar cuesta tanto que no se cambia aunque convenga.</span></li></ol><p>La forma ordenada de comparar es una matriz ponderada, como la del capítulo 5: cada proveedor se puntúa de 1 a 5 en cada criterio, los pesos se acuerdan antes y se publica el cálculo. Algunos criterios, además, son <b>eliminatorios</b> (<i>knock-out</i>): si un proveedor usa los datos de la empresa para entrenar sus modelos y no lo permite desactivar, no importa cuánto puntúe en calidad.</p></div><div class="lab" id="08-lab-3"><div class="lab-title"><span class="tag">Laboratorio</span><h3>Comparador de proveedores</h3></div><p class="hint">Cuatro proveedores ficticios, puntuados de 1 a 5 en los cinco criterios. Ajusta el peso de cada criterio o elige un perfil, y activa el umbral eliminatorio de datos. Las barras muestran cuánto aporta cada criterio al puntaje total de cada proveedor y la lectura dice quién gana y por qué.</p><style>
+[id="08-lab-3"] .c8l3-chk{display:flex;flex-wrap:wrap;gap:8px 18px;font:500 .86rem var(--f-display)}
+[id="08-lab-3"] .c8l3-chk label{display:flex;gap:6px;align-items:center}
+</style>
+<div class="btns" role="group" aria-label="Perfiles de pesos">
+  <button type="button" data-p="iguales">Todos iguales</button>
+  <button type="button" data-p="calidad">Calidad ante todo</button>
+  <button type="button" data-p="salida">Costo y salida</button>
+  <button type="button" data-p="regulado">Empresa regulada</button>
+</div>
+<div class="ctls" id="c8l3-pesos"></div>
+<div class="c8l3-chk">
+  <label><input type="checkbox" id="c8l3-ko-d"> Eliminatorio: datos al menos 4</label>
+  <label><input type="checkbox" id="c8l3-ko-s"> Eliminatorio: soporte al menos 3</label>
+</div>
+<canvas id="c8l3-c" role="img" aria-label="Barras horizontales apiladas con el puntaje ponderado de cuatro proveedores ficticios; cada tramo de color es lo que aporta un criterio; los proveedores eliminados aparecen tachados"></canvas>
+<div class="legend" id="c8l3-ley"></div>
+<div class="readout texto" id="c8l3-out" aria-live="polite"></div></div><div class="caso"><b>Un caso real</b><p><b>Un cambio de proveedor que tomó una tarde.</b> Un operador de servicios de la región había conectado sus tres primeros casos a un mismo proveedor de modelos, pero a través de una pasarela propia. Cuando el proveedor anunció un cambio de precios y, semanas después, tuvo una caída de varias horas, el equipo probó otro modelo con el conjunto de oro de cada caso, comprobó que dos de los tres alcanzaban el umbral y cambió el enrutamiento en la pasarela esa misma tarde. El tercer caso, que dependía de una función exclusiva del primer proveedor, siguió donde estaba. La lección que se llevó: la pasarela y el conjunto de oro son la llave de salida, y cada función exclusiva que se usa es una puerta que se cierra.</p></div></section>
+<section><h2>Contratos: dónde quedan los datos, quién entrena con ellos y cómo se sale</h2><div class="prose"><p>El contrato es donde los criterios de datos y de salida se vuelven obligaciones. Los proveedores grandes publican sus condiciones para empresas, y las preguntas que hay que poder responder antes de firmar son pocas:</p><ul><li><b>¿Dónde se procesan y se guardan los datos?</b> En qué país o región, y si se puede fijar.</li><li><b>¿Se usan para entrenar?</b> Las versiones empresariales de los principales proveedores dicen que no, por defecto; las cuentas personales y gratuitas, muchas veces sí. Esa diferencia es una de las razones de la política de uso del capítulo 9.</li><li><b>¿Cuánto tiempo se retienen?</b> Los pedidos y las respuestas suelen guardarse un tiempo para detectar abusos; hay opciones de retención cero para algunos casos.</li><li><b>¿Quién más los trata?</b> Los <b>subencargados</b> (<i>subprocessors</i>): otras empresas que el proveedor usa, por ejemplo su nube.</li><li><b>¿Cómo se sale?</b> Plazo de aviso, exportación de datos e instrucciones en formatos abiertos, y borrado certificado al terminar.</li></ul><p>Estas condiciones suelen quedar en un <b>acuerdo de tratamiento de datos</b> (<i>data processing agreement</i>, DPA), un anexo del contrato que dice qué hace el proveedor con los datos personales que recibe. La evaluación de los riesgos legales de cada cláusula está en <a href="https://aaramirez.github.io/ia-responsable/temario.html" target="_blank" rel="noopener">IA responsable</a>, y las reglas de datos personales, en <a href="https://aaramirez.github.io/proteccion-de-datos/temario.html" target="_blank" rel="noopener">Protección de datos</a>.</p></div><div class="practica"><div class="practica-title"><span class="tag">En el navegador</span><h3>Lo que dicen los proveedores sobre tus datos</h3></div><p>Vas a leer las condiciones públicas para empresas de dos proveedores de modelos y llenar una tabla de cinco filas. Solo necesitas el navegador; las páginas están en inglés.</p><ol class="steps"><li><span>Abre la página de <a href="https://openai.com/enterprise-privacy/" target="_blank" rel="noopener">privacidad para empresas de OpenAI</a> y la de <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/data-governance" target="_blank" rel="noopener">gobierno de datos de Vertex AI en Google Cloud</a>.</span></li><li><span>Para cada una, busca y anota: si usan los datos del cliente para entrenar, cuánto tiempo retienen los pedidos, si se puede elegir la región, qué certificaciones mencionan y cómo se borran los datos.</span></li><li><span>Marca en tu tabla las celdas que no pudiste responder con la página pública.</span></li></ol><p><b>Qué observar:</b> los dos dicen que, en sus servicios empresariales, los datos del cliente no se usan para entrenar por defecto, pero el detalle de retención y región cambia de un producto a otro del mismo proveedor. Las celdas vacías de tu tabla son exactamente las preguntas que van al contrato. Las condiciones cambian con el tiempo: lee siempre la versión vigente.</p></div></section>
+<section><h2>Lo que decidió la empresa ficticia</h2><div class="prose"><p>Con las ocho preguntas, la matriz de proveedores y el conjunto de oro de cada caso, el comité decidió así:</p><div class="tbl"><table><thead><tr><th>Caso o pieza</th><th>Decisión</th><th>Por qué</th></tr></thead><tbody><tr><td>Pasarela de IA, SSO, registro y costos</td><td>Construir (sobre un producto de pasarela del mercado)</td><td>Es lo que comparten todos los casos; debe ser de la empresa</td></tr><tr><td>Asistente general de oficina para todos</td><td>Comprar</td><td>No diferencia; es la alternativa aprobada al uso con cuentas personales</td></tr><tr><td>Base de conocimiento y búsqueda con fuentes</td><td>Construir sobre la plataforma</td><td>La usan tres casos y es conocimiento propio</td></tr><tr><td>Borradores de respuesta a reclamos</td><td>Combinar</td><td>La función de IA del sistema de tickets, conectada por la pasarela a la base propia</td></tr><tr><td>Búsqueda en manuales para técnicos</td><td>Construir sobre la plataforma</td><td>Reusa la base de conocimiento; solo cambia el canal (celular del técnico)</td></tr><tr><td>Transcripción de llamadas</td><td>Comprar</td><td>Viene con la plataforma de telefonía; se procesa en la región</td></tr><tr><td>Reprogramación de visitas con aprobación</td><td>Construir (segundo semestre)</td><td>Diferencia, toca las órdenes de trabajo y exige control fino</td></tr></tbody></table></div><p>Los modelos: un proveedor principal con un modelo pequeño y uno mediano, y un segundo proveedor probado con los mismos conjuntos de oro como salida de emergencia. Las 50 licencias del asistente general se mantienen y se amplían solo cuando la política de uso esté publicada. Es la decisión que deja este capítulo.</p></div></section>
+<section><h2>Cómo se construye cada nivel: otro curso</h2><div class="prose"><p>Este capítulo mira la plataforma desde el negocio: qué piezas, quién las elige y con qué criterio. Cómo se construye cada una (la búsqueda con fuentes, la memoria, las herramientas con MCP, la evaluación y la pasarela) está en <a href="https://aaramirez.github.io/aplicaciones-con-ia/temario.html" target="_blank" rel="noopener">Aplicaciones con IA</a>.</p></div></section>
+<section><h2>La idea clave</h2><div class="prose"><p>Comprar lo que no te diferencia, construir lo que sí, y compartir la plataforma entre casos. La identidad, el monitoreo, el costo y el registro se instalan una vez y los usan todos; el modelo se elige con un conjunto de oro propio, el más pequeño que alcanza, y el contrato deja escrita la puerta de salida.</p></div></section>
+<section><h2>Pruébate</h2><div class="quiz"><h3>Pruébate</h3><details><summary>¿Qué cuatro piezas forman la plataforma común que comparten todos los casos?</summary><p>Identidad (SSO y permisos por rol), monitoreo u observabilidad, control de costos por caso y registro de auditoría. En la práctica se juntan en una pasarela de IA.</p></details><details><summary>¿Para qué sirve una pasarela de IA el día que un proveedor sube precios o falla?</summary><p>Todos los casos pasan por ella, así que se cambia el modelo o el proveedor en un solo lugar y los casos siguen funcionando, sin tocar cada aplicación.</p></details><details><summary>Un caso no diferencia a la empresa y hay un producto que cubre casi todo. ¿Qué se hace?</summary><p>Se compra, pero conectado a la plataforma común (identidad, registro y costos) y con una salida escrita en el contrato.</p></details><details><summary>¿Cómo se decide si el modelo pequeño alcanza para un caso?</summary><p>Con un conjunto de oro: preguntas reales con respuestas acordadas por expertos. Se corre cada modelo y se elige el más barato que supera el umbral fijado antes.</p></details><details><summary>¿Qué es la dependencia del proveedor y qué la reduce?</summary><p>Es cuando salir de un proveedor cuesta tanto que no se sale aunque convenga. La reducen la pasarela, los conjuntos de oro propios, las instrucciones y los datos en formatos abiertos y las cláusulas de salida del contrato.</p></details><details><summary>¿Por qué el uso de los datos para entrenar es un criterio eliminatorio?</summary><p>Porque, si el proveedor entrena con los datos de la empresa y no se puede desactivar, información de clientes o interna puede terminar influyendo en un modelo que usan otros, y ningún puntaje de calidad compensa ese riesgo.</p></details></div></section>
+<section><h2>Para investigar</h2><div class="investiga"><h3>Para investigar</h3><p class="hint">Estas preguntas no se responden en el capítulo: búscalas por tu cuenta.</p><ol><li>¿Qué es una base de datos vectorial por dentro y qué significa buscar por «similitud del coseno»?<small>Pista: busca «cosine similarity embeddings».</small></li><li>¿Qué diferencia hay entre un modelo de pesos abiertos (<i>open-weight</i>) y uno de código abierto (<i>open source</i>) según la Open Source Initiative?</li><li>¿Qué es la certificación SOC 2 y qué diferencia hay entre un informe de tipo I y uno de tipo II?</li><li>¿Qué es el costo total de propiedad (TCO) y qué partidas suele olvidar quien compara comprar con construir?<small>Pista: busca «total cost of ownership software build vs buy».</small></li><li>¿Qué es una solicitud de propuestas (RFP) y qué secciones suele tener cuando se contrata un servicio de IA?</li></ol></div></section>
+<section><h2>Para saber más</h2><div class="vids"><span>Para saber más</span><a class="vid" href="https://www.gov.uk/government/publications/ai-playbook-for-the-uk-government" target="_blank" rel="noopener">Manual de IA del gobierno del Reino Unido <small>incluye cómo comprar IA, en inglés</small></a><a class="vid" href="https://crfm.stanford.edu/helm/" target="_blank" rel="noopener">HELM, evaluación abierta de modelos de Stanford <small>comparación pública de modelos, en inglés</small></a><a class="vid" href="https://aaramirez.github.io/aplicaciones-con-ia/temario.html" target="_blank" rel="noopener">Aplicaciones con IA: cómo se construye cada nivel <small>curso del sitio</small></a></div></section>
+<label class="got"><input type="checkbox" id="got"> Lo tengo claro</label>
+<nav class="pager" id="pager" aria-label="Capítulo anterior y siguiente"></nav>
+</main>
+</div>
+<footer><span>Curso abierto de aaramirez.github.io.</span><span>Sitio publicado: <a href="https://github.com/aaramirez/adopcion-de-ia" target="_blank" rel="noopener">github.com/aaramirez/adopcion-de-ia</a></span></footer>
+</div>
+<script src="assets/lab.js"></script>
+<script>
+(function(){
+  const {$}=window.Lab;
+  // cada pregunta: texto, aclaración, puntos [comprar, combinar, construir] si la respuesta es sí y si es no
+  const Q=[
+    {t:'¿El caso diferencia a la empresa frente a la competencia?',d:'Si lo copia un competidor, ¿pierdes algo?',si:[0,1,3],no:[3,1,0],rs:'diferencia a la empresa',rn:'no diferencia: es igual en todas las empresas'},
+    {t:'¿Hay un producto en el mercado que cubre al menos el 80 % del caso?',d:'Sin programar, solo configurando',si:[3,1,0],no:[0,2,2],rs:'el mercado ya lo resuelve casi entero',rn:'ningún producto lo cubre'},
+    {t:'¿Necesita integrarse con varios sistemas propios?',d:'CRM, órdenes de trabajo, facturación…',si:[0,2,2],no:[2,0,0],rs:'necesita varias integraciones propias',rn:'casi no toca sistemas propios'},
+    {t:'¿Hay equipo técnico para construirlo y mantenerlo años?',d:'No solo para la primera versión',si:[0,1,2],no:[2,2,0],rs:'hay equipo para mantenerlo',rn:'no hay equipo para mantenerlo'},
+    {t:'¿Se necesita valor en menos de tres meses?',d:'Hay una fecha que no se mueve',si:[2,1,0],no:[0,0,1],rs:'hay urgencia',rn:'hay tiempo para construir'},
+    {t:'¿Usa datos que no pueden salir de la empresa o del país?',d:'Datos de clientes, contratos, información regulada',si:[0,2,2],no:[1,0,0],rs:'usa datos que no pueden salir',rn:'los datos pueden ir a un proveedor con contrato'},
+    {t:'¿El volumen es tan alto que el precio por usuario se vuelve caro?',d:'Decenas de miles de tareas al mes',si:[0,1,2],no:[1,0,0],rs:'el volumen hace caro el precio por usuario',rn:'el volumen es moderado'},
+    {t:'¿El proceso cambia seguido y exige ajustar la lógica?',d:'Reglas, tarifas o pasos que cambian cada mes',si:[0,2,1],no:[1,0,0],rs:'el proceso cambia seguido',rn:'el proceso es estable'}
+  ];
+  const PRE={
+    cero:[null,null,null,null,null,null,null,null],
+    asis:[0,1,0,0,1,0,0,0],
+    trans:[0,1,0,1,1,0,1,0],
+    borr:[0,1,1,1,1,1,0,1],
+    repro:[1,0,1,1,0,1,0,1]
+  };
+  const OP=['Comprar','Combinar','Construir'];
+  const COL=['var(--good)','var(--accent)','var(--c-red)'];
+  let R=PRE.borr.slice();
+  const cont=$('#c8l1-q');
+  Q.forEach((q,i)=>{
+    const d=document.createElement('div');d.className='c8l1-fila';
+    d.innerHTML='<div>'+(i+1)+'. '+q.t+'<small>'+q.d+'</small></div><div class="btns" role="group" aria-label="Respuesta a la pregunta '+(i+1)+'">'+
+      '<button type="button" data-i="'+i+'" data-v="1">Sí</button><button type="button" data-i="'+i+'" data-v="0">No</button></div>';
+    cont.appendChild(d);
+  });
+  const barras=$('#c8l1-barras');
+  OP.forEach((o,k)=>{const b=document.createElement('div');b.className='c8l1-b';
+    b.innerHTML='<span>'+o+'</span><div class="pista"><i id="c8l1-b'+k+'" style="background:'+COL[k]+';width:0"></i></div><b id="c8l1-n'+k+'">0</b>';barras.appendChild(b);});
+  function leer(){
+    cont.querySelectorAll('button').forEach(b=>{const v=R[+b.dataset.i];b.setAttribute('aria-pressed',v!==null&&v===+b.dataset.v?'true':'false');});
+    const S=[0,0,0],razones=[[],[],[]];let resp=0;
+    Q.forEach((q,i)=>{if(R[i]===null)return;resp++;const p=R[i]?q.si:q.no;p.forEach((x,k)=>{S[k]+=x;if(x>=2)razones[k].push({t:R[i]?q.rs:q.rn,x});});});
+    const tot=S[0]+S[1]+S[2]||1,max=Math.max(...S);
+    S.forEach((s,k)=>{$('#c8l1-b'+k).style.width=(100*s/tot)+'%';$('#c8l1-n'+k).textContent=s;});
+    let h='';
+    if(resp<4){h='<span class="big">Responde al menos cuatro preguntas ('+resp+' de 8).</span><span>Cada respuesta suma puntos a uno o más caminos; las barras muestran el reparto.</span>';}
+    else{
+      const orden=[0,1,2].sort((a,b)=>S[b]-S[a]),g=orden[0],seg=orden[1];
+      h+='<span class="big">Recomendación: '+OP[g].toLowerCase()+' ('+S[g]+' puntos frente a '+S[seg]+' de '+OP[seg].toLowerCase()+').</span>';
+      if(S[g]-S[seg]<=1)h+='<span class="warn">Empate técnico: la diferencia es de '+(S[g]-S[seg])+' punto. Aquí deciden el comité y una prueba con el conjunto de oro, no la tabla.</span>';
+      const rz=razones[g].sort((a,b)=>b.x-a.x).slice(0,3).map(r=>r.t);
+      if(rz.length)h+='<span>Por qué: '+rz.join('; ')+'.</span>';
+      const contra=razones[seg].slice(0,2).map(r=>r.t);
+      if(contra.length)h+='<span>Lo que empuja hacia '+OP[seg].toLowerCase()+': '+contra.join('; ')+'.</span>';
+      h+='<span class="ok">En cualquier camino: identidad corporativa, registro de auditoría, costo medido por caso y salida escrita en el contrato.</span>';
+      if(resp<8)h+='<span>Faltan '+(8-resp)+' preguntas: la recomendación puede cambiar.</span>';
+    }
+    $('#c8l1-out').innerHTML=h;
+  }
+  cont.addEventListener('click',ev=>{const b=ev.target.closest('button');if(!b)return;const i=+b.dataset.i,v=+b.dataset.v;R[i]=R[i]===v?null:v;leer();});
+  $('#c8l1-caso').addEventListener('change',e=>{R=PRE[e.target.value].slice();leer();});
+  leer();
+})();
+</script>
+<script>
+(function(){
+  const {$,tok,canvasWidget}=window.Lab;
+  // Precios ilustrativos en USD por millón de tokens (entrada, salida) y latencia típica en segundos
+  const M=[{n:'Pequeño',e:.1,s:.5,lat:.6},{n:'Mediano',e:2,s:10,lat:1.5},{n:'Grande',e:8,s:40,lat:4}];
+  // v: tareas al mes; te/ts: tokens de entrada y salida por tarea; q: calidad en el conjunto de oro (%) con cada modelo; u: umbral
+  const T=[
+    {n:'Clasificar correos entrantes',v:12000,te:600,ts:20,q:[93,96,97],u:90},
+    {n:'Resumir llamadas en el ticket',v:20000,te:3000,ts:250,q:[84,92,94],u:85},
+    {n:'Borradores de respuesta a reclamos',v:6000,te:4000,ts:400,q:[72,88,92],u:85},
+    {n:'Revisar cláusulas de contratos',v:300,te:30000,ts:1500,q:[55,80,91],u:88}
+  ];
+  const miles=n=>String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+  const costo=(t,m)=>t.v*(t.te*M[m].e+t.ts*M[m].s)/1e6;
+  const minimo=t=>{for(let m=0;m<3;m++)if(t.q[m]>=t.u)return m;return 2;};
+  let E=T.map(()=>2);
+  const cont=$('#c8l2-tareas');
+  T.forEach((t,i)=>{const d=document.createElement('div');d.className='c8l2-t';
+    d.innerHTML='<div>'+t.n+'<small>'+miles(t.v)+' al mes · '+miles(t.te)+' tokens de entrada · umbral '+t.u+' %</small></div><div class="btns" role="group" aria-label="Modelo para '+t.n+'">'+
+      M.map((m,k)=>'<button type="button" data-i="'+i+'" data-m="'+k+'">'+m.n+'</button>').join('')+'</div>';cont.appendChild(d);});
+  const money=x=>'US$ '+(x<10?x.toFixed(2).replace('.',','):miles(x));
+  const dibujar=canvasWidget($('#c8l2-c'),w=>(w<520?440:300)/w,(ctx,w,h)=>{
+    ctx.clearRect(0,0,w,h);
+    const ang=w<520,L=ang?10:260,R=ang?10:110,fila=ang?80:52,top=14;
+    const X=q=>L+(q-50)/50*(w-L-R);
+    ctx.font='11px '+tok('--f-mono');ctx.fillStyle=tok('--muted');ctx.textAlign='center';ctx.textBaseline='top';
+    [50,60,70,80,90,100].forEach(q=>{ctx.strokeStyle=tok('--grid');ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(X(q),top);ctx.lineTo(X(q),top+fila*4);ctx.stroke();ctx.textAlign=q===50?'left':q===100?'right':'center';ctx.fillText(q+' %',X(q),top+fila*4+3);});
+    T.forEach((t,i)=>{
+      const m=E[i],q=t.q[m],ok=q>=t.u,y0=top+fila*i,yb=y0+(ang?40:14),bh=18;
+      ctx.textBaseline='middle';ctx.font='600 12px '+tok('--f-display');ctx.fillStyle=tok('--ink');
+      if(ang){ctx.textAlign='left';ctx.fillText(t.n,L,y0+8);ctx.font='11px '+tok('--f-display');ctx.fillStyle=tok('--muted');ctx.fillText('modelo '+M[m].n.toLowerCase()+' · '+money(costo(t,m))+'/mes',L,y0+25);}
+      else{ctx.textAlign='right';ctx.fillText(t.n,L-10,yb+bh/2-7);ctx.font='11px '+tok('--f-display');ctx.fillStyle=tok('--muted');ctx.fillText('modelo '+M[m].n.toLowerCase(),L-10,yb+bh/2+8);}
+      ctx.fillStyle=tok('--paper');ctx.fillRect(X(50),yb,X(100)-X(50),bh);
+      ctx.fillStyle=ok?tok('--good'):tok('--warm');ctx.fillRect(X(50),yb,X(q)-X(50),bh);
+      ctx.fillStyle=tok('--card');ctx.font='700 11px '+tok('--f-mono');ctx.textAlign='left';if(X(q)-X(50)>40)ctx.fillText(q+' %',X(50)+6,yb+bh/2);
+      ctx.strokeStyle=tok('--ink');ctx.lineWidth=2.5;ctx.beginPath();ctx.moveTo(X(t.u),yb-5);ctx.lineTo(X(t.u),yb+bh+5);ctx.stroke();
+      ctx.fillStyle=tok('--ink');ctx.font='600 12px '+tok('--f-mono');
+      if(!ang){ctx.textAlign='left';ctx.fillText(money(costo(t,m)),w-R+10,yb+bh/2);}
+    });
+    // total
+    const tot=T.reduce((s,t,i)=>s+costo(t,E[i]),0),big=T.reduce((s,t)=>s+costo(t,2),0);
+    const yt=top+fila*4+(ang?40:30),W=w-(ang?20:L+R),x0=ang?10:L;
+    ctx.textAlign='left';ctx.textBaseline='middle';ctx.font='600 12px '+tok('--f-display');ctx.fillStyle=tok('--ink');
+    if(ang){ctx.fillText('Costo del mes: '+money(tot),x0,yt-8);ctx.fillStyle=tok('--muted');ctx.font='11px '+tok('--f-display');ctx.fillText('todo con el grande: '+money(big),x0,yt+6);}else ctx.fillText('Costo del mes: '+money(tot)+' (todo con el grande: '+money(big)+')',x0,yt);
+    const yb2=yt+(ang?16:12);ctx.fillStyle=tok('--paper');ctx.fillRect(x0,yb2,W,16);
+    ctx.fillStyle=tok('--muted');ctx.globalAlpha=.35;ctx.fillRect(x0,yb2,W,16);ctx.globalAlpha=1;
+    ctx.fillStyle=tok('--accent');ctx.fillRect(x0,yb2,W*Math.min(1,tot/big),16);
+  });
+  function leer(){
+    cont.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',E[+b.dataset.i]===+b.dataset.m?'true':'false'));
+    const tot=T.reduce((s,t,i)=>s+costo(t,E[i]),0),big=T.reduce((s,t)=>s+costo(t,2),0);
+    const fallan=T.filter((t,i)=>t.q[E[i]]<t.u),sobran=T.filter((t,i)=>E[i]>minimo(t));
+    let h='<span class="big">Costo del mes: '+money(tot)+' · '+Math.round(100*tot/big)+' % de hacerlo todo con el grande · '+money(tot*12)+' al año.</span>';
+    if(fallan.length)h+='<span class="warn">No alcanzan el umbral: '+fallan.map(t=>t.n.toLowerCase()).join('; ')+'. Ahorrar ahí sale caro: cada respuesta mala la corrige una persona o la sufre un cliente.</span>';
+    if(sobran.length)h+='<span>Pagas de más en: '+sobran.map(t=>t.n.toLowerCase()+' (alcanza con el '+M[minimo(t)].n.toLowerCase()+')').join('; ')+'.</span>';
+    if(!fallan.length&&!sobran.length)h+='<span class="ok">Cada tarea usa el modelo más pequeño que alcanza su umbral. Fíjate que no es el mismo para todas: la revisión de contratos sí necesita el grande.</span>';
+    const lat=E.map(m=>M[m].lat);h+='<span>Espera típica del borrador de reclamos: '+lat[2].toString().replace('.',',')+' s por respuesta con el modelo '+M[E[2]].n.toLowerCase()+'.</span>';
+    $('#c8l2-out').innerHTML=h;dibujar();
+  }
+  cont.addEventListener('click',ev=>{const b=ev.target.closest('button');if(!b)return;E[+b.dataset.i]=+b.dataset.m;leer();});
+  $('#c8l2-auto').addEventListener('click',()=>{E=T.map(minimo);leer();});
+  $('#c8l2-grande').addEventListener('click',()=>{E=T.map(()=>2);leer();});
+  $('#c8l2-chico').addEventListener('click',()=>{E=T.map(()=>0);leer();});
+  leer();
+})();
+</script>
+<script>
+(function(){
+  const {$,tok,canvasWidget}=window.Lab;
+  const CR=['Calidad','Costo','Datos','Soporte','Salida'];
+  const COL=['--accent','--good','--c-fis','--warm','--c-tra'];
+  // puntajes de 1 a 5 (5 es lo mejor: en costo, 5 = más barato; en salida, 5 = más fácil irse)
+  const P=[
+    {n:'A · Modelo grande de pago por API',s:[5,2,4,4,3]},
+    {n:'B · Nube con varios modelos',s:[4,3,5,5,4]},
+    {n:'C · Modelo abierto en servidores propios',s:[3,4,5,2,5]},
+    {n:'D · Solución empaquetada (SaaS)',s:[3,3,2,4,1]}
+  ];
+  const PERF={iguales:[1,1,1,1,1],calidad:[5,1,1,1,1],salida:[1,4,1,1,4],regulado:[2,1,5,3,2]};
+  const cont=$('#c8l3-pesos');
+  CR.forEach((c,i)=>{const l=document.createElement('label');l.className='ctl';
+    l.innerHTML='Peso de '+c.toLowerCase()+' <output id="c8l3-w'+i+'-o"></output><input id="c8l3-w'+i+'" type="range" min="0" max="5" step="1" value="1">';cont.appendChild(l);});
+  $('#c8l3-ley').innerHTML=CR.map((c,i)=>'<span><i style="background:var('+COL[i]+')"></i>'+c+'</span>').join('');
+  const W=()=>CR.map((c,i)=>+$('#c8l3-w'+i).value);
+  function calc(){
+    const w=W(),sw=w.reduce((a,b)=>a+b,0)||1,kd=$('#c8l3-ko-d').checked,ks=$('#c8l3-ko-s').checked;
+    return P.map(p=>{const partes=p.s.map((s,i)=>s*w[i]/sw);const elim=(kd&&p.s[2]<4)?'datos':(ks&&p.s[3]<3)?'soporte':null;
+      return {n:p.n,partes,tot:partes.reduce((a,b)=>a+b,0),elim};});
+  }
+  const dibujar=canvasWidget($('#c8l3-c'),w=>(w<520?330:230)/w,(ctx,w,h)=>{
+    ctx.clearRect(0,0,w,h);
+    const R=calc(),ang=w<520,L=ang?10:270,Rr=ang?50:56,fila=ang?72:50,top=10;
+    const X=v=>L+v/5*(w-L-Rr);
+    const mejor=Math.max(...R.filter(r=>!r.elim).map(r=>r.tot),0);
+    ctx.font='11px '+tok('--f-mono');ctx.fillStyle=tok('--muted');ctx.textAlign='center';ctx.textBaseline='top';
+    for(let v=0;v<=5;v++){ctx.strokeStyle=tok('--grid');ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(X(v),top);ctx.lineTo(X(v),top+fila*4);ctx.stroke();ctx.fillText(v,X(v),top+fila*4+3);}
+    R.forEach((r,i)=>{
+      const y0=top+fila*i,yb=y0+(ang?30:12),bh=22;
+      ctx.textBaseline='middle';ctx.font='600 12px '+tok('--f-display');ctx.fillStyle=tok(r.elim?'--muted':'--ink');
+      if(ang){ctx.textAlign='left';ctx.fillText(r.n,L,y0+14);}else{ctx.textAlign='right';ctx.fillText(r.n,L-10,yb+bh/2);}
+      ctx.globalAlpha=r.elim?.25:1;let x=X(0);
+      r.partes.forEach((p,k)=>{const ww=X(p)-X(0);ctx.fillStyle=tok(COL[k]);ctx.fillRect(x,yb,ww,bh);x+=ww;});
+      ctx.globalAlpha=1;
+      ctx.font='700 12px '+tok('--f-mono');ctx.textAlign='left';ctx.fillStyle=tok(r.elim?'--warm':(Math.abs(r.tot-mejor)<1e-9?'--good':'--ink'));
+      ctx.fillText(r.elim?'✕':r.tot.toFixed(2).replace('.',','),Math.min(x+6,w-Rr+6),yb+bh/2);
+      if(r.elim){ctx.strokeStyle=tok('--warm');ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(X(0),yb+bh/2);ctx.lineTo(x,yb+bh/2);ctx.stroke();}
+    });
+  });
+  function leer(){
+    CR.forEach((c,i)=>$('#c8l3-w'+i+'-o').textContent=$('#c8l3-w'+i).value);
+    const R=calc(),vivos=R.filter(r=>!r.elim).sort((a,b)=>b.tot-a.tot),w=W();
+    let h='';
+    if(!vivos.length)h='<span class="warn">Todos quedaron eliminados: los umbrales son más exigentes que el mercado disponible.</span>';
+    else{
+      const g=vivos[0],k=g.partes.indexOf(Math.max(...g.partes));
+      h+='<span class="big">Gana '+g.n.split(' · ')[0]+' ('+g.n.split(' · ')[1].toLowerCase()+') con '+g.tot.toFixed(2).replace('.',',')+' de 5.</span>';
+      h+='<span>Su mayor aporte viene de '+CR[k].toLowerCase()+'.'+(vivos[1]?' Segundo: '+vivos[1].n.split(' · ')[0]+', a '+(g.tot-vivos[1].tot).toFixed(2).replace('.',',')+' puntos.':'')+'</span>';
+      if(vivos[1]&&g.tot-vivos[1].tot<.15)h+='<span class="warn">Diferencia muy pequeña: una prueba con el conjunto de oro y la negociación del contrato pesan más que esta tabla.</span>';
+    }
+    R.filter(r=>r.elim).forEach(r=>h+='<span>'+r.n.split(' · ')[0]+' queda fuera por '+r.elim+', aunque sume '+r.tot.toFixed(2).replace('.',',')+'. Un eliminatorio no se compensa con otros criterios.</span>');
+    if(w.every(x=>x===0))h='<span class="warn">Todos los pesos están en cero: no hay nada que comparar.</span>';
+    $('#c8l3-out').innerHTML=h;dibujar();
+  }
+  document.querySelectorAll('[id="08-lab-3"] [data-p]').forEach(b=>b.addEventListener('click',()=>{PERF[b.dataset.p].forEach((v,i)=>$('#c8l3-w'+i).value=v);
+    document.querySelectorAll('[id="08-lab-3"] [data-p]').forEach(x=>x.setAttribute('aria-pressed',x===b?'true':'false'));leer();}));
+  cont.addEventListener('input',()=>{document.querySelectorAll('[id="08-lab-3"] [data-p]').forEach(x=>x.setAttribute('aria-pressed','false'));leer();});
+  $('#c8l3-ko-d').addEventListener('change',leer);$('#c8l3-ko-s').addEventListener('change',leer);
+  document.querySelector('[id="08-lab-3"] [data-p="iguales"]').setAttribute('aria-pressed','true');
+  leer();
+})();
+</script>
+</body>
+</html>

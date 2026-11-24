@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="es">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KX76XF8R');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La escalera de madurez · IA en la empresa · IA en la empresa</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Los pasos que da una empresa para adoptar la IA: diagnóstico, portafolio de casos, caso de negocio, modelo operativo, personas, pilotos que escalan, KPI y gobierno, recorridos con una empresa de servicios que sube la escalera de cinco niveles en doce meses.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX76XF8R"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="wrap" data-page="la-escalera">
+<header class="topbar"><a class="brand" href="index.html">IA en la <b>empresa</b></a><span class="eyebrow">Curso visual e interactivo · Datos e inteligencia artificial</span><a class="al-sitio" href="https://aaramirez.github.io/">← Todos los cursos</a></header>
+<div class="layout">
+<nav class="toc" id="toc" aria-label="Ruta de aprendizaje"></nav>
+<main>
+<header class="page-head"><span class="num">CAPÍTULO 02 DE 14</span><h1>La escalera de cinco niveles, vista desde el negocio</h1><p class="lede">No toda la IA es igual: responder con los documentos de la empresa no exige lo mismo que dejar a un agente actuar en los sistemas. Este capítulo presenta la escalera de cinco niveles con la que el curso ordena cada decisión, qué habilita cada nivel, qué exige y por qué conviene subirla en orden.</p></header>
+<section><div class="prose"><p>En el capítulo anterior la empresa ficticia descubrió que tenía IA, pero ningún proceso cambiado. La pregunta siguiente es obvia: ¿cambiado hacia qué? No es lo mismo un asistente que contesta preguntas sobre el manual de tarifas que uno que reprograma una visita técnica en el sistema de órdenes, y ninguno de los dos se parece a un programa que, solo, detecta una avería masiva y avisa a cinco mil clientes. Cada uno pide datos, sistemas, personas y controles distintos.</p></div><div class="analogia"><b>Imagínalo así</b><p>Piensa en cómo crece la confianza en un empleado nuevo. La primera semana lee los manuales y responde preguntas citando dónde lo leyó. Al mes ya conoce a los clientes y recuerda lo que cada uno pidió. A los tres meses puede hacer trámites en el sistema, pero con la firma de su supervisor. Al año le dan un objetivo, un presupuesto y libertad para organizarse. Y si resulta ser clave, la empresa le paga una especialización. Nadie le da el presupuesto el primer día.</p></div><div class="prose"><p>Este curso ordena la IA en la empresa con una <b>escalera de madurez</b> (<i>maturity ladder</i>) de cinco niveles. Cada nivel agrega una capacidad y se apoya en las anteriores: primero responder bien, después personalizar, después actuar, después perseguir objetivos y, solo si hace falta, especializar el modelo. La escalera no es una regla de la industria: es una forma práctica de ordenar decisiones que coincide con cómo crecen la autonomía de la IA y el riesgo de que se equivoque.</p></div><figure class="fig fig-esquema" id="02-diagrama-1"><div class="lienzo"><svg viewBox="0 0 900 446" style="min-width:680px" role="img" aria-label="Escalera de cinco peldaños que suben de izquierda a derecha: nivel 1 generar con contexto, nivel 2 interacciones personalizadas, nivel 3 automatizaciones con aprobación, nivel 4 agentes con objetivos y nivel 5 modelos ajustados, cada uno con la pieza que agrega; arriba una flecha indica que crecen la autonomía y el costo de un error; abajo, la base común a todos los niveles">
+<defs><marker id="c2d1-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="k-warm"/></marker></defs>
+<rect x="30" y="250" width="160" height="148" rx="10" class="c-fis"/>
+<text x="110" y="272" class="t t-xs t-b t-m" text-anchor="middle">NIVEL 1</text>
+<text x="110" y="294" class="t t-b" text-anchor="middle">Generar con</text>
+<text x="110" y="311" class="t t-b" text-anchor="middle">contexto</text>
+<text x="110" y="334" class="t t-s" text-anchor="middle">responde con fuentes</text>
+<text x="110" y="354" class="t t-xs t-m" text-anchor="middle">AGREGA</text>
+<text x="110" y="369" class="t t-s t-m" text-anchor="middle">documentos</text>
+<text x="110" y="383" class="t t-s t-m" text-anchor="middle">y citas</text>
+<rect x="200" y="205" width="160" height="193" rx="10" class="c-enl"/>
+<text x="280" y="227" class="t t-xs t-b t-m" text-anchor="middle">NIVEL 2</text>
+<text x="280" y="249" class="t t-b" text-anchor="middle">Interacciones</text>
+<text x="280" y="266" class="t t-b" text-anchor="middle">personalizadas</text>
+<text x="280" y="289" class="t t-s" text-anchor="middle">conoce y recuerda</text>
+<text x="280" y="309" class="t t-xs t-m" text-anchor="middle">AGREGA</text>
+<text x="280" y="324" class="t t-s t-m" text-anchor="middle">identidad, memoria</text>
+<text x="280" y="338" class="t t-s t-m" text-anchor="middle">y canales</text>
+<rect x="370" y="160" width="160" height="238" rx="10" class="c-red"/>
+<text x="450" y="182" class="t t-xs t-b t-m" text-anchor="middle">NIVEL 3</text>
+<text x="450" y="204" class="t t-b" text-anchor="middle">Automatizaciones</text>
+<text x="450" y="221" class="t t-b" text-anchor="middle">con aprobación</text>
+<text x="450" y="244" class="t t-s" text-anchor="middle">actúa en los sistemas</text>
+<text x="450" y="264" class="t t-xs t-m" text-anchor="middle">AGREGA</text>
+<text x="450" y="279" class="t t-s t-m" text-anchor="middle">herramientas</text>
+<text x="450" y="293" class="t t-s t-m" text-anchor="middle">y aprobación</text>
+<rect x="540" y="115" width="160" height="283" rx="10" class="c-tra"/>
+<text x="620" y="137" class="t t-xs t-b t-m" text-anchor="middle">NIVEL 4</text>
+<text x="620" y="159" class="t t-b" text-anchor="middle">Agentes con</text>
+<text x="620" y="176" class="t t-b" text-anchor="middle">objetivos</text>
+<text x="620" y="199" class="t t-s" text-anchor="middle">planifica y ejecuta</text>
+<text x="620" y="219" class="t t-xs t-m" text-anchor="middle">AGREGA</text>
+<text x="620" y="234" class="t t-s t-m" text-anchor="middle">presupuesto</text>
+<text x="620" y="248" class="t t-s t-m" text-anchor="middle">y límites</text>
+<rect x="710" y="70" width="160" height="328" rx="10" class="c-apl"/>
+<text x="790" y="92" class="t t-xs t-b t-m" text-anchor="middle">NIVEL 5</text>
+<text x="790" y="114" class="t t-b" text-anchor="middle">Modelos</text>
+<text x="790" y="131" class="t t-b" text-anchor="middle">ajustados</text>
+<text x="790" y="154" class="t t-s" text-anchor="middle">se especializa</text>
+<text x="790" y="174" class="t t-xs t-m" text-anchor="middle">AGREGA</text>
+<text x="790" y="189" class="t t-s t-m" text-anchor="middle">datos</text>
+<text x="790" y="203" class="t t-s t-m" text-anchor="middle">etiquetados</text>
+<line x1="40" y1="222" x2="690" y2="50" class="ln s-warm" style="stroke-width:2.4" marker-end="url(#c2d1-m)"/>
+<text x="300" y="40" class="t t-s t-b k-warm">Al subir crecen la autonomía de la IA</text>
+<text x="300" y="56" class="t t-s t-b k-warm">y el costo de un error</text>
+<rect x="30" y="406" width="840" height="32" rx="8" class="caja" style="stroke-width:2"/>
+<text x="450" y="427" class="t t-s" text-anchor="middle"><tspan class="t-b">Base común a todos los niveles:</tspan> identidad (SSO) · registro de auditoría · control de costos · evaluación de calidad</text>
+</svg></div><figcaption><b>La escalera de cinco niveles.</b> Se lee de abajo a la izquierda hacia arriba a la derecha. Cada peldaño tiene su número, su nombre y el verbo que describe lo que hace la IA en ese nivel; debajo, en gris, la pieza nueva que agrega. La flecha de arriba recuerda que, al subir, crecen a la vez la autonomía de la IA y el costo de un error. La franja de abajo es la base que comparten todos los niveles: identidad, registro, costos y evaluación.</figcaption></figure></section>
+<section><h2>Nivel 1, generar con contexto</h2><div class="prose"><p>En el nivel 1 la IA <b>responde y produce contenido con el conocimiento de la empresa</b>: manuales, políticas, tarifas, contratos, tickets resueltos. No inventa desde su memoria general; busca primero en los documentos y contesta citando la fuente.</p></div><div class="analogia"><b>Imagínalo así</b><p>Un buen bibliotecario no te responde de memoria. Busca en el catálogo, trae los tres libros que tratan tu tema, te muestra la página y, si no encuentra nada, te lo dice. Un mal bibliotecario te da una respuesta segura y convincente que nadie puede comprobar.</p></div><div class="prose"><p>Un modelo de lenguaje por sí solo es el mal bibliotecario: aprendió de textos públicos hasta cierta fecha, no conoce las tarifas de tu empresa y, cuando no sabe, igual produce una respuesta plausible. A ese error se le llama <b>alucinación</b> (<i>hallucination</i>): una respuesta bien escrita y falsa. La técnica que lo convierte en buen bibliotecario es la <b>generación aumentada con recuperación</b> (<i>Retrieval-Augmented Generation</i>, RAG). Funciona en dos tiempos:</p><ul><li><b>Preparar (una vez y cada vez que cambia un documento).</b> Un <b>conector</b> (<i>connector</i>) lee las carpetas, el wiki o el sistema de tickets; parte cada documento en <b>fragmentos</b> (<i>chunks</i>) de uno o dos párrafos; convierte cada fragmento en una <b>representación vectorial</b> (<i>embedding</i>), una lista de números que captura su significado, y la guarda en una <b>base de datos vectorial</b> (<i>vector database</i>) junto con sus <b>metadatos</b> (<i>metadata</i>): de qué documento viene, quién es su dueño, cuándo se actualizó y quién puede verlo.</li><li><b>Consultar (en cada pregunta).</b> La pregunta también se convierte en vector, el índice devuelve los fragmentos de significado más parecido, y el asistente le pasa al modelo la pregunta junto con esos fragmentos y una instrucción del tipo «responde solo con esto, cita la fuente y, si no alcanza, dilo».</li></ul></div><figure class="fig fig-flujo" id="02-diagrama-2"><div class="lienzo"><svg viewBox="0 0 900 500" style="min-width:700px" role="img" aria-label="Diagrama de secuencia de una consulta de nivel 1: tras la preparación de los documentos en fragmentos y vectores, la persona pregunta, el asistente busca por significado en el índice con su identidad, el índice devuelve fragmentos con fuente y fecha, el asistente arma la instrucción para el modelo, el modelo responde citando y la persona recibe la respuesta con enlaces a las fuentes">
+  <defs>
+    <marker id="c2d2-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="fl-muted"/></marker>
+    <marker id="c2d2-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="k-apl"/></marker>
+    <marker id="c2d2-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="k-red"/></marker>
+    <marker id="c2d2-f" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="k-fis"/></marker>
+  </defs>
+  <rect x="10" y="14" width="120" height="50" rx="10" class="caja"/><text x="70" y="36" class="t t-b" text-anchor="middle">Persona</text><text x="70" y="53" class="t t-s t-m" text-anchor="middle">agente o cliente</text>
+  <rect x="185" y="14" width="130" height="50" rx="10" class="c-apl"/><text x="250" y="36" class="t t-b" text-anchor="middle">Asistente</text><text x="250" y="53" class="t t-s t-m" text-anchor="middle">el programa</text>
+  <rect x="385" y="14" width="130" height="50" rx="10" class="c-fis"/><text x="450" y="36" class="t t-b" text-anchor="middle">Índice</text><text x="450" y="53" class="t t-s t-m" text-anchor="middle">base vectorial</text>
+  <rect x="575" y="14" width="130" height="50" rx="10" class="c-red"/><text x="640" y="36" class="t t-b" text-anchor="middle">Modelo de</text><text x="640" y="53" class="t t-b" text-anchor="middle">lenguaje</text>
+
+  <rect x="10" y="80" width="695" height="50" rx="8" class="c-fis" style="stroke-dasharray:5 3"/>
+  <text x="24" y="100" class="t t-xs t-b k-fis">PREPARACIÓN, ANTES DE CUALQUIER PREGUNTA</text>
+  <text x="24" y="119" class="t t-s">documentos → fragmentos → vectores (embeddings) → índice con dueño, fecha y permisos de cada fragmento</text>
+
+  <line x1="70" y1="130" x2="70" y2="480" class="vida"/>
+  <line x1="250" y1="130" x2="250" y2="480" class="vida"/>
+  <line x1="450" y1="130" x2="450" y2="480" class="vida"/>
+  <line x1="640" y1="130" x2="640" y2="480" class="vida"/>
+
+  <line x1="70" y1="170" x2="248" y2="176" class="ln" style="stroke-width:2" marker-end="url(#c2d2-m)"/>
+  <text x="78" y="162" class="t t-s">① «¿Cuánto cuesta reconectar?»</text>
+  <line x1="250" y1="218" x2="448" y2="224" class="ln s-fis" style="stroke-width:2" marker-end="url(#c2d2-f)"/>
+  <text x="258" y="196" class="t t-s">② Busca por significado,</text>
+  <text x="258" y="210" class="t t-s">con la identidad de quien pregunta</text>
+  <line x1="450" y1="262" x2="252" y2="268" class="ln s-fis" style="stroke-width:2" marker-end="url(#c2d2-f)"/>
+  <text x="266" y="286" class="t t-s">③ 3 fragmentos + fuente + fecha</text>
+  <line x1="250" y1="336" x2="638" y2="342" class="ln s-apl" style="stroke-width:2.4" marker-end="url(#c2d2-a)"/>
+  <text x="258" y="314" class="t t-s">④ Pregunta + fragmentos + «responde solo</text>
+  <text x="258" y="328" class="t t-s">con esto, cita y, si no alcanza, dilo»</text>
+  <line x1="640" y1="384" x2="252" y2="390" class="ln s-red" style="stroke-width:2.4" marker-end="url(#c2d2-r)"/>
+  <text x="300" y="378" class="t t-s">⑤ «La reconexión cuesta 5 dólares [1]»</text>
+  <line x1="250" y1="436" x2="72" y2="442" class="ln s-apl" style="stroke-width:2" marker-end="url(#c2d2-a)"/>
+  <text x="82" y="462" class="t t-s">⑥ Respuesta + enlace a [1]</text>
+
+  <g class="t t-xs t-b">
+    <path d="M740 150v130" class="ln s-fis" style="stroke-width:3"/><text x="752" y="206" class="k-fis">RECUPERAR</text><text x="752" y="221" class="t-m">por significado</text><text x="752" y="235" class="t-m">y con permisos</text>
+    <path d="M740 300v100" class="ln s-red" style="stroke-width:3"/><text x="752" y="346" class="k-red">GENERAR</text><text x="752" y="361" class="t-m">solo con los</text><text x="752" y="375" class="t-m">fragmentos</text>
+    <path d="M740 420v40" class="ln s-apl" style="stroke-width:3"/><text x="752" y="438" class="k-apl">CITAR</text><text x="752" y="452" class="t-m">se puede verificar</text>
+  </g>
+</svg></div><figcaption><b>Una consulta de nivel 1, paso a paso.</b> Arriba, los participantes; el tiempo corre hacia abajo. La franja punteada de arriba es la preparación, que ocurre antes de cualquier pregunta. ① La persona pregunta; ② el asistente busca por significado en el índice, con la identidad de quien pregunta; ③ el índice devuelve los fragmentos más parecidos, con su fuente; ④ el asistente arma la instrucción para el modelo; ⑤ el modelo responde citando; ⑥ la persona ve la respuesta con enlaces a cada fuente. A la derecha, las fases: recuperar, generar y citar.</figcaption></figure><div class="prose"><p>En el nivel 1 entra también lo <b>multimodal</b> (<i>multimodal</i>): leer un PDF escaneado con <b>reconocimiento óptico de caracteres</b> (<i>Optical Character Recognition</i>, OCR), transcribir el audio de una llamada, entender la foto de un equipo instalado, y producir textos, imágenes o presentaciones con el estilo de la marca.</p><p>La calidad del nivel 1 no depende tanto del modelo como de los documentos. Si en la carpeta conviven la política de reconexión de 2024 y la de 2026, el índice no sabe cuál vale, salvo que un metadato lo diga. El laboratorio lo muestra.</p></div><div class="lab" id="02-lab-3"><div class="lab-title"><span class="tag">Laboratorio</span><h3>Con o sin contexto</h3></div><p class="hint">Un cliente pregunta cuánto cuesta la reconexión después de un corte por falta de pago. Activa o no la búsqueda en documentos, decide si el índice guarda versiones vencidas, cambia cuántos fragmentos recibe el modelo y si se le exige citar. Mira qué fragmentos llegan, qué responde y cuántos tokens cuesta.</p><style>
+[id="02-lab-3"] .c2l3-q{font:600 .95rem/1.4 var(--f-body);background:var(--paper);border-radius:8px;padding:8px 12px;margin:0}
+[id="02-lab-3"] .c2l3-sw{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:6px 16px}
+[id="02-lab-3"] .c2l3-sw label{display:flex;gap:8px;align-items:flex-start;font:500 .86rem/1.35 var(--f-display);cursor:pointer}
+[id="02-lab-3"] .c2l3-sw input{accent-color:var(--accent);margin-top:2px;flex:none}
+[id="02-lab-3"] .c2l3-frs{display:grid;gap:6px}
+[id="02-lab-3"] .c2l3-f{display:grid;grid-template-columns:minmax(0,1fr) 110px;gap:4px 10px;align-items:center;border:1px solid var(--line);border-radius:8px;padding:6px 10px;background:var(--card);font:500 .8rem/1.35 var(--f-display)}
+[id="02-lab-3"] .c2l3-f .src{font-weight:700}
+[id="02-lab-3"] .c2l3-f .txt{grid-column:1/-1;color:var(--muted);font-family:var(--f-body)}
+[id="02-lab-3"] .c2l3-f .bar{height:9px;border-radius:5px;background:var(--grid);overflow:hidden;position:relative}
+[id="02-lab-3"] .c2l3-f .bar i{display:block;height:100%;background:var(--muted)}
+[id="02-lab-3"] .c2l3-f.in{border-color:var(--accent);border-width:2px}
+[id="02-lab-3"] .c2l3-f.in .bar i{background:var(--accent)}
+[id="02-lab-3"] .c2l3-f.fuera{opacity:.45;text-decoration:line-through}
+[id="02-lab-3"] .c2l3-ans{border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:0 8px 8px 0;padding:8px 12px;font:500 .92rem/1.45 var(--f-body);margin:0}
+</style>
+<p class="c2l3-q">Cliente: «¿Cuánto cuesta reconectar el servicio después de un corte por falta de pago?»</p>
+<div class="c2l3-sw">
+  <label><input type="checkbox" id="c2l3-rag" checked> Buscar en los documentos de la empresa antes de responder</label>
+  <label><input type="checkbox" id="c2l3-vieja" checked> El índice guarda también versiones vencidas, sin fecha de vigencia</label>
+  <label><input type="checkbox" id="c2l3-cita"> Exigir citas y abstenerse si no hay evidencia</label>
+</div>
+<div class="ctls"><label class="ctl">Fragmentos que recibe el modelo (k) <output id="c2l3-k-o"></output><input id="c2l3-k" type="range" min="1" max="5" step="1" value="2"></label></div>
+<div class="c2l3-frs" id="c2l3-frs"></div>
+<p class="c2l3-ans" id="c2l3-ans"></p>
+<div class="readout texto" id="c2l3-out" aria-live="polite"></div></div><div class="caso"><b>Un caso real</b><p><b>Air Canada y la política que no existía.</b> En 2024, un tribunal de Canadá obligó a la aerolínea Air Canada a pagarle a un pasajero la diferencia de una tarifa: el chatbot de su sitio le había prometido un reembolso con una política que no existía. La empresa alegó que el chatbot era «responsable de sus propios actos»; el tribunal respondió que la empresa responde por todo lo que publica en su sitio. Un asistente sin recuperación ni citas habla en nombre de la empresa con información que nadie verificó. Diseñar y operar un chatbot de cara al cliente es tema de <a href="https://aaramirez.github.io/chatbots-empresariales/temario.html" target="_blank" rel="noopener">Chatbots empresariales</a>.</p></div></section>
+<section><h2>Nivel 2, interacciones personalizadas</h2><div class="prose"><p>En el nivel 2 el asistente <b>sabe con quién habla</b>: conoce su rol, sus permisos y su historia, recuerda lo que importa y lo acompaña de un canal a otro.</p></div><div class="analogia"><b>Imagínalo así</b><p>El farmacéutico del barrio te saluda por tu nombre, sabe que eres alérgico a la penicilina y que tu madre toma una pastilla para la presión. No te pregunta todo de nuevo cada vez. Y si un día le escribes por mensaje en lugar de ir, sigue sabiendo quién eres.</p></div><div class="prose"><p>Tres piezas técnicas hacen posible el nivel 2:</p><ul><li><b>Identidad y permisos.</b> El asistente sabe quién pregunta porque la persona entró con su cuenta de la empresa por <b>inicio de sesión único</b> (<i>single sign-on</i>, SSO), y responde según su rol con un <b>control de acceso basado en roles</b> (<i>Role-Based Access Control</i>, RBAC): un técnico ve las órdenes de su zona; un agente de atención, la ficha del cliente que atiende; un analista de finanzas, la cobranza. Para un cliente, la identidad sale de su sesión en la aplicación o de verificar su número.</li><li><b>Memoria con reglas.</b> La <b>memoria de corto plazo</b> (<i>short-term memory</i>) es la conversación en curso y se borra al terminar. La <b>memoria de largo plazo</b> (<i>long-term memory</i>) guarda preferencias y hechos útiles («prefiere que lo llamen en la tarde», «tiene una visita pendiente»), con consentimiento, plazo de retención y una forma de verlos y borrarlos. Y la <b>memoria de la organización</b> son las políticas y el conocimiento compartido del nivel 1, con sus permisos.</li><li><b>Canales.</b> El mismo asistente atiende en la web, en la aplicación, en el chat interno de la empresa, por correo o por mensajería, y adapta el formato a cada uno. Cuando no puede resolver, hace un <b>traspaso a una persona</b> (<i>handoff</i>) que llega con el historial, para que nadie le pida al cliente que repita todo.</li></ul><p>Para la empresa ficticia, un ejemplo de nivel 2 es un asistente para los técnicos que, al empezar el día, sabe qué órdenes tiene cada uno, en qué zona trabaja y qué equipos lleva en la camioneta, y le contesta por el chat del teléfono con respuestas cortas que se leen de un vistazo.</p><p>El nivel 2 trae un riesgo nuevo: la <b>privacidad</b>. Un asistente que recuerda puede recordar de más o mostrarle a una persona lo que no debe ver. Se controla con memoria acotada, retención con plazo, permisos que se heredan de los sistemas y la opción de que cada persona vea qué se recuerda de ella. El <b>indicador clave de desempeño</b> (<i>Key Performance Indicator</i>, KPI) típico del nivel es la <b>resolución sin escalar</b> (<i>containment</i>): qué parte de las conversaciones se resuelve sin pasar a una persona. Otra señal útil es el uso repetido: si la gente vuelve, es porque le sirvió.</p></div></section>
+<section><h2>Nivel 3, automatizaciones con aprobación</h2><div class="prose"><p>En el nivel 3 la IA <b>deja de solo hablar y empieza a actuar en los sistemas</b>: abre un ticket, reprograma una visita, prepara un reembolso, restablece una contraseña. Es el salto más grande de la escalera, porque un error ya no es una respuesta equivocada que alguien lee: es un cambio en un sistema.</p></div><div class="analogia"><b>Imagínalo así</b><p>Una buena asistente de oficina llena el formulario de la transferencia, revisa que la cuenta exista y te lo deja en el escritorio con un papelito: «firma aquí». Ella prepara; tú autorizas; el banco ejecuta y te da un comprobante. Si mañana alguien pregunta quién autorizó, el comprobante tiene tu firma.</p></div><div class="prose"><p>La pieza técnica central es la <b>llamada a herramientas</b> (<i>tool calling</i> o <i>function calling</i>). El modelo nunca toca la base de datos directamente. Lo que hace es proponer, en un formato estructurado, qué herramienta usar y con qué datos: por ejemplo, <code>reprogramar_visita(orden: 4471, fecha: jueves, franja: tarde)</code>. Un programa normal, sin nada de probabilístico, valida esos datos, revisa si el usuario tiene permiso, y recién entonces llama a la <b>API</b> (<i>Application Programming Interface</i>, interfaz de programación) del sistema de órdenes.</p><p>Para que cualquier asistente pueda usar las herramientas de cualquier sistema sin una integración a medida cada vez, en 2024 apareció un estándar abierto: el <b>MCP</b> (<i>Model Context Protocol</i>, protocolo de contexto de modelos). Un <b>servidor MCP</b> (<i>MCP server</i>) publica las herramientas de un sistema con su nombre, su descripción y los datos que piden; el asistente las descubre y las usa. Es parecido a lo que el USB hizo con los periféricos: un enchufe común.</p><p>Alrededor de cada acción, el nivel 3 exige una secuencia fija:</p><ol class="steps"><li><span><b>Simular.</b> La herramienta corre en <b>modo simulación</b> (<i>dry run</i>): calcula qué cambiaría, pero no cambia nada, y devuelve una vista previa.</span></li><li><span><b>Aprobar.</b> Una persona ve la vista previa y aprueba o rechaza. Es el <b>humano en el bucle</b> (<i>human in the loop</i>).</span></li><li><span><b>Ejecutar una sola vez.</b> La acción lleva una <b>clave de idempotencia</b> (<i>idempotency key</i>): si por un corte de red se envía dos veces, el sistema la aplica una sola. Sin eso, un reintento puede generar dos reembolsos.</span></li><li><span><b>Registrar.</b> El <b>registro de auditoría</b> (<i>audit log</i>) guarda quién pidió, qué propuso la IA, quién aprobó y qué cambió, para poder revisarlo o deshacerlo.</span></li></ol></div><figure class="fig fig-flujo" id="02-diagrama-3"><div class="lienzo"><svg viewBox="0 0 920 520" style="min-width:720px" role="img" aria-label="Diagrama de secuencia para reprogramar una visita en el nivel 3: el agente lo pide, el asistente llama a la herramienta en modo simulación a través del servidor MCP, el sistema de órdenes devuelve qué cambiaría, el supervisor ve la vista previa y aprueba, el asistente ejecuta con una clave de idempotencia, el sistema confirma y todo queda en el registro de auditoría">
+  <defs>
+    <marker id="c2d3-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="fl-muted"/></marker>
+    <marker id="c2d3-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="k-apl"/></marker>
+    <marker id="c2d3-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="k-red"/></marker>
+    <marker id="c2d3-e" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="k-enl"/></marker>
+  </defs>
+  <rect x="10" y="14" width="120" height="52" rx="10" class="caja"/><text x="70" y="36" class="t t-b" text-anchor="middle">Agente de</text><text x="70" y="54" class="t t-b" text-anchor="middle">atención</text>
+  <rect x="160" y="14" width="120" height="52" rx="10" class="c-enl"/><text x="220" y="45" class="t t-b" text-anchor="middle">Supervisor</text>
+  <rect x="310" y="14" width="120" height="52" rx="10" class="c-apl"/><text x="370" y="45" class="t t-b" text-anchor="middle">Asistente</text>
+  <rect x="470" y="14" width="120" height="52" rx="10" class="caja"/><text x="530" y="36" class="t t-b" text-anchor="middle">Servidor MCP</text><text x="530" y="54" class="t t-s t-m" text-anchor="middle">herramientas</text>
+  <rect x="630" y="14" width="120" height="52" rx="10" class="c-red"/><text x="690" y="36" class="t t-b" text-anchor="middle">Sistema de</text><text x="690" y="54" class="t t-b" text-anchor="middle">órdenes</text>
+  <line x1="70" y1="66" x2="70" y2="500" class="vida"/>
+  <line x1="220" y1="66" x2="220" y2="500" class="vida"/>
+  <line x1="370" y1="66" x2="370" y2="500" class="vida"/>
+  <line x1="530" y1="66" x2="530" y2="500" class="vida"/>
+  <line x1="690" y1="66" x2="690" y2="500" class="vida"/>
+
+  <line x1="70" y1="112" x2="368" y2="118" class="ln" style="stroke-width:2" marker-end="url(#c2d3-m)"/>
+  <text x="80" y="104" class="t t-s">① «Pasa la visita 4471 al jueves en la tarde»</text>
+  <line x1="370" y1="160" x2="688" y2="166" class="ln s-apl" style="stroke-width:2" marker-end="url(#c2d3-a)"/>
+  <circle cx="530" cy="163" r="4" class="k-apl"/>
+  <text x="378" y="152" class="t t-s t-mono">② reprogramar_visita(4471, jueves, simular)</text>
+  <line x1="690" y1="204" x2="372" y2="210" class="ln s-red" style="stroke-width:2" marker-end="url(#c2d3-r)"/>
+  <text x="384" y="228" class="t t-s">③ Cambiaría: martes 9:00 → jueves 14:00</text>
+  <line x1="370" y1="262" x2="222" y2="268" class="ln s-apl" style="stroke-width:2.4" marker-end="url(#c2d3-a)"/>
+  <text x="232" y="256" class="t t-s">④ Vista previa</text>
+  <line x1="220" y1="304" x2="368" y2="310" class="ln s-enl" style="stroke-width:2.4" marker-end="url(#c2d3-e)"/>
+  <text x="228" y="326" class="t t-s">⑤ Aprobar</text>
+  <line x1="370" y1="354" x2="688" y2="360" class="ln s-apl" style="stroke-width:2" marker-end="url(#c2d3-a)"/>
+  <circle cx="530" cy="357" r="4" class="k-apl"/>
+  <text x="378" y="346" class="t t-s">⑥ Ejecutar · clave de idempotencia 9f2c</text>
+  <line x1="690" y1="400" x2="72" y2="408" class="ln s-red" style="stroke-width:2" marker-end="url(#c2d3-r)"/>
+  <text x="400" y="394" class="t t-s">⑦ Hecho: orden 4471 actualizada</text>
+  <path d="M690 434 h46 v30 h-44" class="ln s-red" style="stroke-width:2" marker-end="url(#c2d3-r)"/>
+  <text x="470" y="452" class="t t-s">⑧ Registro de auditoría: quién pidió,</text>
+  <text x="470" y="468" class="t t-s">qué propuso, quién aprobó, qué cambió</text>
+
+  <g class="t t-xs t-b">
+    <path d="M790 100v120" class="ln s-apl" style="stroke-width:3"/><text x="802" y="150" class="k-apl">SIMULAR</text><text x="802" y="165" class="t-m">no cambia nada</text>
+    <path d="M790 250v76" class="ln s-enl" style="stroke-width:3"/><text x="802" y="284" class="k-enl">APROBAR</text><text x="802" y="299" class="t-m">humano en</text><text x="802" y="313" class="t-m">el bucle</text>
+    <path d="M790 342v74" class="ln s-red" style="stroke-width:3"/><text x="802" y="374" class="k-red">EJECUTAR</text><text x="802" y="389" class="t-m">una sola vez</text>
+    <path d="M790 432v40" class="ln" style="stroke-width:3"/><text x="802" y="450" class="t-b">REGISTRAR</text><text x="802" y="465" class="t-m">para deshacer</text>
+  </g>
+</svg></div><figcaption><b>Reprogramar una visita en el nivel 3.</b> Los participantes están arriba y el tiempo corre hacia abajo. ① El agente de atención lo pide en lenguaje natural; ② el asistente llama a la herramienta en modo simulación; ③ el sistema de órdenes devuelve qué cambiaría; ④ el asistente muestra la vista previa al supervisor; ⑤ el supervisor aprueba; ⑥ el asistente ejecuta con una clave de idempotencia; ⑦ el sistema confirma; ⑧ todo queda en el registro de auditoría. A la derecha, las cuatro fases: simular, aprobar, ejecutar y registrar.</figcaption></figure><div class="prose"><p>Cuando una tarea tiene varios pasos (verificar el pago, reconectar, avisar al cliente), un <b>orquestador</b> (<i>orchestrator</i>) los encadena, reintenta los que fallan y, si algo sale mal a mitad de camino, deshace lo hecho. Herramientas de flujos como n8n, Zapier o Power Automate son ejemplos del mercado de esta categoría. Y un <b>motor de políticas</b> (<i>policy engine</i>) decide qué acciones necesitan aprobación: un reembolso de 5 dólares puede pasar solo; uno de 500, nunca.</p></div><div class="practica"><div class="practica-title"><span class="tag">En la terminal</span><h3>Las herramientas de un servidor MCP</h3></div><p>Vas a mirar, sin instalar nada, los servidores MCP de referencia que publica el proyecto del estándar en GitHub. Solo lees una lista pública.</p><div class="cmds"><div class="cmd-tabs" role="tablist" aria-label="Sistema operativo"><button type="button" role="tab" data-so="win">Windows</button><button type="button" role="tab" data-so="mac linux">macOS y Linux</button></div><div class="cmd-panel" role="tabpanel" data-so="win"><p class="cmd-nota">Windows (PowerShell)</p><div class="cmd-l"><code>curl.exe -s https://api.github.com/repos/modelcontextprotocol/servers/contents/src</code><button type="button" class="copiar">Copiar</button></div><div class="cmd-l"><code>curl.exe -s https://raw.githubusercontent.com/modelcontextprotocol/servers/main/src/time/README.md</code><button type="button" class="copiar">Copiar</button></div></div><div class="cmd-panel" role="tabpanel" data-so="mac linux"><div class="cmd-l"><code>curl -s https://api.github.com/repos/modelcontextprotocol/servers/contents/src</code><button type="button" class="copiar">Copiar</button></div><div class="cmd-l"><code>curl -s https://raw.githubusercontent.com/modelcontextprotocol/servers/main/src/time/README.md</code><button type="button" class="copiar">Copiar</button></div></div></div><ol class="steps"><li><span>La primera línea lista las carpetas de <code>src</code>: cada <code>"name"</code> es un servidor de ejemplo. Anota los nombres.</span></li><li><span>La segunda muestra la documentación de uno de ellos, el de la hora. Busca la sección de herramientas (<i>tools</i>) y anota el nombre de cada herramienta y los datos que pide.</span></li></ol><p><b>Qué observar:</b> cada servidor expone unas pocas herramientas con nombre, descripción y parámetros. Eso es lo que un asistente de nivel 3 ve de un sistema: no la base de datos entera, sino un menú cerrado de acciones con sus datos de entrada. La empresa decide qué herramientas publica y cuáles piden aprobación. La lista exacta de servidores cambia con el tiempo.</p></div><div class="prose"><p>El KPI del nivel 3 es la <b>tasa de éxito de la automatización</b> (<i>automation success rate</i>): qué parte de las acciones termina bien sin corrección. Las referencias de la industria piden más de 95 % de éxito y menos de 1 % de errores antes de quitar la aprobación humana de una acción, junto con el tiempo que tarda una aprobación y las horas que se liberan al mes.</p></div></section>
+<section><h2>Nivel 4, agentes con objetivos</h2><div class="prose"><p>Hasta el nivel 3, cada acción la pide una persona. En el nivel 4 la persona da un <b>objetivo</b> y la IA decide los pasos. Un <b>agente</b> (<i>AI agent</i>) es un programa que, con un modelo de lenguaje, planifica cómo llegar a un objetivo, usa herramientas, mira el resultado, corrige el plan y sigue hasta terminar o hasta que algo lo detiene.</p></div><div class="analogia"><b>Imagínalo así</b><p>Cuando contratas a un maestro de obras para remodelar la cocina no le dictas cada clavo. Le das el objetivo, los planos, un presupuesto y una fecha. Él organiza el trabajo, compra los materiales y coordina al plomero. Pero hay reglas: no tumba una pared sin consultarte, te muestra el avance cada semana y, si el presupuesto se acaba, para y te llama.</p></div><div class="prose"><p>El funcionamiento es un ciclo: <b>planificar</b> los pasos, <b>actuar</b> con las herramientas de los niveles anteriores (buscar con el nivel 1, saber quién es quién con el nivel 2, cambiar sistemas con el nivel 3), <b>observar</b> el resultado y <b>revisar</b> si se acerca al objetivo. Muchos diseños agregan un <b>agente revisor</b> (<i>reviewer agent</i>) que critica el trabajo del primero antes de seguir. Para tener contexto, el agente se alimenta de <b>eventos</b> (<i>events</i>): una alarma de la red, un pago recibido, un ticket nuevo.</p></div><figure class="fig fig-esquema" id="02-diagrama-4"><div class="lienzo"><svg viewBox="0 0 880 470" style="min-width:680px" role="img" aria-label="Ciclo de un agente: en el centro el objetivo; alrededor, planificar, actuar con las herramientas de los niveles 1 a 3, observar y revisar. Un marco punteado marca los límites: herramientas permitidas, presupuesto, puntos de control humanos, interruptor de parada y traza. Las salidas son objetivo cumplido o escalar a una persona">
+  <defs>
+    <marker id="c2d4-m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="k-tra"/></marker>
+    <marker id="c2d4-e" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="k-enl"/></marker>
+    <marker id="c2d4-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="k-warm"/></marker>
+  </defs>
+  <rect x="14" y="14" width="636" height="442" rx="18" class="caja" style="stroke-dasharray:7 5;stroke-width:2"/>
+  <text x="34" y="40" class="t t-xs t-b t-m">LÍMITES QUE FIJA LA EMPRESA ANTES DE ENCENDERLO</text>
+  <rect x="30" y="54" width="170" height="40" rx="8" class="c-fis"/><text x="115" y="71" class="t t-s t-b" text-anchor="middle">Herramientas</text><text x="115" y="86" class="t t-s" text-anchor="middle">en lista cerrada</text>
+  <rect x="464" y="54" width="170" height="40" rx="8" class="c-fis"/><text x="549" y="71" class="t t-s t-b" text-anchor="middle">Presupuesto</text><text x="549" y="86" class="t t-s" text-anchor="middle">pasos, dinero, tiempo</text>
+  <rect x="30" y="400" width="170" height="40" rx="8" class="c-fis"/><text x="115" y="417" class="t t-s t-b" text-anchor="middle">Puntos de control</text><text x="115" y="432" class="t t-s" text-anchor="middle">una persona aprueba</text>
+  <rect x="464" y="400" width="170" height="40" rx="8" class="c-fis"/><text x="549" y="417" class="t t-s t-b" text-anchor="middle">Interruptor de parada</text><text x="549" y="432" class="t t-s" text-anchor="middle">y traza de cada paso</text>
+
+  <circle cx="332" cy="245" r="62" class="c-tra" style="stroke-width:2"/>
+  <text x="332" y="236" class="t t-b" text-anchor="middle">Objetivo</text>
+  <text x="332" y="254" class="t t-s" text-anchor="middle">«atender la avería</text>
+  <text x="332" y="268" class="t t-s" text-anchor="middle">de la zona norte»</text>
+
+  <rect x="52" y="215" width="140" height="60" rx="12" class="caja" style="stroke-width:2"/>
+  <text x="122" y="240" class="t t-b" text-anchor="middle">1 · Planificar</text><text x="122" y="258" class="t t-s t-m" text-anchor="middle">dividir en pasos</text>
+  <rect x="252" y="100" width="160" height="60" rx="12" class="caja" style="stroke-width:2"/>
+  <text x="332" y="124" class="t t-b" text-anchor="middle">2 · Actuar</text><text x="332" y="142" class="t t-s t-m" text-anchor="middle">herramientas niveles 1 a 3</text>
+  <rect x="472" y="215" width="140" height="60" rx="12" class="caja" style="stroke-width:2"/>
+  <text x="542" y="240" class="t t-b" text-anchor="middle">3 · Observar</text><text x="542" y="258" class="t t-s t-m" text-anchor="middle">¿qué pasó?</text>
+  <rect x="252" y="330" width="160" height="60" rx="12" class="caja" style="stroke-width:2"/>
+  <text x="332" y="354" class="t t-b" text-anchor="middle">4 · Revisar</text><text x="332" y="372" class="t t-s t-m" text-anchor="middle">agente revisor</text>
+
+  <path d="M122 215 Q 130 132 248 130" class="ln s-tra" style="stroke-width:2.2" marker-end="url(#c2d4-m)"/>
+  <path d="M412 130 Q 534 132 542 211" class="ln s-tra" style="stroke-width:2.2" marker-end="url(#c2d4-m)"/>
+  <path d="M542 275 Q 530 330 416 338" class="ln s-tra" style="stroke-width:2.2" marker-end="url(#c2d4-m)"/>
+  <path d="M252 360 Q 130 358 122 279" class="ln s-tra" style="stroke-width:2.2" marker-end="url(#c2d4-m)"/>
+  <text x="40" y="318" class="t t-s t-m">otra vuelta</text>
+
+  <rect x="690" y="150" width="176" height="58" rx="12" class="c-enl"/>
+  <text x="778" y="175" class="t t-b" text-anchor="middle">Objetivo cumplido</text><text x="778" y="193" class="t t-s" text-anchor="middle">informe y traza</text>
+  <rect x="690" y="354" width="176" height="58" rx="12" class="caja" style="stroke-width:2"/>
+  <text x="778" y="379" class="t t-b k-warm" text-anchor="middle">Escalar a una persona</text><text x="778" y="397" class="t t-s" text-anchor="middle">límite alcanzado o duda</text>
+  <path d="M412 366 H630 Q 665 366 665 330 V 200 Q 665 180 686 180" class="ln s-enl" style="stroke-width:2.2" marker-end="url(#c2d4-e)"/>
+  <path d="M412 382 H686" class="ln s-warm" style="stroke-width:2.2" marker-end="url(#c2d4-w)"/>
+</svg></div><figcaption><b>El ciclo de un agente dentro de sus límites.</b> En el centro, el objetivo. Alrededor, el ciclo que se recorre en el sentido de las flechas: planificar, actuar, observar y revisar. El marco punteado son los límites que la empresa fija antes de encenderlo: herramientas permitidas, presupuesto de pasos, dinero y tiempo, puntos de control humanos, interruptor de parada y traza completa. A la derecha, las dos únicas salidas: objetivo cumplido o escalar a una persona.</figcaption></figure><div class="prose"><p>El riesgo del nivel 4 es que los errores se encadenan. Si cada paso sale bien el 95 % de las veces, una tarea de diez pasos sale bien completa solo el 60 % de las veces (0,95 multiplicado por sí mismo diez veces da 0,60). Por eso los agentes en empresa trabajan con <b>barandas</b> (<i>guardrails</i>): una lista cerrada de herramientas, un <b>presupuesto</b> (<i>budget</i>) de pasos, dinero y tiempo, puntos de control donde una persona aprueba antes de seguir, un <b>interruptor de parada</b> (<i>kill switch</i>) y una <b>traza</b> (<i>trace</i>) completa de cada decisión para revisar y repetir lo que pasó.</p><p>Un ejemplo para la empresa ficticia: ante una avería masiva, un agente agrupa los tickets que llegan de la misma zona, confirma con el sistema de red que hay una falla, prepara el aviso a los clientes afectados y propone las visitas necesarias. Las referencias de la industria hablan de más de 70 % de tareas completas con éxito, dentro del presupuesto, como meta razonable para el nivel 4, y de medir cuántas veces hubo que revertir lo que hizo el agente.</p></div></section>
+<section><h2>Nivel 5, modelos ajustados</h2><div class="prose"><p>Los cuatro niveles anteriores usan modelos generales tal como vienen del proveedor; lo que cambia es el contexto, la memoria y las herramientas que se les dan. El nivel 5 cambia <b>el modelo mismo</b>.</p></div><div class="analogia"><b>Imagínalo así</b><p>La mayoría de la gente compra la ropa en tallas: S, M, L. Casi siempre alcanza. Pero un sastre hace un traje a medida cuando la talla estándar no queda bien, cuando se va a usar todos los días o cuando debe cumplir un requisito especial. Es más caro, pide tomar medidas con cuidado y, si cambias de talla, hay que volver a ajustarlo.</p></div><div class="prose"><p>El <b>ajuste fino</b> (<i>fine-tuning</i>) es seguir entrenando un modelo existente con ejemplos propios de la empresa (miles de pares de entrada y salida correcta) para que aprenda un estilo, un vocabulario o un formato que con instrucciones no se logra de forma confiable. Hoy casi nunca se reentrena el modelo entero: técnicas como <b>LoRA</b> (<i>Low-Rank Adaptation</i>, adaptación de bajo rango) entrenan solo una capa pequeña que se agrega al modelo, lo que lo hace más barato. Otra variante es la <b>destilación</b> (<i>distillation</i>): un modelo grande enseña a uno pequeño a hacer una sola tarea, y el pequeño queda más rápido y barato.</p><p>El nivel 5 conviene en pocos casos: cuando una tarea se repite millones de veces y el costo por consulta importa, cuando hace falta una salida estructurada siempre igual, o cuando el lenguaje del negocio es tan propio que el modelo general se equivoca. Exige datos etiquetados con permiso y sin datos sensibles, un <b>conjunto de oro</b> (<i>golden set</i>) de ejemplos con su respuesta correcta para comparar contra el modelo base, versiones de cada entrenamiento y un <b>enrutamiento</b> (<i>routing</i>) que envía cada tarea al modelo más pequeño que alcanza la calidad y vuelve al modelo general si el ajustado falla. Para la empresa ficticia, un candidato sería un modelo pequeño que clasifica los 40.000 contactos del mes en sus categorías, más barato que mandar cada uno a un modelo grande.</p></div><div class="practica"><div class="practica-title"><span class="tag">En el navegador</span><h3>El árbol de un modelo abierto</h3></div><p>Vas a ver cuántas versiones ajustadas existen de un modelo de lenguaje abierto. Solo necesitas el navegador; Hugging Face, el sitio donde se publican modelos abiertos, no pide registro para mirar.</p><ol class="steps"><li><span>Abre la <a href="https://huggingface.co/Qwen/Qwen2.5-7B-Instruct" target="_blank" rel="noopener">página del modelo Qwen2.5-7B-Instruct</a> en Hugging Face.</span></li><li><span>En la columna de la derecha busca el recuadro <b>Model tree</b>. Anota cuántos modelos hay en <b>Finetunes</b> (ajustados), <b>Adapters</b> (capas pequeñas tipo LoRA) y <b>Quantizations</b> (versiones comprimidas).</span></li><li><span>Entra en <b>Finetunes</b> y abre dos o tres de la lista. Lee para qué tarea o idioma se ajustó cada uno.</span></li></ol><p><b>Qué observar:</b> de un solo modelo base salen cientos o miles de variantes, cada una especializada en algo. Eso es el nivel 5: tomar un modelo general y adaptarlo. Fíjate también en cuántas descargas tiene el modelo base frente a las variantes: casi todo el mundo usa el general, y por eso el ajuste se reserva para cuando los otros niveles no alcanzan. Los números cambian cada día.</p></div></section>
+<section><h2>Qué exige cada nivel: datos, sistemas, personas y controles</h2><div class="prose"><p>Cada peldaño agrega exigencias a las del anterior; ninguna desaparece al subir. La tabla resume lo nuevo de cada nivel.</p><div class="tbl"><table><thead><tr><th>Nivel</th><th>Datos</th><th>Sistemas</th><th>Personas</th><th>Controles</th><th>KPI típico</th></tr></thead><tbody><tr><td>1 · Generar con contexto</td><td>Documentos ordenados, con dueño, fecha y permisos</td><td>Proveedor de modelos, conectores, base vectorial</td><td>Dueño de producto, experto del área</td><td>Citas obligatorias, abstenerse sin evidencia, filtro de datos sensibles</td><td>Precisión evaluada por personas, satisfacción</td></tr><tr><td>2 · Interacciones personalizadas</td><td>Perfiles, permisos, historial de conversaciones con retención</td><td>SSO y RBAC, almacén de memoria, canales</td><td>Diseñador de la conversación, soporte para el traspaso</td><td>Memoria acotada y visible, consentimiento</td><td>Resolución sin escalar, uso repetido</td></tr><tr><td>3 · Automatizaciones</td><td>Datos de prueba, APIs documentadas</td><td>Servidores de herramientas (MCP), orquestador, motor de políticas</td><td>Ingeniero de integración, aprobadores</td><td>Simulación, aprobación, idempotencia, auditoría</td><td>Éxito de la automatización, errores, horas liberadas</td></tr><tr><td>4 · Agentes</td><td>Eventos en tiempo real, relaciones entre datos</td><td>Plataforma de agentes, evaluadores</td><td>Responsable de operación del agente</td><td>Presupuestos, puntos de control, interruptor, trazas</td><td>Tareas completas con éxito, reversiones</td></tr><tr><td>5 · Modelos ajustados</td><td>Ejemplos etiquetados, conjunto de oro</td><td>Infraestructura de entrenamiento, registro de modelos, enrutador</td><td>Especialista en datos y en aprendizaje automático</td><td>Evaluación contra el modelo base, plan de vuelta atrás</td><td>Mejora sobre el modelo base, costo por tarea</td></tr></tbody></table></div><p>El laboratorio permite subir a la empresa ficticia peldaño a peldaño y ver qué se habilita, qué se acumula y qué riesgo nuevo aparece.</p></div><div class="lab" id="02-lab-1"><div class="lab-title"><span class="tag">Laboratorio</span><h3>Simulador de la escalera</h3></div><p class="hint">Elige un nivel y mira qué se habilita en la empresa ficticia, qué exige (lo nuevo aparece marcado) y qué riesgo aparece. Después activa «Llegar sin pasar por los anteriores» y mira qué queda en el aire.</p><style>
+[id="02-lab-1"] .c2l1-wrap{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:14px;align-items:start}
+@media (max-width:620px){[id="02-lab-1"] .c2l1-wrap{grid-template-columns:minmax(0,1fr)}}
+[id="02-lab-1"] .c2l1-esc{display:flex;flex-direction:column-reverse;gap:4px}
+[id="02-lab-1"] .c2l1-p{border:1.5px solid var(--line);border-radius:8px;padding:6px 10px;font:600 .82rem/1.25 var(--f-display);color:var(--muted);background:var(--paper);transition:background .25s,color .25s}
+[id="02-lab-1"] .c2l1-p small{display:block;font-weight:500;font-size:.72rem}
+[id="02-lab-1"] .c2l1-p.on{color:var(--card);border-color:transparent}
+[id="02-lab-1"] .c2l1-p.on small{color:var(--card);opacity:.9}
+[id="02-lab-1"] .c2l1-p.falta{border-style:dashed;border-color:var(--warm);color:var(--warm);background:var(--warm-soft)}
+[id="02-lab-1"] .c2l1-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:10px}
+[id="02-lab-1"] .c2l1-card{border:1px solid var(--line);border-radius:10px;padding:8px 12px;background:var(--card);min-width:0}
+[id="02-lab-1"] .c2l1-card h4{margin:0 0 6px;font:700 .74rem var(--f-display);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+[id="02-lab-1"] .c2l1-card ul{margin:0;padding-left:18px;font:500 .84rem/1.4 var(--f-body)}
+[id="02-lab-1"] .c2l1-card li.nuevo{color:var(--accent);font-weight:600}
+[id="02-lab-1"] .c2l1-card li.falta{color:var(--warm);font-weight:600}
+[id="02-lab-1"] .c2l1-m{display:grid;grid-template-columns:130px 1fr 40px;gap:8px;align-items:center;font:500 .8rem var(--f-display)}
+[id="02-lab-1"] .c2l1-m .tr{height:10px;border-radius:5px;background:var(--grid);overflow:hidden}
+[id="02-lab-1"] .c2l1-m .tr i{display:block;height:100%;transition:width .3s}
+@media (prefers-reduced-motion: reduce){[id="02-lab-1"] .c2l1-m .tr i,[id="02-lab-1"] .c2l1-p{transition:none}}
+</style>
+<div class="btns" role="group" aria-label="Nivel de la escalera" id="c2l1-btns"></div>
+<label style="display:flex;gap:8px;align-items:flex-start;font:500 .88rem var(--f-display)"><input type="checkbox" id="c2l1-salto" style="accent-color:var(--warm);margin-top:3px"> Llegar sin pasar por los anteriores (construir solo el nivel elegido)</label>
+<div class="c2l1-wrap">
+  <div class="c2l1-esc" id="c2l1-esc" aria-hidden="true"></div>
+  <div style="display:grid;gap:10px;min-width:0">
+    <div class="c2l1-cols">
+      <div class="c2l1-card"><h4>Qué se habilita</h4><ul id="c2l1-hab"></ul></div>
+      <div class="c2l1-card"><h4>Qué exige</h4><ul id="c2l1-exi"></ul></div>
+    </div>
+    <div style="display:grid;gap:5px" id="c2l1-med"></div>
+  </div>
+</div>
+<div class="readout texto" id="c2l1-out" aria-live="polite"></div></div></section>
+<section><h2>Por qué no conviene saltar niveles</h2><div class="prose"><p>La tentación es empezar por arriba: «queremos agentes». Los proveedores muestran demostraciones de agentes que hacen todo solos, y el nivel 1 parece poco ambicioso. Hay tres razones para no saltar.</p><p><b>La primera es técnica: cada nivel usa al anterior.</b> Un agente que atiende una avería necesita saber qué dice la política de compensaciones (nivel 1), quién es cada cliente afectado y por qué canal prefiere que le avisen (nivel 2) y cómo crear una orden de visita con aprobación (nivel 3). Si esas piezas no existen, el agente las improvisa, y un agente que improvisa sobre datos inventados actúa sobre ellos.</p><p><b>La segunda es de datos y de procesos.</b> Construir el nivel 1 obliga a ordenar los documentos, nombrar dueños y decidir quién ve qué. El nivel 3 obliga a documentar las APIs y los pasos de cada trámite. Ese orden es justamente lo que los niveles superiores dan por hecho.</p><p><b>La tercera es de confianza.</b> La gente aprende a confiar en la IA cuando la ve acertar en algo que puede revisar: una respuesta con la fuente al lado. Los aprobadores aprenden a aprobar rápido cuando las vistas previas del nivel 3 salen bien semana tras semana. Una empresa que pone un agente sin ese camino recorrido encuentra la resistencia de quienes deben supervisarlo.</p><p>Subir en orden no significa subir lento ni hacerlo igual en toda la empresa. Un área puede estar en el nivel 3 mientras otra empieza el nivel 1. Lo que no conviene es que un caso dependa de un nivel que nadie construyó.</p></div><div class="lab" id="02-lab-2"><div class="lab-title"><span class="tag">Laboratorio</span><h3>Clasifica diez iniciativas</h3></div><p class="hint">Diez iniciativas de una empresa de servicios genérica. Asígnale a cada una su nivel de la escalera y pulsa «Revisar» para ver cuál corresponde y por qué.</p><style>
+[id="02-lab-2"] .c2l2-lista{display:grid;gap:8px}
+[id="02-lab-2"] .c2l2-it{border:1px solid var(--line);border-radius:10px;padding:8px 12px;display:grid;gap:6px;background:var(--card)}
+[id="02-lab-2"] .c2l2-it p{margin:0;font:500 .88rem/1.4 var(--f-body)}
+[id="02-lab-2"] .c2l2-it .btns button{font-size:.78rem;padding:4px 9px}
+[id="02-lab-2"] .c2l2-it.bien{border-color:var(--good);background:var(--good-soft)}
+[id="02-lab-2"] .c2l2-it.mal{border-color:var(--warm);background:var(--warm-soft)}
+[id="02-lab-2"] .c2l2-exp{font:500 .82rem/1.4 var(--f-display);color:var(--ink)}
+[id="02-lab-2"] .c2l2-exp b{color:var(--good)}
+[id="02-lab-2"] .c2l2-it.mal .c2l2-exp b{color:var(--warm)}
+</style>
+<div class="btns">
+  <button type="button" class="primary" id="c2l2-rev">Revisar</button>
+  <button type="button" id="c2l2-reset">Borrar respuestas</button>
+</div>
+<div class="c2l2-lista" id="c2l2-lista"></div>
+<div class="readout texto" id="c2l2-out" aria-live="polite"></div></div><div class="ml"><b>En la práctica</b><p><b>La empresa ficticia se ubica en la escalera.</b> Con la escalera en la mano, la directora de operaciones revisó los tres pilotos congelados. El resumen automático de llamadas es nivel 1, pero sin documentos: solo resume lo que se dijo. El bot de preguntas frecuentes de la web quiso ser nivel 2 (conversar con clientes) sin tener nivel 1 debajo: responde con textos escritos a mano hace un año, por eso lleva ocho meses «en prueba». Y el modelo que predice atrasos de pago no está en la escalera: es aprendizaje automático clásico, útil, pero otro tipo de proyecto. La decisión: la empresa no tiene hoy ningún nivel completo, y la meta del año es subir en orden, con una base común en los dos primeros meses, nivel 1 en atención y técnicos, después nivel 2 y nivel 3, y un piloto acotado de nivel 4 al final. Antes, falta saber si está preparada (capítulo 3).</p></div></section>
+<section><h2>Cómo se construye cada nivel: otro curso</h2><div class="prose"><p>Este capítulo mira la escalera desde el negocio: qué habilita, qué exige y en qué orden. Cómo se construye cada nivel por dentro (fragmentar y recuperar documentos, diseñar herramientas MCP, evaluar respuestas, armar agentes) está en <a href="https://aaramirez.github.io/aplicaciones-con-ia/temario.html" target="_blank" rel="noopener">Aplicaciones con IA</a>.</p></div></section>
+<section><h2>La idea clave</h2><div class="prose"><p>Cada nivel se apoya en el anterior: primero responder bien, después personalizar, después actuar. La escalera ordena las decisiones de todo el curso: el diagnóstico dice hasta qué nivel puede llegar la empresa hoy, el portafolio pone cada caso en su nivel y el plan de doce meses los sube en orden.</p></div></section>
+<section><h2>Pruébate</h2><div class="quiz"><h3>Pruébate</h3><details><summary>¿Qué agrega el nivel 1 a un modelo de lenguaje usado tal como viene?</summary><p>Que responda con los documentos de la empresa: recupera los fragmentos relevantes, responde con ellos, cita la fuente y se abstiene si no hay evidencia (RAG).</p></details><details><summary>¿Por qué el índice de documentos guarda metadatos como el dueño, la fecha y los permisos?</summary><p>Para saber qué versión está vigente, a quién preguntar por ella y qué fragmentos puede ver cada persona. Sin fecha, el índice no distingue una política vencida de la actual.</p></details><details><summary>En el nivel 3, ¿quién ejecuta realmente la acción en el sistema: el modelo o un programa?</summary><p>Un programa. El modelo propone una llamada a una herramienta con datos estructurados; un programa la valida, revisa permisos, la simula, espera la aprobación y la ejecuta con una clave de idempotencia.</p></details><details><summary>Si cada paso de un agente sale bien el 90 % de las veces, ¿qué tan probable es que una tarea de cinco pasos salga bien completa?</summary><p>0,9 multiplicado cinco veces da 0,59: un poco más de la mitad. Por eso los agentes llevan puntos de control, revisores y presupuestos.</p></details><details><summary>¿Cuándo conviene el nivel 5?</summary><p>Cuando una tarea se repite muchísimo y el costo o la velocidad importan, cuando hace falta un formato siempre igual o un lenguaje muy propio, y los niveles anteriores no alcanzan la calidad. Exige datos etiquetados, un conjunto de oro y un plan de vuelta atrás.</p></details><details><summary>Nombra dos razones para no saltar de nivel.</summary><p>Cada nivel usa las piezas del anterior (fuentes, identidad, herramientas con aprobación); construirlo ordena datos y procesos que los niveles superiores dan por hechos; y la confianza de usuarios y aprobadores se gana nivel a nivel.</p></details></div></section>
+<section><h2>Para investigar</h2><div class="investiga"><h3>Para investigar</h3><p class="hint">Estas preguntas no se responden en el capítulo: búscalas por tu cuenta.</p><ol><li>¿Qué es la ventana de contexto de un modelo de lenguaje y por qué limita cuántos fragmentos se le pueden pasar en una consulta?<small>Pista: busca «context window» y compara cuántos tokens acepta cada modelo.</small></li><li>¿Qué es la búsqueda híbrida y por qué muchos sistemas combinan la búsqueda por significado con la búsqueda por palabras exactas?<small>Pista: busca «hybrid search BM25 embeddings».</small></li><li>¿Qué es la inyección de instrucciones (<i>prompt injection</i>) y por qué preocupa más en un asistente que puede usar herramientas?</li><li>¿Qué es la cuantización de un modelo y qué se gana y qué se pierde al hacerla?</li><li>¿Qué es un grafo de conocimiento (<i>knowledge graph</i>) y en qué se diferencia de una base de datos vectorial?</li></ol></div></section>
+<section><h2>Para saber más</h2><div class="vids"><span>Para saber más</span><a class="vid" href="https://modelcontextprotocol.io/" target="_blank" rel="noopener">Model Context Protocol: introducción oficial <small>documentación del estándar, en inglés</small></a><a class="vid" href="https://es.wikipedia.org/wiki/Generaci%C3%B3n_aumentada_por_recuperaci%C3%B3n" target="_blank" rel="noopener">Generación aumentada por recuperación <small>artículo de Wikipedia</small></a><a class="vid" href="https://www.bbc.com/travel/article/20240222-air-canada-chatbot-misinformation-what-travellers-should-know" target="_blank" rel="noopener">Air Canada y su chatbot: qué decidió el tribunal <small>BBC, en inglés</small></a><a class="vid" href="https://aaramirez.github.io/aplicaciones-con-ia/temario.html" target="_blank" rel="noopener">Aplicaciones con IA: cómo se construye cada nivel <small>curso del sitio</small></a></div></section>
+<label class="got"><input type="checkbox" id="got"> Lo tengo claro</label>
+<nav class="pager" id="pager" aria-label="Capítulo anterior y siguiente"></nav>
+</main>
+</div>
+<footer><span>Curso abierto de aaramirez.github.io.</span><span>Sitio publicado: <a href="https://github.com/aaramirez/adopcion-de-ia" target="_blank" rel="noopener">github.com/aaramirez/adopcion-de-ia</a></span></footer>
+</div>
+<script src="assets/lab.js"></script>
+<script>
+(function(){
+  const {$}=window.Lab;
+  const F=[
+    {id:'A',src:'Política de reconexión 2026 (vigente)',txt:'«La reconexión por falta de pago cuesta 5 dólares y se hace dentro de las 24 horas siguientes al pago.»',s:.86},
+    {id:'B',src:'Política de reconexión 2024 (vencida)',txt:'«La reconexión por falta de pago cuesta 3 dólares y se hace dentro de las 48 horas.»',s:.84,vieja:true},
+    {id:'C',src:'Preguntas frecuentes de facturación',txt:'«Los pagos en línea se reflejan en dos horas hábiles.»',s:.61},
+    {id:'D',src:'Manual del técnico: corte y reconexión física',txt:'«El corte se hace en la caja de distribución del poste…»',s:.55},
+    {id:'E',src:'Promociones de temporada',txt:'«Instalación gratis al contratar el plan anual.»',s:.32}
+  ];
+  const frs=$('#c2l3-frs');
+  F.forEach(f=>{const d=document.createElement('div');d.className='c2l3-f';d.id='c2l3-'+f.id;
+    d.innerHTML='<span class="src">['+f.id+'] '+f.src+'</span><span class="bar" title="parecido"><i style="width:'+Math.round(f.s*100)+'%"></i></span><span class="txt">'+f.txt+' · parecido '+f.s.toFixed(2).replace('.',',')+'</span>';frs.appendChild(d);});
+  function leer(){
+    const rag=$('#c2l3-rag').checked,vieja=$('#c2l3-vieja').checked,cita=$('#c2l3-cita').checked,k=+$('#c2l3-k').value;
+    $('#c2l3-k-o').textContent=k;
+    const disp=F.filter(f=>vieja||!f.vieja),sel=rag?disp.slice(0,k):[];
+    F.forEach(f=>{const d=$('#c2l3-'+f.id);d.classList.toggle('in',sel.includes(f));d.classList.toggle('fuera',rag&&!vieja&&!!f.vieja);d.style.opacity=rag?'':'.4';});
+    const tA=sel.some(f=>f.id==='A'),tB=sel.some(f=>f.id==='B');
+    let ans,ver,cls;
+    if(!rag){
+      if(cita){ans='«No encuentro información sobre eso en las fuentes que tengo. Te comunico con un agente.»';ver='Se abstiene: no inventa, pero tampoco ayuda. Sin documentos, abstenerse es lo único honesto.';cls='';}
+      else{ans='«Normalmente la reconexión no tiene costo y se activa de inmediato al pagar.»';ver='Inventada: el modelo respondió con lo que suena plausible en general. Es una alucinación, y el cliente la tomará como promesa de la empresa.';cls='warn';}
+    }else if(tA&&tB){
+      if(cita){ans='«Encontré dos documentos que no coinciden: 5 dólares [A] y 3 dólares [B]. Consulta con un agente cuál aplica.»';ver='Conflicto visible: las citas muestran el problema, pero el cliente no recibe una respuesta clara. La falla está en el índice, no en el modelo.';cls='warn';}
+      else{ans='«La reconexión cuesta 3 dólares y se hace en 48 horas.»';ver='Desactualizada: el modelo recibió dos precios y no tiene cómo saber cuál vale. Eligió el vencido y nadie puede ver de dónde salió.';cls='warn';}
+    }else if(tA){
+      ans=cita?'«La reconexión cuesta 5 dólares y se hace dentro de las 24 horas siguientes al pago [A].»':'«La reconexión cuesta 5 dólares y se hace dentro de las 24 horas siguientes al pago.»';
+      ver=cita?'Correcta y verificable: el agente o el cliente pueden abrir [A] y comprobarla.':'Correcta, pero sin fuente: hoy acertó; el día que se equivoque, nadie sabrá de dónde salió.';cls=cita?'ok':'';
+    }else{ans='—';ver='';cls='';}
+    $('#c2l3-ans').textContent=ans;
+    const tok=150+sel.length*300+120;
+    let h='<span class="'+(cls||'big')+'">'+ver+'</span>';
+    h+='<span>Fragmentos enviados: '+sel.length+(sel.length?' ('+sel.map(f=>f.id).join(', ')+')':'')+' · tokens por consulta ≈ '+tok.toLocaleString('es')+' · con 40.000 consultas al mes ≈ '+(tok*40000/1e6).toLocaleString('es',{maximumFractionDigits:1})+' millones de tokens.</span>';
+    if(rag&&k>=4)h+='<span>Con k = '+k+' llegan fragmentos poco relacionados (C, D, E): no cambian la respuesta, pero cada consulta cuesta más y el modelo tiene más texto que puede confundirlo.</span>';
+    if(rag&&vieja)h+='<span>Prueba a quitar las versiones vencidas: es un trabajo de datos (dueño y fecha de vigencia), no de IA.</span>';
+    $('#c2l3-out').innerHTML=h;
+  }
+  ['#c2l3-rag','#c2l3-vieja','#c2l3-cita'].forEach(s=>$(s).addEventListener('change',leer));
+  $('#c2l3-k').addEventListener('input',leer);
+  leer();
+})();
+</script>
+<script>
+(function(){
+  const {$}=window.Lab;
+  const N=[
+    {n:'Generar con contexto',c:'--c-fis',hab:['Agentes de atención con respuestas citadas del manual de tarifas','Técnicos que buscan en los manuales de equipos desde el teléfono','Resúmenes de llamadas con la política aplicable'],
+     exi:['Documentos con dueño, fecha y permisos','Proveedor de modelos y base vectorial','Citas obligatorias y abstenerse sin evidencia','Filtro de datos sensibles antes de indexar'],
+     riesgo:'respuestas inventadas o con una versión vencida del documento',mit:'citas, metadatos de vigencia y evaluación semanal por personas',kpi:'precisión evaluada por personas (meta de referencia: 80 % o más)',auto:15,err:15},
+    {n:'Interacciones personalizadas',c:'--c-enl',hab:['Asistente del técnico que conoce sus órdenes y su zona','Chat de clientes que reconoce el plan y la visita pendiente','Traspaso a un agente con todo el historial'],
+     exi:['Inicio de sesión único (SSO) y permisos por rol','Memoria con retención y consentimiento','Adaptadores de canal: web, aplicación, chat, correo'],
+     riesgo:'privacidad: recordar de más o mostrar datos a quien no debe',mit:'memoria acotada y visible, permisos heredados de los sistemas',kpi:'resolución sin escalar (referencia: 40 % o más) y uso repetido',auto:30,err:30},
+    {n:'Automatizaciones con aprobación',c:'--c-red',hab:['Reprogramar visitas desde el chat con vista previa','Reembolsos de cobros duplicados que finanzas aprueba','Restablecer contraseñas de empleados con verificación'],
+     exi:['APIs documentadas y datos de prueba','Servidores de herramientas (MCP) y orquestador','Simulación, aprobación, idempotencia y auditoría','Aprobadores con tiempo asignado'],
+     riesgo:'acciones equivocadas o duplicadas en los sistemas',mit:'modo simulación, aprobación humana, claves de idempotencia, motor de políticas',kpi:'éxito de la automatización (referencia: 95 % o más) y errores por debajo de 1 %',auto:55,err:60},
+    {n:'Agentes con objetivos',c:'--c-tra',hab:['Agente que atiende una avería masiva: agrupa tickets, avisa y propone visitas','Agente semanal de cobranza que prioriza y prepara mensajes para aprobar'],
+     exi:['Eventos en tiempo real (alarmas, pagos, tickets)','Plataforma de agentes con evaluadores','Presupuestos, puntos de control, interruptor de parada y trazas','Responsable de operar el agente'],
+     riesgo:'errores que se encadenan y objetivos mal entendidos',mit:'tareas cortas, agente revisor, presupuesto y parada',kpi:'tareas completas con éxito (referencia: 70 % o más) y reversiones',auto:80,err:85},
+    {n:'Modelos ajustados',c:'--c-apl',hab:['Clasificador propio de los 40.000 contactos del mes, más barato y rápido','Redacción con el vocabulario exacto del negocio'],
+     exi:['Miles de ejemplos etiquetados, con permiso','Conjunto de oro para comparar con el modelo base','Infraestructura de entrenamiento y registro de modelos','Enrutador con vuelta al modelo general'],
+     riesgo:'un modelo propio que envejece y hay que mantener',mit:'evaluación continua contra el modelo base y plan de vuelta atrás',kpi:'mejora sobre el modelo base y menor costo por tarea',auto:80,err:85}
+  ];
+  let niv=0;
+  const bt=$('#c2l1-btns');
+  ['Hoy'].concat(N.map((x,i)=>'Nivel '+(i+1))).forEach((t,i)=>{const b=document.createElement('button');b.type='button';b.textContent=t;b.dataset.n=i;bt.appendChild(b);});
+  const esc=$('#c2l1-esc');
+  N.forEach((x,i)=>{const d=document.createElement('div');d.className='c2l1-p';d.innerHTML='Nivel '+(i+1)+'<small>'+x.n+'</small>';esc.appendChild(d);});
+  function med(t,v,col){return '<div class="c2l1-m"><span>'+t+'</span><span class="tr"><i style="width:'+v+'%;background:var('+col+')"></i></span><b>'+v+'</b></div>';}
+  function leer(){
+    const salto=$('#c2l1-salto').checked;
+    bt.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.n===niv?'true':'false'));
+    esc.querySelectorAll('.c2l1-p').forEach((d,i)=>{
+      const on=i<niv&&(!salto||i===niv-1),falta=salto&&i<niv-1;
+      d.classList.toggle('on',on);d.classList.toggle('falta',falta);d.style.background=on?'var('+N[i].c+')':'';
+    });
+    if(niv===0){
+      $('#c2l1-hab').innerHTML='<li>Uso individual con cuentas propias</li><li>Tres pilotos sueltos, ninguno conectado a los sistemas</li>';
+      $('#c2l1-exi').innerHTML='<li>Nada todavía: por eso nadie lo controla</li>';
+      $('#c2l1-med').innerHTML=med('Autonomía de la IA',0,'--accent')+med('Costo de un error',5,'--warm')+med('Exigencias',0,'--muted');
+      $('#c2l1-out').innerHTML='<span class="big">Punto de partida: ningún nivel completo.</span><span>Elige un nivel para ver qué cambia en la empresa ficticia.</span>';return;
+    }
+    const x=N[niv-1];let hab='',exi='',cuenta=0,faltan=0;
+    N.slice(0,niv).forEach((y,i)=>{
+      const nuevo=i===niv-1;
+      if(!salto||nuevo)y.hab.forEach(h=>hab+='<li'+(nuevo?' class="nuevo"':'')+'>'+h+'</li>');
+      y.exi.forEach(e=>{cuenta++;if(salto&&!nuevo){faltan++;exi+='<li class="falta">Falta: '+e+'</li>';}else exi+='<li'+(nuevo?' class="nuevo"':'')+'>'+e+'</li>';});
+    });
+    $('#c2l1-hab').innerHTML=hab;$('#c2l1-exi').innerHTML=exi;
+    const err=Math.min(100,x.err+(salto&&niv>1?15:0));
+    $('#c2l1-med').innerHTML=med('Autonomía de la IA',x.auto,'--accent')+med('Costo de un error',err,'--warm')+med('Exigencias',Math.round(cuenta/19*100),'--muted');
+    let h='<span class="big">Nivel '+niv+': '+x.n+'.</span>';
+    h+='<span>Exige '+cuenta+' piezas en total'+(niv>1?' ('+x.exi.length+' nuevas, en azul, y '+(cuenta-x.exi.length)+' heredadas de los niveles de abajo)':'')+'.</span>';
+    h+='<span>Riesgo que aparece: '+x.riesgo+'. Se controla con '+x.mit+'.</span>';
+    h+='<span>KPI típico: '+x.kpi+'.</span>';
+    if(salto&&niv>1)h+='<span class="warn">Sin los niveles anteriores faltan '+faltan+' piezas. El nivel '+niv+' tendría que improvisarlas: '+(niv>=3?'actuaría en los sistemas sin fuentes verificadas ni identidad clara de quién pide.':'conversaría con cada persona usando respuestas sin fuentes.')+'</span>';
+    else if(niv>1)h+='<span class="ok">Subiste en orden: todo lo de abajo ya existe y el nivel '+niv+' lo reutiliza.</span>';
+    $('#c2l1-out').innerHTML=h;
+  }
+  bt.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;niv=+b.dataset.n;leer();});
+  $('#c2l1-salto').addEventListener('change',leer);
+  niv=1;leer();
+})();
+</script>
+<script>
+(function(){
+  const {$}=window.Lab;
+  const NOM=['','Generar con contexto','Interacciones personalizadas','Automatizaciones con aprobación','Agentes con objetivos','Modelos ajustados'];
+  const IT=[
+    {t:'Un buscador de los manuales de equipos para los técnicos, que responde citando la página.',n:1,p:'Responde con documentos de la empresa y cita la fuente. No necesita saber quién pregunta ni actuar en ningún sistema.'},
+    {t:'Un resumen de los contratos con proveedores que muestra plazos, multas y la cláusula de donde sale cada dato.',n:1,p:'Genera contenido a partir de documentos propios, con fuentes. Es nivel 1 aunque el documento sea largo.'},
+    {t:'Un asistente de ventas que conoce la cartera de cada vendedor y recuerda en qué quedó con cada prospecto.',n:2,p:'Lo nuevo es la identidad (cada vendedor ve su cartera) y la memoria de largo plazo. No cambia nada en los sistemas.'},
+    {t:'Un chat de atención que reconoce al cliente, sabe su plan y, si no puede resolver, pasa a un agente con todo el historial.',n:2,p:'Personaliza por cliente y canal y hace el traspaso a una persona. Todavía no ejecuta trámites.'},
+    {t:'Reprogramar una visita técnica desde el chat: la IA muestra la nueva fecha y el cliente confirma.',n:3,p:'La IA actúa en el sistema de órdenes por medio de una herramienta, con vista previa y confirmación.'},
+    {t:'Devolver un cobro duplicado: la IA detecta el caso, prepara el reembolso y una persona de finanzas lo aprueba.',n:3,p:'Una acción con dinero, con simulación y aprobación humana antes de ejecutar. Es la definición del nivel 3.'},
+    {t:'Restablecer la contraseña de un empleado desde el chat interno, después de verificar su identidad.',n:3,p:'Ejecuta una acción en un sistema (el directorio de usuarios). Suele ser de los primeros casos de nivel 3 por su bajo riesgo.'},
+    {t:'Ante una avería masiva, la IA agrupa los tickets de la zona, confirma la falla, prepara el aviso a los clientes y propone visitas, con un tope de acciones.',n:4,p:'Recibe un objetivo y decide los pasos, usando herramientas de los niveles 1 a 3, con presupuesto y puntos de control.'},
+    {t:'Cada lunes, la IA revisa la cobranza atrasada, decide a quién contactar primero y deja los mensajes listos para aprobar.',n:4,p:'Persigue un objetivo semanal y planifica sola el orden de las acciones; los mensajes pasan por aprobación.'},
+    {t:'Un modelo pequeño entrenado con miles de tickets etiquetados para clasificar los reclamos en 40 categorías, más barato que un modelo grande.',n:5,p:'Cambia el modelo mismo con datos propios etiquetados: es ajuste fino o destilación.'}
+  ];
+  const resp=IT.map(()=>0);
+  const lista=$('#c2l2-lista');
+  IT.forEach((it,i)=>{
+    const d=document.createElement('div');d.className='c2l2-it';d.id='c2l2-i'+i;
+    d.innerHTML='<p><b>'+(i+1)+'.</b> '+it.t+'</p><div class="btns" role="group" aria-label="Nivel de la iniciativa '+(i+1)+'">'+
+      [1,2,3,4,5].map(n=>'<button type="button" data-i="'+i+'" data-n="'+n+'" aria-pressed="false" title="'+NOM[n]+'">N'+n+'</button>').join('')+'</div><div class="c2l2-exp" hidden></div>';
+    lista.appendChild(d);
+  });
+  function pintar(){lista.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',resp[+b.dataset.i]===+b.dataset.n?'true':'false'));}
+  lista.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;resp[+b.dataset.i]=+b.dataset.n;
+    const d=$('#c2l2-i'+b.dataset.i);d.classList.remove('bien','mal');d.querySelector('.c2l2-exp').hidden=true;pintar();
+    const n=resp.filter(x=>x).length;$('#c2l2-out').innerHTML='<span>Respondidas: '+n+' de 10.</span>';});
+  $('#c2l2-rev').addEventListener('click',()=>{
+    let ok=0,arriba=0,abajo=0;
+    IT.forEach((it,i)=>{const d=$('#c2l2-i'+i),e=d.querySelector('.c2l2-exp'),r=resp[i];
+      d.classList.remove('bien','mal');
+      if(!r){e.hidden=true;return;}
+      const b=r===it.n;if(b)ok++;else if(r>it.n)arriba++;else abajo++;
+      d.classList.add(b?'bien':'mal');e.hidden=false;
+      e.innerHTML='<b>'+(b?'Bien: ':'Es nivel '+it.n+': ')+'</b>'+NOM[it.n]+'. '+it.p;});
+    const n=resp.filter(x=>x).length;
+    let h='<span class="big">Aciertos: '+ok+' de '+n+' respondidas.</span>';
+    if(arriba)h+='<span class="warn">'+arriba+' las pusiste más arriba de lo que son. Es el error más común: lo que suena avanzado muchas veces es un buen nivel 1 o 2.</span>';
+    if(abajo)h+='<span class="warn">'+abajo+' las pusiste más abajo. Pregúntate: ¿cambia algo en un sistema (nivel 3)? ¿recibe un objetivo y decide los pasos (nivel 4)?</span>';
+    if(n<10)h+='<span>Te faltan '+(10-n)+' por responder.</span>';
+    h+='<span>Pista general: si solo responde, es nivel 1; si sabe quién eres, 2; si cambia un sistema, 3; si decide los pasos, 4; si cambia el modelo, 5.</span>';
+    $('#c2l2-out').innerHTML=h;
+  });
+  $('#c2l2-reset').addEventListener('click',()=>{resp.fill(0);lista.querySelectorAll('.c2l2-it').forEach(d=>{d.classList.remove('bien','mal');d.querySelector('.c2l2-exp').hidden=true;});pintar();$('#c2l2-out').innerHTML='<span>Elige un nivel para cada iniciativa.</span>';});
+  $('#c2l2-out').innerHTML='<span>Elige un nivel (N1 a N5) para cada iniciativa y pulsa «Revisar».</span>';
+})();
+</script>
+</body>
+</html>

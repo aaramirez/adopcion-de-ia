@@ -4,7 +4,7 @@ Los pasos que da una empresa para adoptar la IA: diagnóstico, portafolio de cas
 
 **Ver en línea:** https://aaramirez.github.io/adopcion-de-ia/
 
-Este repositorio solo tiene el sitio generado. El curso está en preparación: la tabla de contenido ya está publicada para revisión.
+Este repositorio solo tiene el sitio generado. Curso completo: 14 capítulos con laboratorios interactivos, diagramas y prácticas.
 
 | # | Capítulo |
 |---|---|
